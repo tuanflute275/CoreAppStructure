@@ -1,0 +1,41 @@
+├── Features/                     # Chia theo từng module nghiệp vụ
+│   ├── Products/                 # Module quản lý sản phẩm
+│   │   ├── Controllers/          # Controller liên quan đến sản phẩm
+│   │   ├── Services/             # Logic xử lý sản phẩm
+│   │   ├── Repositories/         # Repository xử lý dữ liệu sản phẩm
+│   │   ├── Models/               # Entity, DTO, ViewModel cho sản phẩm
+│   │   ├── Interfaces/           # Interface liên quan đến sản phẩm
+│   │   └── Mappings/             # AutoMapper profiles (nếu có)
+│   ├── Orders/                   # Module quản lý đơn hàng
+│   │   ├── Controllers/          
+│   │   ├── Services/             
+│   │   ├── Repositories/         
+│   │   ├── Models/               
+│   │   ├── Interfaces/           
+│   │   └── Mappings/             
+│   └── Users/                    # Module quản lý người dùng
+│       ├── Controllers/          
+│       ├── Services/             
+│       ├── Repositories/         
+│       ├── Models/               
+│       ├── Interfaces/           
+│       └── Mappings/             
+├── Core/                         # Chứa các thành phần dùng chung
+│   ├── Middlewares/              # Các middleware tùy chỉnh
+│   ├── Exceptions/               # Xử lý lỗi tập trung (global exception)
+│   ├── Helpers/                  # Utility classes (JWT, Hashing, v.v.)
+│   ├── Configurations/           # Các cấu hình chung (AppSettings, Swagger, v.v.)
+│   └── Extensions/               # Service hoặc middleware extensions
+├── Data/                         # Data access (DbContext, Migration)
+│   ├── AppDbContext.cs           # DbContext chính
+│   ├── SeedData.cs               # Dữ liệu mẫu khởi tạo
+│   └── Migrations/               # Thư mục migration tự động sinh ra
+├── Infrastructure/               # Thư viện và công nghệ phụ trợ
+│   ├── Email/                    # Xử lý email (SMTP, templates)
+│   ├── Logging/                  # Logging (Serilog, NLog, etc.)
+│   ├── Caching/                  # Caching (Redis, Memory Cache)
+│   └── Messaging/                # Message queue (RabbitMQ, Kafka, v.v.)
+├── Tests/                        # Kiểm thử ứng dụng
+│   ├── UnitTests/                # Unit tests
+│   └── IntegrationTests/         # Integration tests
+├── Program.cs                    # Điểm khởi động chính

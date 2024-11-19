@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\TK24000071.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\TK24000071.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\ao.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\ao.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\túi1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\túi1.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CoreAppStructure.props",
+      "PackagePath": "build\\CoreAppStructure.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CoreAppStructure.props",
+      "PackagePath": "buildMultiTargeting\\CoreAppStructure.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CoreAppStructure.props",
+      "PackagePath": "buildTransitive\\CoreAppStructure.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

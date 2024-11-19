@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "RpupuUlOdruuaAQjHC9to27f9ZO84eYZBBXZM4CG0q8=",
+  "Source": "CoreAppStructure",
+  "BasePath": "_content/CoreAppStructure",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CoreAppStructure\\wwwroot",
+      "Source": "CoreAppStructure",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\ao.jpg",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/products/ao.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\ao.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\TK24000071.jpg",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/products/TK24000071.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\TK24000071.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\túi1.jpg",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/products/túi1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\túi1.jpg"
+    }
+  ]
+}

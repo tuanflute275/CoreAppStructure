@@ -1,0 +1,27 @@
+Các thư mục trong Core có thể bao gồm:
+
+1. Middlewares: Thư mục này chứa các lớp middleware tùy chỉnh mà bạn có thể 
+sử dụng để xử lý các yêu cầu HTTP. 
+Ví dụ, bạn có thể viết middleware cho việc xác thực JWT, logging, hay 
+ghi nhận thời gian xử lý yêu cầu.
+
+
+2. Exceptions: Thư mục này dùng để xử lý các lỗi toàn cục trong ứng dụng. 
+Bạn có thể định nghĩa một ExceptionMiddleware để bắt tất cả các lỗi 
+không mong muốn và trả về phản hồi hợp lệ cho người dùng.
+
+
+3. Helpers: Chứa các lớp tiện ích mà các module khác có thể sử dụng, 
+chẳng hạn như các lớp giúp mã hóa mật khẩu, tạo JWT token, hoặc 
+các utility khác như việc chuyển đổi kiểu dữ liệu.
+
+
+4. Configurations: Đây là nơi bạn lưu trữ các cấu hình ứng dụng như AppSettings, 
+cấu hình cho các dịch vụ như Swagger, CORS, v.v. 
+Trong trường hợp bạn muốn tách cấu hình vào một lớp riêng biệt, 
+có thể tạo một lớp Configuration để quản lý.
+
+
+5. Extensions: Chứa các extension methods giúp mở rộng khả năng của các dịch vụ
+hoặc các lớp trong ứng dụng. Ví dụ, bạn có thể thêm phương thức mở rộng cho 
+IServiceCollection để đăng ký các dịch vụ một cách dễ dàng hơn.

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RpupuUlOdruuaAQjHC9to27f9ZO84eYZBBXZM4CG0q8=",
+  "Hash": "R0kuR/4vxlFP7+rU5o2y2fDZqjm1MlWZqc7PhqC6v9E=",
   "Source": "CoreAppStructure",
   "BasePath": "_content/CoreAppStructure",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\ao.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\download.jpg",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/products/download.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\download.jpg"
     },
     {
       "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\TK24000071.jpg",

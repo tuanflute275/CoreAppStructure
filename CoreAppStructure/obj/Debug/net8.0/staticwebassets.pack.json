@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\ao.jpg"
     },
     {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\download.jpg"
+    },
+    {
       "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\túi1.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\túi1.jpg"
     },

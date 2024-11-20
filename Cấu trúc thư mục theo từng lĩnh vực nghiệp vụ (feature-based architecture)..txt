@@ -5,15 +5,8 @@
 │   │   ├── Repositories/         # Repository xử lý dữ liệu sản phẩm
 │   │   ├── Models/               # Entity, DTO, ViewModel cho sản phẩm
 │   │   ├── Interfaces/           # Interface liên quan đến sản phẩm
-│   │   └── Mappings/             # AutoMapper profiles (nếu có)
-│   ├── Orders/                   # Module quản lý đơn hàng
-│   │   ├── Controllers/          
-│   │   ├── Services/             
-│   │   ├── Repositories/         
-│   │   ├── Models/               
-│   │   ├── Interfaces/           
-│   │   └── Mappings/             
-│   └── Users/                    # Module quản lý người dùng
+│   │   └── Mappings/             # AutoMapper profiles (nếu có)             
+│   └── Categories/               # Module quản lý danh mục
 │       ├── Controllers/          
 │       ├── Services/             
 │       ├── Repositories/         

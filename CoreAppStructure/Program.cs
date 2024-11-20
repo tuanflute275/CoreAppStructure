@@ -1,4 +1,5 @@
 ﻿using CoreAppStructure.Core.Configurations;
+using CoreAppStructure.Core.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,13 +21,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowOrigin");
 
 app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.Run();

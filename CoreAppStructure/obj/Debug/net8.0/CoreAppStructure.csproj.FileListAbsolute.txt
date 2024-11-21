@@ -158,3 +158,5 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\refint
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\CoreAppStructure.pdb
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\CoreAppStructure.genruntimeconfig.cache
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\ref\CoreAppStructure.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\AutoMapper.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

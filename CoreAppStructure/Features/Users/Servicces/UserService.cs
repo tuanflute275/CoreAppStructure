@@ -1,7 +1,11 @@
 ﻿using CoreAppStructure.Core.Extensions;
 using CoreAppStructure.Core.Helpers;
+using CoreAppStructure.Features.Products.Models;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
+using CoreAppStructure.Infrastructure.Caching;
+using Newtonsoft.Json;
+using X.PagedList;
 
 namespace CoreAppStructure.Features.Users.Servicces
 {
@@ -20,9 +24,40 @@ namespace CoreAppStructure.Features.Users.Servicces
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public Task<ResponseObject> FindAllAsync(string? name, string? sort, int page = 1)
+        public async Task<ResponseObject> FindAllAsync(string? name, string? sort, int page = 1)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var users = await _userRepository.FindAllAsync(name, sort);
+                if (users.Count > 0)
+                {
+                    int totalRecords = users.Count();
+                    int limit = 10;
+                    page = page <= 1 ? 1 : page;
+                    var pageData = users.ToPagedList(page, limit);
+
+                    int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
+
+                    //var userDTOs = null;
+
+                    var response = new
+                    {
+                        TotalRecords = totalRecords,
+                        TotalPages = totalPages,
+                        //Data = userDTOs
+                    };
+                   
+                    LogHelper.LogInformation(_logger, "GET", "/api/user", null, response);
+                    return new ResponseObject(200, "Query data successfully", response);
+                }
+                LogHelper.LogInformation(_logger, "GET", "/api/user", null, users);
+                return new ResponseObject(200, "Query data successfully", users);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError(_logger, ex, "GET", $"/api/user");
+                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+            }
         }
 
         public Task<ResponseObject> FindByIdAsync(int id)

@@ -5,22 +5,25 @@ using X.PagedList;
 using CoreAppStructure.Core.Extensions;
 using CoreAppStructure.Infrastructure.Caching;
 using Newtonsoft.Json;
+using AutoMapper;
 
 namespace CoreAppStructure.Features.Products.Services
 {
     public class ProductService : IProductService
     {
+        private readonly IMapper _mapper;
         private readonly IProductRepository _productRepository;
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _environment;
         private readonly ILogger<ProductService> _logger;
         private readonly RedisCacheService _redisCacheService;
         private readonly string _cacheKeyPrefix = "product_";
 
-        public ProductService(IProductRepository productRepository, 
+        public ProductService(IMapper mapper,IProductRepository productRepository, 
             Microsoft.AspNetCore.Hosting.IHostingEnvironment environment,
             ILogger<ProductService> logger,
             RedisCacheService redisCacheService)
         {
+            _mapper = mapper;
             _productRepository = productRepository;
             _environment = environment;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -52,26 +55,14 @@ namespace CoreAppStructure.Features.Products.Services
 
                     int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
 
-                    var productDTO = products.Select(p => new ProductDTO
-                    {
-                        ProductId = p.ProductId,
-                        ProductImage = p.ProductImage,
-                        ProductName = p.ProductName,
-                        ProductSlug = p.ProductSlug,
-                        ProductPrice = p.ProductPrice,
-                        ProductSalePrice = p.ProductSalePrice,
-                        ProductStatus = p.ProductStatus,
-                        ProductDescription = p.ProductDescription,
-                        CategoryId = p.CategoryId,
-                        CategoryName = p.Category.CategoryName,
-                        CategorySlug = p.Category.CategorySlug
-                    }).ToList();
+                    // Ánh xạ từ Product sang ProductDTO
+                    var productDTOs = _mapper.Map<List<ProductDTO>>(pageData);
 
                     var response = new
                     {
                         TotalRecords = totalRecords,
                         TotalPages = totalPages,
-                        Data = productDTO
+                        Data = productDTOs
                     };
                     // Lưu vào Redis
                     await _redisCacheService.SetCacheAsync(cacheKey, JsonConvert.SerializeObject(response), TimeSpan.FromMinutes(10));
@@ -97,20 +88,7 @@ namespace CoreAppStructure.Features.Products.Services
                 {
                     return new ResponseObject(404, $"Cannot find data with id {id}", null);
                 }
-                var productDTO = new ProductDTO
-                {
-                    ProductId = product.ProductId,
-                    ProductImage = product.ProductImage,
-                    ProductName = product.ProductName,
-                    ProductSlug = product.ProductSlug,
-                    ProductPrice = product.ProductPrice,
-                    ProductSalePrice = product.ProductSalePrice,
-                    ProductStatus = product.ProductStatus,
-                    ProductDescription = product.ProductDescription,
-                    CategoryId = product.CategoryId,
-                    CategoryName = product.Category.CategoryName,
-                    CategorySlug = product.Category.CategorySlug
-                };
+                var productDTO = _mapper.Map<ProductDTO>(product);
                 LogHelper.LogInformation(_logger, "GET", "/api/product/{id}", id, productDTO);
                 return new ResponseObject(200, "Query data successfully", productDTO);
             }
@@ -130,20 +108,7 @@ namespace CoreAppStructure.Features.Products.Services
                 {
                     return new ResponseObject(404, $"Cannot find data with slug {slug}", null);
                 }
-                var productDTO = new ProductDTO
-                {
-                    ProductId = product.ProductId,
-                    ProductImage = product.ProductImage,
-                    ProductName = product.ProductName,
-                    ProductSlug = product.ProductSlug,
-                    ProductPrice = product.ProductPrice,
-                    ProductSalePrice = product.ProductSalePrice,
-                    ProductStatus = product.ProductStatus,
-                    ProductDescription = product.ProductDescription,
-                    CategoryId = product.CategoryId,
-                    CategoryName = product.Category.CategoryName,
-                    CategorySlug = product.Category.CategorySlug
-                };
+                var productDTO = _mapper.Map<ProductDTO>(product);
                 LogHelper.LogInformation(_logger, "GET", "/api/product/{slug}", slug, productDTO);
                 return new ResponseObject(200, "Query data successfully", productDTO);
             }

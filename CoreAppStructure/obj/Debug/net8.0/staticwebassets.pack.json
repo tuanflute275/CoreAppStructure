@@ -1,20 +1,16 @@
 {
   "Files": [
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\TK24000071.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\TK24000071.jpg"
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
+      "PackagePath": "staticwebassets\\uploads\\products\\.gitkeep"
     },
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\ao.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\ao.jpg"
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\product4.jpg"
     },
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\download.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\download.jpg"
-    },
-    {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\túi1.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\túi1.jpg"
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\product7.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssets.props",

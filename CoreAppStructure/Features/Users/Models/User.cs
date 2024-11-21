@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using CoreAppStructure.Features.Users.Enums;
 using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Core.Helpers;
 
 namespace CoreAppStructure.Features.Users.Models
 {

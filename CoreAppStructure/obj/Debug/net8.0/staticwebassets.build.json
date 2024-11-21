@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R0kuR/4vxlFP7+rU5o2y2fDZqjm1MlWZqc7PhqC6v9E=",
+  "Hash": "K0ijryZVxchinhTah9JFbi7UNLhafitNtUVqg3knjXE=",
   "Source": "CoreAppStructure",
   "BasePath": "_content/CoreAppStructure",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\ao.jpg",
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/ao.jpg",
+      "RelativePath": "uploads/products/.gitkeep",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\ao.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\.gitkeep"
     },
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\download.jpg",
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product4.jpg",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/download.jpg",
+      "RelativePath": "uploads/products/product4.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\download.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\product4.jpg"
     },
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\TK24000071.jpg",
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product7.jpg",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/TK24000071.jpg",
+      "RelativePath": "uploads/products/product7.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,26 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\TK24000071.jpg"
-    },
-    {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\túi1.jpg",
-      "SourceId": "CoreAppStructure",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
-      "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/túi1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\túi1.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\product7.jpg"
     }
   ]
 }

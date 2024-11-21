@@ -3,40 +3,8 @@
   "WorkspaceRootPath": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\categories\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\categories\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\users\\servicces\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\users\\servicces\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\categories\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\categories\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\categories\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\categories\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\parameters\\controllers\\parametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\parameters\\controllers\\parametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\roles\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\roles\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\configurations\\cacheconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\configurations\\cacheconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,119 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20241121091201_v1.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs",
-              "RelativeToolTip": "CoreAppStructure\\Data\\Migrations\\20241121091201_v1.cs",
+              "DocumentIndex": 0,
+              "Title": "CacheConfiguration.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\CacheConfiguration.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Configurations\\CacheConfiguration.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\CacheConfiguration.cs",
+              "RelativeToolTip": "CoreAppStructure\\Core\\Configurations\\CacheConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:12:01.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Categories\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Categories\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBMAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:11:16.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:10:50.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Categories\\Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Categories\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:10:44.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppConfiguration.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeToolTip": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAQwKkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:04:53.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ParameterController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Parameters\\Controllers\\ParameterController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Parameters\\Controllers\\ParameterController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Parameters\\Controllers\\ParameterController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Parameters\\Controllers\\ParameterController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:03:07.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Roles\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Roles\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Roles\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Roles\\Controllers\\RoleController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAkwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:02:55.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowBIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:02:37.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwAcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T09:02:01.836Z",
+              "WhenOpened": "2024-11-21T12:38:38.786Z",
               "EditorCaption": ""
             }
           ]

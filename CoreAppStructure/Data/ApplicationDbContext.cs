@@ -1,17 +1,24 @@
 ﻿using CoreAppStructure.Features.Categories.Models;
 using CoreAppStructure.Features.Products.Models;
-using System.Collections.Generic;
 using System.Data;
-using System.Reflection.Emit;
-using System.Reflection.Metadata;
-using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using CoreAppStructure.Features.Users.Models;
+using CoreAppStructure.Features.Parameters.Models;
+using CoreAppStructure.Features.Roles.Models;
+using CoreAppStructure.Data.Entities;
 
 namespace CoreAppStructure.Data
 {
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,9 +31,5 @@ namespace CoreAppStructure.Data
 
             base.OnModelCreating(modelBuilder);
         }
-
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
-
     }
 }

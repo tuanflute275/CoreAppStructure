@@ -9,6 +9,7 @@ namespace CoreAppStructure.Features.Categories.Interfaces
         Task<List<Category>> FindListAllAsync();
         Task<Category> FindByIdAsync(int id);
         Task<Category> FindBySlugAsync(string slug);
+        Task<Category> FindByNameAsync(string name);
         Task AddAsync(Category category);
         Task UpdateAsync(Category category);
         Task DeleteAsync(Category category);

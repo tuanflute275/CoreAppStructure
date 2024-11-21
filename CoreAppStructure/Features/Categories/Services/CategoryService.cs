@@ -2,7 +2,6 @@
 using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Features.Categories.Interfaces;
 using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Products.Models;
 using X.PagedList;
 
 namespace CoreAppStructure.Features.Categories.Services
@@ -55,8 +54,17 @@ namespace CoreAppStructure.Features.Categories.Services
 
         public async Task<ResponseObject> FindListAllAsync()
         {
-            var categories = await _categoryRepository.FindListAllAsync();
-            return new ResponseObject(200, "Query data successfully", categories);
+            try
+            {
+                var categories = await _categoryRepository.FindListAllAsync();
+                LogHelper.LogInformation(_logger, "GET", "/api/category/all", null, categories);
+                return new ResponseObject(200, "Query data successfully", categories);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError(_logger, ex, "GET", $"/api/category");
+                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+            }
         }
 
         public async Task<ResponseObject> FindByIdAsync(int id)
@@ -101,7 +109,7 @@ namespace CoreAppStructure.Features.Categories.Services
         {
             try
             {
-                var existingCategory = await _categoryRepository.FindBySlugAsync(model.CategoryName);
+                var existingCategory = await _categoryRepository.FindByNameAsync(model.CategoryName);
                 if (existingCategory != null)
                 {
                     return new ResponseObject(400, "Category name already taken");
@@ -152,18 +160,18 @@ namespace CoreAppStructure.Features.Categories.Services
 
         public async Task<ResponseObject> DeleteAsync(int id)
         {
-            var category = await _categoryRepository.FindByIdAsync(id);
-            var products = await _categoryRepository.GetProductsByCategoryIdAsync(id);
-            if (category == null)
-            {
-                return new ResponseObject(404, $"Cannot find data with id {id}", null);
-            }
-            if (products != null && products.Count > 0)
-            {
-                _categoryRepository.DeleteProducts(products);
-            }
             try
             {
+                var category = await _categoryRepository.FindByIdAsync(id);
+                var products = await _categoryRepository.GetProductsByCategoryIdAsync(id);
+                if (category == null)
+                {
+                    return new ResponseObject(404, $"Cannot find data with id {id}", null);
+                }
+                if (products != null && products.Count > 0)
+                {
+                    _categoryRepository.DeleteProducts(products);
+                }
                 await _categoryRepository.DeleteAsync(category);
                 LogHelper.LogInformation(_logger, "DELETE", $"/api/category/{id}", id, "Deleted successfully");
                 return new ResponseObject(200, "Delete data successfully", null);

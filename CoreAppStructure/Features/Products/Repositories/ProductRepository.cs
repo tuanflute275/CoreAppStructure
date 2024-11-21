@@ -1,5 +1,4 @@
 ﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Categories.Models;
 using CoreAppStructure.Features.Products.Interfaces;
 using CoreAppStructure.Features.Products.Models;
 using Microsoft.EntityFrameworkCore;

@@ -14,6 +14,15 @@ using CoreAppStructure.Core.Helpers;
 using StackExchange.Redis;
 using CoreAppStructure.Infrastructure.Caching;
 using Microsoft.Extensions.Caching.Memory;
+using CoreAppStructure.Features.Parameters.Interfaces;
+using CoreAppStructure.Features.Parameters.Repositories;
+using CoreAppStructure.Features.Parameters.Services;
+using CoreAppStructure.Features.Roles.Interfaces;
+using CoreAppStructure.Features.Roles.Repositories;
+using CoreAppStructure.Features.Roles.Servicces;
+using CoreAppStructure.Features.Users.Interfaces;
+using CoreAppStructure.Features.Users.Repositories;
+using CoreAppStructure.Features.Users.Servicces;
 
 namespace CoreAppStructure.Core.Configurations
 {
@@ -167,6 +176,18 @@ namespace CoreAppStructure.Core.Configurations
             // Thêm các dịch vụ liên quan đến Category
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            // Thêm các dịch vụ liên quan đến Parameter
+            services.AddScoped<IParameterRepository, ParameterRepository>();
+            services.AddScoped<IParameterService, ParameterService>();
+
+            // Thêm các dịch vụ liên quan đến Role
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IRoleService, RoleService>();
+
+            // Thêm các dịch vụ liên quan đến User
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
 
 
         }

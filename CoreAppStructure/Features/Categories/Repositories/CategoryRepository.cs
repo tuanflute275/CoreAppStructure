@@ -61,6 +61,11 @@ namespace CoreAppStructure.Features.Categories.Repositories
             return await _context.Categories.FirstOrDefaultAsync(x => x.CategorySlug == slug);
         }
 
+        public async Task<Category> FindByNameAsync(string name)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(x => x.CategoryName == name);
+        }
+
         public async Task AddAsync(Category category)
         {
             await _context.Categories.AddAsync(category);

@@ -120,7 +120,7 @@ namespace CoreAppStructure.Features.Users.Servicces
                     // Lặp qua danh sách các vai trò và thêm vào bảng UserRole
                     foreach (var roleName in model.Roles)  // Giả sử model.Roles là một List<string>
                     {
-                        var role = await _roleRepository.FindByNameAsync(roleName);
+                        var role = await _userRepository.FindByNameAsync(roleName);
                         if (role != null)
                         {
                             var userRole = new UserRole
@@ -185,7 +185,7 @@ namespace CoreAppStructure.Features.Users.Servicces
                     // Lặp qua danh sách các vai trò và thêm vào bảng UserRole
                     foreach (var roleName in model.Roles)
                     {
-                        var role = await _roleRepository.FindByNameAsync(roleName);
+                        var role = await _userRepository.FindByNameAsync(roleName);
                         if (role != null)
                         {
                             var userRole = new UserRole

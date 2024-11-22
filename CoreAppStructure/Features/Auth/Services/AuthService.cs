@@ -1,5 +1,6 @@
 ﻿using CoreAppStructure.Core.Extensions;
 using CoreAppStructure.Core.Helpers;
+using CoreAppStructure.Data.Entities;
 using CoreAppStructure.Features.Auth.Interfaces;
 using CoreAppStructure.Features.Auth.Models;
 using CoreAppStructure.Features.Users.Models;
@@ -83,6 +84,29 @@ namespace CoreAppStructure.Features.Auth.Services
                     UserPassword = passwordHash
                 };
 
+                await _authRepository.AddAsync(user);
+
+                // Lấy userId vừa tạo
+                var userId = user.UserId;
+                List<string> listRole = new List<string>();
+                listRole.Add("User");
+
+                // Lặp qua danh sách các vai trò và thêm vào bảng UserRole
+                foreach (var roleName in listRole) 
+                {
+                    var role = await _authRepository.FindByNameAsync(roleName);
+                    if (role != null)
+                    {
+                        var userRole = new UserRole
+                        {
+                            UserId = userId,
+                            RoleId = role.RoleId
+                        };
+
+                        _authRepository.AddUserRoleAsync(userRole);
+                    }
+                }
+
                 // Gửi email xác nhận đăng ký
                 await _emailService.SendEmailAsync(model.Email, "Welcome to Our Service", BodyRegisterMail(model.FullName));
                 return new ResponseObject(200, "Register successfully,please check email!", model);
@@ -95,13 +119,15 @@ namespace CoreAppStructure.Features.Auth.Services
 
         private string BodyRegisterMail(string fullName)
         {
-            string body = string.Empty;
-            using (StreamReader reader = new StreamReader(Path.Combine(Directory.GetCurrentDirectory(), "Infrastructure\\Mail\\Templates", "RegisterSuccessMail.cshtml")))
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Infrastructure\\Email\\Templates", "RegisterSuccessMail.cshtml");
+            if (!File.Exists(path))
             {
-                body = reader.ReadToEnd();
+                throw new FileNotFoundException($"Template file not found at: {path}");
             }
-            body = body.Replace("{{fullName}}", fullName);
-            return body;
+
+            string body = File.ReadAllText(path);
+            return body.Replace("{{fullName}}", fullName);
         }
+
     }
 }

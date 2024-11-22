@@ -1,5 +1,6 @@
 ﻿using CoreAppStructure.Data;
 using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Features.Roles.Models;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
 using Microsoft.EntityFrameworkCore;
@@ -98,6 +99,11 @@ namespace CoreAppStructure.Features.Users.Repositories
         {
             _context.UserRoles.RemoveRange(userRoles);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<Role> FindByNameAsync(string name)
+        {
+            return await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == name);
         }
     }
 }

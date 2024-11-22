@@ -1,6 +1,8 @@
 ﻿using CoreAppStructure.Data;
+using CoreAppStructure.Data.Entities;
 using CoreAppStructure.Features.Auth.Interfaces;
 using CoreAppStructure.Features.Auth.Models;
+using CoreAppStructure.Features.Roles.Models;
 using CoreAppStructure.Features.Users.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,6 +16,28 @@ namespace CoreAppStructure.Features.Auth.Repositories
         public AuthRepository(ApplicationDbContext context)
         {
             _context = context;
+        }
+
+        public async Task AddAsync(User user)
+        {
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<UserRole>> FindUserRoleAsync(int userId)
+        {
+            return await _context.UserRoles.Where(ur => ur.UserId == userId).ToListAsync();
+        }
+
+        public async Task AddUserRoleAsync(UserRole userRole)
+        {
+            await _context.UserRoles.AddAsync(userRole);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteUserRoleAsync(List<UserRole> userRoles)
+        {
+            _context.UserRoles.RemoveRange(userRoles);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<User> FindByUsernameOrEmailAsync(string usernameOrEmail)
@@ -34,10 +58,9 @@ namespace CoreAppStructure.Features.Auth.Repositories
                           }).ToListAsync();
         }
 
-        public async Task RegisterAsync(User user)
+        public async Task<Role> FindByNameAsync(string name)
         {
-            await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
+            return await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == name);
         }
     }
 }

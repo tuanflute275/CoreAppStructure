@@ -17,3 +17,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure
 build_property._RazorSourceGeneratorDebug = 
+
+[D:/Code/Csharp/ASP_API/CoreAppStructure/CoreAppStructure/Infrastructure/Email/Templates/RegisterSuccessMail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW5mcmFzdHJ1Y3R1cmVcRW1haWxcVGVtcGxhdGVzXFJlZ2lzdGVyU3VjY2Vzc01haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

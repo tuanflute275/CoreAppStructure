@@ -1,4 +1,5 @@
 ﻿using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Features.Roles.Models;
 using CoreAppStructure.Features.Users.Models;
 
 namespace CoreAppStructure.Features.Users.Interfaces
@@ -8,6 +9,7 @@ namespace CoreAppStructure.Features.Users.Interfaces
         Task<List<User>> FindAllAsync(string? name, string? sort);
         Task<User> FindByIdAsync(int id);
         Task<User> FindByUsernameAsync(string username);
+        Task<Role> FindByNameAsync(string name);
         Task AddAsync(User user);
         Task UpdateAsync(User user);
         Task DeleteAsync(User user);

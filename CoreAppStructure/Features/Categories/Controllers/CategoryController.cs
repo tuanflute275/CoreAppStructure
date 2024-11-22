@@ -43,7 +43,7 @@ namespace CoreAppStructure.Features.Categories.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Save(CategoryViewModel model)
         {
@@ -51,7 +51,7 @@ namespace CoreAppStructure.Features.Categories.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, CategoryViewModel model)
         {
@@ -59,7 +59,7 @@ namespace CoreAppStructure.Features.Categories.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

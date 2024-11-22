@@ -6,6 +6,7 @@ using CoreAppStructure.Features.Users.Models;
 using CoreAppStructure.Features.Parameters.Models;
 using CoreAppStructure.Features.Roles.Models;
 using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Data.Models;
 
 namespace CoreAppStructure.Data
 {
@@ -18,6 +19,7 @@ namespace CoreAppStructure.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Parameter> Parameters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,6 +1,7 @@
 ﻿using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreAppStructure.Features.Users.Controllers
@@ -29,7 +30,7 @@ namespace CoreAppStructure.Features.Users.Controllers
             var result = await _userService.FindByIdAsync(id);
             return Ok(result);
         }
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Save([FromForm] UserViewModel model)
         {
@@ -37,7 +38,6 @@ namespace CoreAppStructure.Features.Users.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, [FromForm] UserViewModel model)
         {
@@ -45,7 +45,7 @@ namespace CoreAppStructure.Features.Users.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

@@ -22,6 +22,14 @@ namespace CoreAppStructure.Features.Auth.Controlles
 
         }
 
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult> refreshToken(string refreshToken)
+        {
+            var result = await _authService.RefreshTokenAsync(refreshToken);
+            return Ok(result);
+
+        }
+
         [HttpPost("register")]
         public async Task<ActionResult> Register([FromBody] RegisterViewModel model)
         {

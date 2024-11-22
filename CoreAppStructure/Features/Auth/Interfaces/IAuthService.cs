@@ -7,5 +7,6 @@ namespace CoreAppStructure.Features.Auth.Interfaces
     {
         Task<ResponseObject> LoginAsync(LoginViewModel model);
         Task<ResponseObject> RegisterAsync(RegisterViewModel model);
+        Task<ResponseObject> RefreshTokenAsync(string refreshToken);
     }
 }

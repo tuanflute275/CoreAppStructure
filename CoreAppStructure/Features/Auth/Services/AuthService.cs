@@ -45,15 +45,24 @@ namespace CoreAppStructure.Features.Auth.Services
                     return new ResponseObject(400, "You do not have access.");
 
 
-                var token = JwtHelper.GenerateJwtToken(
+                var accessToken = TokenHelper.GenerateJwtToken(
                       user.UserId,
                       user.UserEmail,
                       roles.Select(r => r.RoleName),
                       _configuration
                   );
-
-                LogHelper.LogInformation(_logger, "POST", "/api/auth/login", null, token);
-                return new ResponseObject(200, "Login successfully", token);
+                var refreshToken = TokenHelper.GenerateRefreshToken();
+                await _authRepository.SaveRefreshTokenAsync(user.UserId, refreshToken, DateTime.UtcNow.AddDays(15));
+                LogHelper.LogInformation(_logger, "POST", "/api/auth/login", null, new
+                {
+                    AccessToken = accessToken,
+                    RefreshToken = refreshToken
+                });
+                return new ResponseObject(200, "Login successfully", new
+                {
+                    AccessToken = accessToken,
+                    RefreshToken = refreshToken
+                });
             }
             catch (Exception ex)
             {
@@ -62,17 +71,51 @@ namespace CoreAppStructure.Features.Auth.Services
             }
         }
 
+        public async Task<ResponseObject> RefreshTokenAsync(string refreshToken)
+        {
+            try
+            {
+                var storedToken = await _authRepository.GetRefreshTokenAsync(refreshToken);
+
+                if (storedToken == null || storedToken.IsRevoked || storedToken.ExpiresAt <= DateTime.UtcNow)
+                    return new ResponseObject(400, "Invalid or expired refresh token.");
+
+                // Generate new Access Token
+                var user = await _authRepository.GetUserByIdAsync(storedToken.UserId);
+                var roles = await _authRepository.GetUserRolesAsync(user.UserId);
+
+                var newAccessToken = TokenHelper.GenerateJwtToken(
+                      user.UserId,
+                      user.UserEmail,
+                      roles.Select(r => r.RoleName),
+                      _configuration
+                  );
+
+                // Optionally: Generate a new Refresh Token
+                var newRefreshToken = TokenHelper.GenerateRefreshToken();
+                await _authRepository.UpdateRefreshTokenAsync(storedToken.Id, newRefreshToken, DateTime.UtcNow.AddDays(15));
+
+                return new ResponseObject(200, "Token refreshed successfully", new
+                {
+                    AccessToken = newAccessToken,
+                    RefreshToken = newRefreshToken
+                });
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError(_logger, ex, "POST", "/api/auth/refresh-token");
+                return new ResponseObject(500, "Internal server error. Please try again later.");
+            }
+        }
+
         public async Task<ResponseObject> RegisterAsync(RegisterViewModel model)
         {
             if (model == null)
-            {
                 return new ResponseObject(400, "Invalid request.");
-            }
-           
+            
             if (model.Password.Length < 6)
-            {
                 return new ResponseObject(400, "Password must be longer than 6 characters !");
-            }
+            
             try
             {
                 string passwordHash = BCrypt.Net.BCrypt.HashPassword(model.Password, 12);

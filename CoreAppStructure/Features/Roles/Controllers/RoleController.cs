@@ -1,6 +1,7 @@
 ﻿
 using CoreAppStructure.Features.Roles.Interfaces;
 using CoreAppStructure.Features.Roles.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreAppStructure.Features.Roles.Controllers
@@ -37,7 +38,7 @@ namespace CoreAppStructure.Features.Roles.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Save(RoleViewModel model)
         {
@@ -45,7 +46,7 @@ namespace CoreAppStructure.Features.Roles.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, RoleViewModel model)
         {
@@ -53,7 +54,7 @@ namespace CoreAppStructure.Features.Roles.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

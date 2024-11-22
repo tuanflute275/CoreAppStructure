@@ -39,7 +39,7 @@ namespace CoreAppStructure.Features.Products.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Product>> Save([FromForm] ProductViewModel model)
         {
@@ -47,7 +47,7 @@ namespace CoreAppStructure.Features.Products.Controllers
             return Ok(result);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult<Product>> Update(int id, [FromForm] ProductViewModel model)
         {
@@ -55,6 +55,7 @@ namespace CoreAppStructure.Features.Products.Controllers
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

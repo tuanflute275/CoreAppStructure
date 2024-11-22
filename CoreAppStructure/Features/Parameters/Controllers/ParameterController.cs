@@ -1,10 +1,11 @@
 ﻿using CoreAppStructure.Features.Parameters.Interfaces;
 using CoreAppStructure.Features.Parameters.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreAppStructure.Features.Parameters.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("/api/parameter")]
     public class ParameterController : ControllerBase

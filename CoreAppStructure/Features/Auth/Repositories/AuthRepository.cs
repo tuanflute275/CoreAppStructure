@@ -1,5 +1,6 @@
 ﻿using CoreAppStructure.Data;
 using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Data.Models;
 using CoreAppStructure.Features.Auth.Interfaces;
 using CoreAppStructure.Features.Auth.Models;
 using CoreAppStructure.Features.Roles.Models;
@@ -18,6 +19,10 @@ namespace CoreAppStructure.Features.Auth.Repositories
             _context = context;
         }
 
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
         public async Task AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
@@ -61,6 +66,37 @@ namespace CoreAppStructure.Features.Auth.Repositories
         public async Task<Role> FindByNameAsync(string name)
         {
             return await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == name);
+        }
+
+
+        // refresh token
+        public async Task SaveRefreshTokenAsync(int userId, string token, DateTime expiresAt)
+        {
+            var refreshToken = new RefreshToken
+            {
+                UserId = userId,
+                Token = token,
+                ExpiresAt = expiresAt
+            };
+            await _context.RefreshTokens.AddAsync(refreshToken);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<RefreshToken> GetRefreshTokenAsync(string token)
+        {
+            return await _context.RefreshTokens
+                .FirstOrDefaultAsync(t => t.Token == token && !t.IsRevoked);
+        }
+
+        public async Task UpdateRefreshTokenAsync(int tokenId, string newToken, DateTime newExpiresAt)
+        {
+            var token = await _context.RefreshTokens.FindAsync(tokenId);
+            if (token != null)
+            {
+                token.Token = newToken;
+                token.ExpiresAt = newExpiresAt;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using CoreAppStructure.Features.Categories.Interfaces;
+﻿using CoreAppStructure.Features.Auth.Interfaces;
+using CoreAppStructure.Features.Auth.Repositories;
+using CoreAppStructure.Features.Auth.Services;
+using CoreAppStructure.Features.Categories.Interfaces;
 using CoreAppStructure.Features.Categories.Repositories;
 using CoreAppStructure.Features.Categories.Services;
 using CoreAppStructure.Features.Parameters.Interfaces;
@@ -39,6 +42,10 @@ namespace CoreAppStructure.Core.Configurations
             // Dịch vụ liên quan đến User
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
+
+            // Dịch vụ liên quan đến Auth
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IAuthService, AuthService>();
         }
     }
 }

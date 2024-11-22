@@ -117,6 +117,19 @@
           }
         }
       },
+      "Microsoft.AspNet.Razor/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.8": {
         "type": "package",
         "dependencies": {
@@ -1140,6 +1153,22 @@
           }
         }
       },
+      "RazorEngine/3.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.0.0"
+        },
+        "compile": {
+          "lib/net45/RazorEngine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/RazorEngine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "StackExchange.Redis/2.7.27": {
         "type": "package",
         "dependencies": {
@@ -2090,6 +2119,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNet.Razor/3.0.0": {
+      "sha512": "mU1W0PRd1uQAb+triRGp51YYkw26RQ9q1tWPX57eHqxDqjx1smRHhejQhhnoAGr3bZDkl8AoUxegGR3tNM+YKA==",
+      "type": "package",
+      "path": "microsoft.aspnet.razor/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.Web.Razor.dll",
+        "lib/net45/System.Web.Razor.xml",
+        "microsoft.aspnet.razor.3.0.0.nupkg.sha512",
+        "microsoft.aspnet.razor.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.8": {
@@ -3797,6 +3839,22 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
+    "RazorEngine/3.10.0": {
+      "sha512": "xWjGSjhMTM+Qzh3kabsRXR7kpCZQALbYGGYrOPc7wf6IBeDee4OVuO/LRTgWpgIFA8W/widTfszLBm0MfVHRGg==",
+      "type": "package",
+      "path": "razorengine/3.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net40/RazorEngine.dll",
+        "lib/net40/RazorEngine.xml",
+        "lib/net45/RazorEngine.dll",
+        "lib/net45/RazorEngine.xml",
+        "razorengine.3.10.0.nupkg.sha512",
+        "razorengine.nuspec"
+      ]
+    },
     "StackExchange.Redis/2.7.27": {
       "sha512": "Uqc2OQHglqj9/FfGQ6RkKFkZfHySfZlfmbCl+hc+u2I/IqunfelQ7QJi7ZhvAJxUtu80pildVX6NPLdDaUffOw==",
       "type": "package",
@@ -5166,6 +5224,7 @@
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 8.0.8",
       "Moq >= 4.20.72",
       "Newtonsoft.Json >= 13.0.3",
+      "RazorEngine >= 3.10.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "X.PagedList >= 10.2.1",
       "X.PagedList.Mvc.Core >= 10.2.1",
@@ -5274,6 +5333,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "RazorEngine": {
+            "target": "Package",
+            "version": "[3.10.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
@@ -5332,11 +5395,41 @@
       ]
     },
     {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RazorEngine' 3.10.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-ph3v-2hq5-5qfq",
+      "libraryId": "RazorEngine",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
       "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
       "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RazorEngine 3.10.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RazorEngine",
       "targetGraphs": [
         "net8.0"
       ]

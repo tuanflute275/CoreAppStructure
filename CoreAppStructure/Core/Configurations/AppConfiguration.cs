@@ -29,6 +29,9 @@ namespace CoreAppStructure.Core.Configurations
             // Cấu hình Cache (Redis or MemoryCache)
             services.AddCacheConfiguration(appSetting.RedisConnection);
 
+            // Cấu hình Email
+            services.AddEmailConfiguration(configuration);
+
             // Cấu hình các dịch vụ nghiệp vụ
             services.AddServiceConfiguration();
 

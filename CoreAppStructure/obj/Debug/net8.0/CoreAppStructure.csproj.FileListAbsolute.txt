@@ -160,3 +160,5 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\CoreAp
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\ref\CoreAppStructure.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\AutoMapper.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Web.Razor.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\RazorEngine.dll

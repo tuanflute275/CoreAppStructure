@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Email\\EmailService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Email\\EmailService.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Email\\EmailService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Email\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:59:49.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAgwF8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:43:24.406Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,37 +1,36 @@
-﻿using CoreAppStructure.Core.Configurations;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
 namespace CoreAppStructure.Core.Helpers
 {
-    public class JwtHelper
+    public static class JwtHelper
     {
-       /* private readonly string _secretKey;
-
-        public JwtHelper(IOptions<AppSettings> settings)
+        public static string GenerateJwtToken(int userId, string userEmail, IEnumerable<string> roles, IConfiguration configuration)
         {
-            _secretKey = settings.Value.SecretKey;
-        }
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(configuration["Jwt:key"]);
 
-        public string GenerateToken(string userId)
-        {
-            var claims = new[]
+            var claims = new List<Claim>
             {
-            new Claim(ClaimTypes.Name, userId)
-        };
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+                new Claim(ClaimTypes.Email, userEmail)
+            };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken(
-                issuer: "yourdomain.com",
-                audience: "yourdomain.com",
-                claims: claims,
-                expires: DateTime.Now.AddDays(1),
-                signingCredentials: creds
-            );
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }*/
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddHours(1), // Token expires after 1 hour
+                Issuer = configuration["Jwt:Issuer"],
+                Audience = configuration["Jwt:Audience"],
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
     }
 }

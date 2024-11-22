@@ -5,12 +5,64 @@
       "PackagePath": "staticwebassets\\uploads\\products\\.gitkeep"
     },
     {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\cd8a4257-7e75-44ed-aefe-1ebc773aac4d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\cd8a4257-7e75-44ed-aefe-1ebc773aac4d.jpg"
+    },
+    {
       "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product4.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\product4.jpg"
     },
     {
       "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\product7.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\product7.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\03cfbf3c-518a-4815-918d-39db4fa38796.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\03cfbf3c-518a-4815-918d-39db4fa38796.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\48114b97-5611-4d3e-a5c9-5ce5f329ca91.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\48114b97-5611-4d3e-a5c9-5ce5f329ca91.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\80f2b55e-ac6b-4747-a945-c1d01cbd0432.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\80f2b55e-ac6b-4747-a945-c1d01cbd0432.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\858aff9d-5d1c-44a0-a43c-b413044d4081.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\858aff9d-5d1c-44a0-a43c-b413044d4081.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\9203cee8-3da6-4392-b2d6-e016483c9e1c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\9203cee8-3da6-4392-b2d6-e016483c9e1c.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\b2d75fc4-e1e7-4867-9e96-2c2f5d3d68e3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\b2d75fc4-e1e7-4867-9e96-2c2f5d3d68e3.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\b429adb1-a8c6-4960-ac2c-ee02d9c5d350.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\b429adb1-a8c6-4960-ac2c-ee02d9c5d350.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\b4471318-3fae-4c13-8e5f-222def538ed7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\b4471318-3fae-4c13-8e5f-222def538ed7.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\eb45ac2b-6486-4b12-84c6-170dd26c19fd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\eb45ac2b-6486-4b12-84c6-170dd26c19fd.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\edc520ca-9ccf-42a3-a1a9-7087c2fa04ff.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\edc520ca-9ccf-42a3-a1a9-7087c2fa04ff.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\pr1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\users\\pr1.jpg"
+    },
+    {
+      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\quần2.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\users\\quần2.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssets.props",

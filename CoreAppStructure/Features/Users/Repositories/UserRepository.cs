@@ -1,5 +1,5 @@
 ﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Products.Models;
+using CoreAppStructure.Data.Entities;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
 using Microsoft.EntityFrameworkCore;
@@ -59,6 +59,12 @@ namespace CoreAppStructure.Features.Users.Repositories
                 .ThenInclude(u => u.Role).FirstOrDefaultAsync(x => x.UserId == id);
         }
 
+        public async Task<User> FindByUsernameAsync(string username)
+        {
+            return await _context.Users.Include(x => x.UserRoles)
+                .ThenInclude(u => u.Role).FirstOrDefaultAsync(x => x.UserName == username);
+        }
+
         public async Task AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
@@ -74,6 +80,23 @@ namespace CoreAppStructure.Features.Users.Repositories
         public async Task DeleteAsync(User user)
         {
             _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
+
+        // user role 
+        public async Task<List<UserRole>> FindUserRoleAsync(int userId)
+        {
+            return await _context.UserRoles.Where(ur => ur.UserId == userId).ToListAsync();
+        }
+
+        public async Task AddUserRoleAsync(UserRole userRole)
+        {
+            await _context.UserRoles.AddAsync(userRole);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteUserRoleAsync(List<UserRole> userRoles)
+        {
+            _context.UserRoles.RemoveRange(userRoles);
             await _context.SaveChangesAsync();
         }
     }

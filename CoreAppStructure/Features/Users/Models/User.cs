@@ -47,10 +47,10 @@ namespace CoreAppStructure.Features.Users.Models
         public string? UserAddress { get; set; }
 
         [Column]
-        public bool UserGender { get; set; } = true;
+        public bool? UserGender { get; set; } = true;
 
         [Column(TypeName = "int")]
-        public AccountStatus UserActive { get; set; } = AccountStatus.Active;       
+        public int UserActive { get; set; } = 0;       
 
         [Range(0, int.MaxValue)]
         [Column]

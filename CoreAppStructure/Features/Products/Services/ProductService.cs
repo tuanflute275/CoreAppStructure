@@ -6,6 +6,7 @@ using CoreAppStructure.Core.Extensions;
 using CoreAppStructure.Infrastructure.Caching;
 using Newtonsoft.Json;
 using AutoMapper;
+using CoreAppStructure.Features.Users.Models;
 
 namespace CoreAppStructure.Features.Products.Services
 {
@@ -75,7 +76,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/product");
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -95,7 +96,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/product/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -115,7 +116,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/product/{slug}", slug);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -139,27 +140,8 @@ namespace CoreAppStructure.Features.Products.Services
                     ProductDescription = model.ProductDescription
                 };
 
-                if (model.ImageFile != null && model.ImageFile.Length > 0)
-                {
-                    // Đường dẫn lưu file
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "products");
-                    var filePath = Path.Combine(uploadsFolder, model.ImageFile.FileName);
-
-                    // Tạo thư mục nếu chưa tồn tại
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
-                    // Lưu file hình ảnh
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await model.ImageFile.CopyToAsync(fileStream);
-                    }
-
-                    // Cập nhật đường dẫn hình ảnh vào thuộc tính sản phẩm
-                    product.ProductImage = $"http://{request}/uploads/product/{model.ImageFile.FileName}";
-                }
+                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "products");
+                product.ProductImage = imageUrl;
 
                 await _productRepository.AddAsync(product);
                 // Cập nhật lại cache Redis
@@ -171,7 +153,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "POST", "/api/product", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -179,54 +161,14 @@ namespace CoreAppStructure.Features.Products.Services
         {
             try
             {
-                if (model.ImageFile == null)
-                {
-                    return new ResponseObject(400, "Image Is Required", null);
-                }
                 var product = await _productRepository.FindByIdAsync(id);
                 if (product == null)
                 {
                     return new ResponseObject(404, "Product not found", null);
                 }
 
-                if (model.ImageFile != null && model.ImageFile.Length > 0)
-                {
-                    // Đường dẫn lưu file
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "products");
-                    var filePath = Path.Combine(uploadsFolder, model.ImageFile.FileName);
-
-                    // Xóa hình ảnh cũ nếu tồn tại
-                    if (!string.IsNullOrEmpty(model.OldImage))
-                    {
-                        var oldFileName = model.OldImage.Split($"{request}/uploads/products/").LastOrDefault();
-                        var oldFilePath = Path.Combine(uploadsFolder, oldFileName);
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-
-                    // Tạo thư mục nếu chưa tồn tại
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
-                    // Lưu file hình ảnh
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await model.ImageFile.CopyToAsync(fileStream);
-                    }
-
-                    // Cập nhật đường dẫn hình ảnh vào thuộc tính sản phẩm
-                    product.ProductImage = $"http://{request}/uploads/products/{model.ImageFile.FileName}";
-                }
-                else
-                {
-                    // Nếu không có hình ảnh mới, giữ nguyên hình ảnh cũ
-                    product.ProductImage = model.OldImage;
-                }
-
+                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "products");
+                product.ProductImage = imageUrl;
                 product.ProductName = model.ProductName;
                 product.ProductSlug = Util.GenerateSlug(model.ProductName);
                 product.ProductPrice = model.ProductPrice;
@@ -245,7 +187,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "PUT", $"/api/product/{id}", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -268,7 +210,7 @@ namespace CoreAppStructure.Features.Products.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "DELETE", $"/api/product/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 

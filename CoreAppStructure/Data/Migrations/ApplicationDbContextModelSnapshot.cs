@@ -376,7 +376,7 @@ namespace CoreAppStructure.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<bool>("UserGender")
+                    b.Property<bool?>("UserGender")
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")

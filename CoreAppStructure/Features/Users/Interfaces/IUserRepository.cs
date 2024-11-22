@@ -1,4 +1,5 @@
-﻿using CoreAppStructure.Features.Users.Models;
+﻿using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Features.Users.Models;
 
 namespace CoreAppStructure.Features.Users.Interfaces
 {
@@ -6,8 +7,13 @@ namespace CoreAppStructure.Features.Users.Interfaces
     {
         Task<List<User>> FindAllAsync(string? name, string? sort);
         Task<User> FindByIdAsync(int id);
-        Task AddAsync(User product);
-        Task UpdateAsync(User product);
-        Task DeleteAsync(User product);
+        Task<User> FindByUsernameAsync(string username);
+        Task AddAsync(User user);
+        Task UpdateAsync(User user);
+        Task DeleteAsync(User user);
+
+        Task<List<UserRole>> FindUserRoleAsync(int userId);
+        Task AddUserRoleAsync(UserRole userRole);
+        Task DeleteUserRoleAsync(List<UserRole> userRoles);
     }
 }

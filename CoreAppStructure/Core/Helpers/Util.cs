@@ -2,9 +2,9 @@
 {
     public class Util
     {
-        public static string GenerateSlug(string categoryName)
+        public static string GenerateSlug(string value)
         {
-            string slug = RemoveVietnameseAccents(categoryName.ToLowerInvariant());
+            string slug = RemoveVietnameseAccents(value.ToLowerInvariant());
             slug = System.Text.RegularExpressions.Regex.Replace(slug, @"[^a-z0-9\s-]", "");
             slug = System.Text.RegularExpressions.Regex.Replace(slug, @"\s+", "-").Trim('-');
             return slug;

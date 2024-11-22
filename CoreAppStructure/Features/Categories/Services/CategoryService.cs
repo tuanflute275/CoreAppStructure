@@ -48,7 +48,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/category");
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -63,7 +63,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/category");
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -82,7 +82,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/category/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -101,7 +101,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/category/{slug}", slug);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -129,7 +129,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "POST", "/api/category", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -154,7 +154,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "PUT", $"/api/category/{id}", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -179,7 +179,7 @@ namespace CoreAppStructure.Features.Categories.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "DELETE", $"/api/category/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
     }

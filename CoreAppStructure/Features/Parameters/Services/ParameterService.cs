@@ -49,7 +49,7 @@ namespace CoreAppStructure.Features.Parameters.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/category");
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -68,7 +68,7 @@ namespace CoreAppStructure.Features.Parameters.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "GET", $"/api/parameter/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -104,7 +104,7 @@ namespace CoreAppStructure.Features.Parameters.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "POST", "/api/parameter", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -137,7 +137,7 @@ namespace CoreAppStructure.Features.Parameters.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "PUT", $"/api/parameter/{id}", model);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
 
@@ -157,7 +157,7 @@ namespace CoreAppStructure.Features.Parameters.Services
             catch (Exception ex)
             {
                 LogHelper.LogError(_logger, ex, "DELETE", $"/api/parameter/{id}", id);
-                return new ResponseObject(500, "Internal server error. Please try again later.", null);
+                return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
         }
     }

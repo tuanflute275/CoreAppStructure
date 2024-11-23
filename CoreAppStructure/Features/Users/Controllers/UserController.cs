@@ -1,4 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
 using Microsoft.AspNetCore.Authorization;

@@ -7,9 +7,9 @@ namespace CoreAppStructure.Infrastructure.Email
 {
     public class EmailService : IEmailService
     {
-        private readonly EmailConfig _emailConfig;
+        private readonly EmailModel _emailConfig;
 
-        public EmailService(EmailConfig emailConfig)
+        public EmailService(EmailModel emailConfig)
         {
             _emailConfig = emailConfig;
         }

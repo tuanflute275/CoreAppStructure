@@ -1,0 +1,9 @@
+2024-11-23 14:18:18.803 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-23 14:18:20.046 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-23 14:18:20.068 +07:00 [INF] HTTP GET /api/role responded 200 in 1192.6069 ms
+2024-11-23 14:18:27.910 +07:00 [INF] Processed GET /api/role/all. Request Data: No request data provided. Response Data: ["CoreAppStructure.Features.Roles.Models.Role","CoreAppStructure.Features.Roles.Models.Role","CoreAppStructure.Features.Roles.Models.Role","CoreAppStructure.Features.Roles.Models.Role","CoreAppStructure.Features.Roles.Models.Role"]
+2024-11-23 14:18:27.931 +07:00 [INF] HTTP GET /api/role/all responded 200 in 41.8022 ms
+2024-11-23 14:18:32.850 +07:00 [INF] Processed GET /api/role/{id}. Request Data: 1. Response Data: CoreAppStructure.Features.Roles.Models.Role
+2024-11-23 14:18:32.854 +07:00 [INF] HTTP GET /api/role/1 responded 200 in 184.3633 ms
+2024-11-23 14:18:38.653 +07:00 [INF] Processed GET /api/user. Request Data: No request data provided. Response Data: { TotalRecords = 9, TotalPages = 1, Data = System.Collections.Generic.List`1[CoreAppStructure.Features.Users.Models.UserDTO] }
+2024-11-23 14:18:38.667 +07:00 [INF] HTTP GET /api/user responded 200 in 237.0704 ms

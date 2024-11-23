@@ -1,4 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Features.Categories.Models;
 using CoreAppStructure.Features.Products.Models;
 

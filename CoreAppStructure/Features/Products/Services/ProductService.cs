@@ -2,11 +2,12 @@
 using CoreAppStructure.Features.Products.Interfaces;
 using CoreAppStructure.Features.Products.Models;
 using X.PagedList;
-using CoreAppStructure.Core.Extensions;
 using CoreAppStructure.Infrastructure.Caching;
 using Newtonsoft.Json;
 using AutoMapper;
 using CoreAppStructure.Features.Users.Models;
+using CoreAppStructure.Core.Exceptions;
+using CoreAppStructure.Infrastructure.Logging;
 
 namespace CoreAppStructure.Features.Products.Services
 {

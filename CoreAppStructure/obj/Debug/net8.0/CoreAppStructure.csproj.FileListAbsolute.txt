@@ -64,7 +64,6 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Text.Json.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\X.PagedList.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
@@ -164,3 +163,12 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\System
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\RazorEngine.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\CoreAppStructure.RazorAssemblyInfo.cache
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\obj\Debug\net8.0\CoreAppStructure.RazorAssemblyInfo.cs
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.File.dll

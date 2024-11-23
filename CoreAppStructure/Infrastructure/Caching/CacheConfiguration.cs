@@ -1,8 +1,7 @@
-﻿using CoreAppStructure.Infrastructure.Caching;
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
 using StackExchange.Redis;
 
-namespace CoreAppStructure.Core.Configurations
+namespace CoreAppStructure.Infrastructure.Caching
 {
     public static class CacheConfiguration
     {

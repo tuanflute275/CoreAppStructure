@@ -1,4 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;

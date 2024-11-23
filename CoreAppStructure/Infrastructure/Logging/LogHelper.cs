@@ -1,4 +1,4 @@
-﻿namespace CoreAppStructure.Core.Extensions
+﻿namespace CoreAppStructure.Infrastructure.Logging
 {
     public static class LogHelper
     {

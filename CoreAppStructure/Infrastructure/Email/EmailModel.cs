@@ -1,6 +1,6 @@
 ﻿namespace CoreAppStructure.Infrastructure.Email
 {
-    public class EmailConfig
+    public class EmailModel
     {
         public string From { get; set; }
         public string SmtpServer { get; set; }

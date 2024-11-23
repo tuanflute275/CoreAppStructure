@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using Azure.Core;
-using CoreAppStructure.Core.Extensions;
+using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Data.Entities;
 using CoreAppStructure.Features.Roles.Interfaces;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
+using CoreAppStructure.Infrastructure.Logging;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 

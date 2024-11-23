@@ -1,4 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Features.Parameters.Models;
 
 namespace CoreAppStructure.Features.Parameters.Interfaces

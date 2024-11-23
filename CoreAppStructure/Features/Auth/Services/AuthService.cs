@@ -1,10 +1,11 @@
-﻿using CoreAppStructure.Core.Extensions;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Data.Entities;
 using CoreAppStructure.Features.Auth.Interfaces;
 using CoreAppStructure.Features.Auth.Models;
 using CoreAppStructure.Features.Users.Models;
 using CoreAppStructure.Infrastructure.Email;
+using CoreAppStructure.Infrastructure.Logging;
 
 namespace CoreAppStructure.Features.Auth.Services
 {

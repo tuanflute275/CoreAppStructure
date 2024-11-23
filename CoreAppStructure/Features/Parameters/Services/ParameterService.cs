@@ -1,8 +1,8 @@
-﻿using CoreAppStructure.Core.Extensions;
-using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Features.Categories.Services;
 using CoreAppStructure.Features.Parameters.Interfaces;
 using CoreAppStructure.Features.Parameters.Models;
+using CoreAppStructure.Infrastructure.Logging;
 using X.PagedList;
 
 namespace CoreAppStructure.Features.Parameters.Services

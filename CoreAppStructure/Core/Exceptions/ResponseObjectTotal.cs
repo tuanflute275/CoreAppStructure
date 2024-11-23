@@ -1,4 +1,4 @@
-﻿namespace CoreAppStructure.Core.Helpers
+﻿namespace CoreAppStructure.Core.Exceptions
 {
     public class ResponseObjectTotal
     {
@@ -9,7 +9,7 @@
 
         public ResponseObjectTotal(int code, string message, object? total, object? data)
         {
-            this.status = code;
+            status = code;
             this.message = message;
             this.total = total;
             this.data = data;

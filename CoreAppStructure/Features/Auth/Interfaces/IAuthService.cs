@@ -1,4 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
+﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Features.Auth.Models;
 
 namespace CoreAppStructure.Features.Auth.Interfaces

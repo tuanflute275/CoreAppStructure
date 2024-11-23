@@ -1,7 +1,1 @@
 Infrastructure/
-├── Email/
-│   ├── EmailConfiguration.cs        # Lưu cấu hình email (SMTP, port, v.v.)
-│   ├── IEmailService.cs             # Interface định nghĩa các hành vi của email service
-│   ├── EmailService.cs              # Implement gửi email
-│   └── Templates/                   # Lưu trữ các template email HTML
-│       └── RegisterTemplate.html    # Template email đăng ký

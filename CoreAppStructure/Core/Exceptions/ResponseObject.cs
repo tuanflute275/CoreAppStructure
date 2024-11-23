@@ -1,4 +1,4 @@
-﻿namespace CoreAppStructure.Core.Helpers
+﻿namespace CoreAppStructure.Core.Exceptions
 {
     public class ResponseObject
     {
@@ -8,13 +8,13 @@
 
         public ResponseObject(int code, string message)
         {
-            this.status = code;
+            status = code;
             this.message = message;
         }
 
         public ResponseObject(int code, string message, object? data)
         {
-            this.status = code;
+            status = code;
             this.message = message;
             this.data = data;
         }

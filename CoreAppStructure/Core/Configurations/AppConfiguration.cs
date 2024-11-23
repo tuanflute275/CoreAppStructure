@@ -1,5 +1,6 @@
-﻿using CoreAppStructure.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using CoreAppStructure.Infrastructure.Caching;
+using CoreAppStructure.Infrastructure.Email;
+using CoreAppStructure.Infrastructure.Logging;
 
 
 namespace CoreAppStructure.Core.Configurations
@@ -11,8 +12,8 @@ namespace CoreAppStructure.Core.Configurations
             // Load appsettings
             var appSetting = AppSetting.MapValues(configuration);
 
-            // Cấu hình Logging
-            services.AddLoggingConfiguration();
+            // Cấu hình Logging (Serilog)
+            services.AddSerilogConfiguration(configuration);
 
             // Cấu hình SQL Server
             services.AddSqlServerConfiguration(appSetting.SqlServerConnection);

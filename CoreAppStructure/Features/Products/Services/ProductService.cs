@@ -5,7 +5,6 @@ using X.PagedList;
 using CoreAppStructure.Infrastructure.Caching;
 using Newtonsoft.Json;
 using AutoMapper;
-using CoreAppStructure.Features.Users.Models;
 using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Infrastructure.Logging;
 
@@ -121,7 +120,7 @@ namespace CoreAppStructure.Features.Products.Services
             }
         }
 
-        public async Task<ResponseObject> SaveAsync(ProductViewModel model, string request)
+        public async Task<ResponseObject> SaveAsync(ProductViewModel model, HttpRequest request)
         {
             try
             {
@@ -141,7 +140,7 @@ namespace CoreAppStructure.Features.Products.Services
                     ProductDescription = model.ProductDescription
                 };
 
-                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "products");
+                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, request.Scheme, request.Host.Value, "products");
                 product.ProductImage = imageUrl;
 
                 await _productRepository.AddAsync(product);
@@ -158,7 +157,7 @@ namespace CoreAppStructure.Features.Products.Services
             }
         }
 
-        public async Task<ResponseObject> UpdateAsync(int id, ProductViewModel model, string request)
+        public async Task<ResponseObject> UpdateAsync(int id, ProductViewModel model, HttpRequest request)
         {
             try
             {
@@ -168,7 +167,7 @@ namespace CoreAppStructure.Features.Products.Services
                     return new ResponseObject(404, "Product not found", null);
                 }
 
-                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "products");
+                var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage,request.Scheme, request.Host.Value, "products");
                 product.ProductImage = imageUrl;
                 product.ProductName = model.ProductName;
                 product.ProductSlug = Util.GenerateSlug(model.ProductName);

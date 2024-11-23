@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Azure.Core;
 using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Data.Entities;
@@ -7,7 +6,6 @@ using CoreAppStructure.Features.Roles.Interfaces;
 using CoreAppStructure.Features.Users.Interfaces;
 using CoreAppStructure.Features.Users.Models;
 using CoreAppStructure.Infrastructure.Logging;
-using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 
 namespace CoreAppStructure.Features.Users.Servicces
@@ -85,7 +83,7 @@ namespace CoreAppStructure.Features.Users.Servicces
             }
         }
 
-        public async Task<ResponseObject> SaveAsync(UserViewModel model, string request)
+        public async Task<ResponseObject> SaveAsync(UserViewModel model, HttpRequest request)
         {
             try
             {
@@ -97,7 +95,7 @@ namespace CoreAppStructure.Features.Users.Servicces
                 }
                 else
                 {
-                    var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "users");
+                    var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage,request.Scheme, request.Host.Value, "users");
                     user.UserAvatar = imageUrl;
                     string passwordHash = BCrypt.Net.BCrypt.HashPassword(model.UserPassword, 12);
                     user.UserName = model.UserName;
@@ -144,14 +142,14 @@ namespace CoreAppStructure.Features.Users.Servicces
             }
         }
 
-        public async Task<ResponseObject> UpdateAsync(int id, UserViewModel model, string request)
+        public async Task<ResponseObject> UpdateAsync(int id, UserViewModel model, HttpRequest request)
         {
             try
             {
                 var user = await _userRepository.FindByIdAsync(id);
                 if (user != null)
                 {
-                    var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, "users");
+                    var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, request.Scheme, request.Host.Value, "users");
                     user.UserAvatar = imageUrl;
 
                     if (!string.IsNullOrEmpty(model.UserPassword))

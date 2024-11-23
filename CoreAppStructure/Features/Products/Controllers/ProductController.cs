@@ -39,19 +39,19 @@ namespace CoreAppStructure.Features.Products.Controllers
             return Ok(result);
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Product>> Save([FromForm] ProductViewModel model)
         {
-            var result = await _productService.SaveAsync(model, HttpContext.Request.Host.Value);
+            var result = await _productService.SaveAsync(model, HttpContext.Request);
             return Ok(result);
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult<Product>> Update(int id, [FromForm] ProductViewModel model)
         {
-            var result = await _productService.UpdateAsync(id, model, HttpContext.Request.Host.Value);
+            var result = await _productService.UpdateAsync(id, model, HttpContext.Request);
             return Ok(result);
         }
 

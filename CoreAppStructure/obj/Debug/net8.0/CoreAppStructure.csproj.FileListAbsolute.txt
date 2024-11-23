@@ -172,3 +172,4 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilo
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\SixLabors.ImageSharp.dll

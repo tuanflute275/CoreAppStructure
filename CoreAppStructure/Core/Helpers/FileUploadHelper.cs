@@ -1,13 +1,25 @@
-﻿namespace CoreAppStructure.Core.Helpers
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Webp;
+using SixLabors.ImageSharp.Processing;
+using System.IO;
+
+namespace CoreAppStructure.Core.Helpers
 {
     public static class FileUploadHelper
     {
-        public static async Task<string> UploadImageAsync(IFormFile imageFile, string oldImage, string folderName)
+        public static async Task<string> UploadImageAsync(IFormFile imageFile, string oldImage,
+            string requestScheme, string requestHost, string folderName)
         {
-            string requestScheme = "http";
-            string requestHost = "localhost:5095";
+            const long maxFileSize = 5 * 1024 * 1024; // 5MB
+
             if (imageFile != null && imageFile.Length > 0)
             {
+                // Kiểm tra kích thước tệp
+                if (imageFile.Length > maxFileSize)
+                {
+                    throw new ArgumentException("File size exceeds the 5MB limit.");
+                }
+
                 // Kiểm tra loại file (ví dụ: chỉ cho phép hình ảnh JPEG, PNG, GIF)
                 var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
                 var fileExtension = Path.GetExtension(imageFile.FileName).ToLower();
@@ -30,24 +42,33 @@
                 if (!string.IsNullOrEmpty(oldImage))
                 {
                     var oldFileName = oldImage.Split($"{requestScheme}://{requestHost}/uploads/{folderName}/").LastOrDefault();
-                    var oldFilePath = Path.Combine(uploadsFolder, oldFileName);
-
-                    if (File.Exists(oldFilePath))
+                    if (!string.IsNullOrEmpty(oldFileName))
                     {
-                        File.Delete(oldFilePath);
+                        var oldFilePath = Path.Combine(uploadsFolder, oldFileName);
+                        if (File.Exists(oldFilePath))
+                        {
+                            File.Delete(oldFilePath);
+                        }
                     }
                 }
 
                 // Tạo tên file duy nhất để tránh trùng lặp
-                var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+                var uniqueFileName = Guid.NewGuid().ToString() + ".webp";
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                // Lưu file hình ảnh
                 try
                 {
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    // nén hình ảnh với định dạng webp
+                    using (var image = Image.Load(imageFile.OpenReadStream()))
                     {
-                        await imageFile.CopyToAsync(fileStream);
+                        // Giảm chất lượng nếu cần
+                        var encoder = new WebpEncoder()
+                        {
+                            Quality = 75 // Bạn có thể điều chỉnh mức độ nén ở đây (0-100)
+                        };
+
+                        // Chuyển đổi hình ảnh thành WebP và lưu vào đĩa
+                        await image.SaveAsync(filePath, encoder);
                     }
 
                     // Trả về đường dẫn URL của hình ảnh mới
@@ -62,7 +83,7 @@
             }
             else
             {
-                throw new ArgumentException("No image file provided.");
+                return oldImage;
             }
         }
     }

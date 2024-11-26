@@ -7,8 +7,8 @@ namespace CoreAppStructure.Features.Users.Interfaces
     {
         Task<ResponseObject> FindAllAsync(string? name, string? sort, int page = 1);
         Task<ResponseObject> FindByIdAsync(int id);
-        Task<ResponseObject> SaveAsync(UserViewModel model, HttpRequest request);
-        Task<ResponseObject> UpdateAsync(int id, UserViewModel model, HttpRequest request);
+        Task<ResponseObject> SaveAsync(UserViewModel model);
+        Task<ResponseObject> UpdateAsync(int id, UserViewModel model);
         Task<ResponseObject> DeleteAsync(int id);
     }
 }

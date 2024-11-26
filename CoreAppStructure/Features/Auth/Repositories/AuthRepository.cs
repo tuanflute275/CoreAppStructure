@@ -6,7 +6,6 @@ using CoreAppStructure.Features.Auth.Models;
 using CoreAppStructure.Features.Roles.Models;
 using CoreAppStructure.Features.Users.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace CoreAppStructure.Features.Auth.Repositories
 {
@@ -69,32 +68,44 @@ namespace CoreAppStructure.Features.Auth.Repositories
         }
 
 
-        // refresh token
-        public async Task SaveRefreshTokenAsync(int userId, string token, DateTime expiresAt)
+        // token
+        public async Task<Tokens> GetRefreshTokenAsync(string refreshToken)
         {
-            var refreshToken = new RefreshToken
-            {
-                UserId = userId,
-                Token = token,
-                ExpiresAt = expiresAt
-            };
-            await _context.RefreshTokens.AddAsync(refreshToken);
+            return await _context.Tokens.FirstOrDefaultAsync(x => x.RefreshToken == refreshToken);
+        }
+
+        public async Task SaveTokenAsync(Tokens token)
+        {
+            await _context.Tokens.AddAsync(token);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<RefreshToken> GetRefreshTokenAsync(string token)
+  
+
+        public async Task UpdateTokenAsync(int tokenId, string token, DateTime expirationDate, string refreshToken, DateTime refreshTokenDate)
         {
-            return await _context.RefreshTokens
-                .FirstOrDefaultAsync(t => t.Token == token && !t.IsRevoked);
+            var data = await _context.Tokens.FindAsync(tokenId);
+            if (data != null)
+            {
+                data.Token = token;
+                data.ExpirationDate = expirationDate;
+                data.RefreshToken = refreshToken;
+                data.RefreshTokenDate = refreshTokenDate;
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public async Task UpdateRefreshTokenAsync(int tokenId, string newToken, DateTime newExpiresAt)
+        public async Task<List<Tokens>> GetUserTokensAsync(int userId)
         {
-            var token = await _context.RefreshTokens.FindAsync(tokenId);
+           return await _context.Tokens.Where(x => x.UserId == userId).ToListAsync();
+        }
+
+        public async Task DeleteTokenAsync(int tokenId)
+        {
+            var token = await _context.Tokens.FindAsync(tokenId);
             if (token != null)
             {
-                token.Token = newToken;
-                token.ExpiresAt = newExpiresAt;
+                _context.Tokens.Remove(token);
                 await _context.SaveChangesAsync();
             }
         }

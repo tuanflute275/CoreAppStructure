@@ -43,7 +43,7 @@ namespace CoreAppStructure.Features.Products.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> Save([FromForm] ProductViewModel model)
         {
-            var result = await _productService.SaveAsync(model, HttpContext.Request);
+            var result = await _productService.SaveAsync(model);
             return Ok(result);
         }
 
@@ -51,7 +51,7 @@ namespace CoreAppStructure.Features.Products.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Product>> Update(int id, [FromForm] ProductViewModel model)
         {
-            var result = await _productService.UpdateAsync(id, model, HttpContext.Request);
+            var result = await _productService.UpdateAsync(id, model);
             return Ok(result);
         }
 

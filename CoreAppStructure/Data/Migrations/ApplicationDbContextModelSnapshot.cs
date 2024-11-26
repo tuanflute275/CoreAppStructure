@@ -47,7 +47,7 @@ namespace CoreAppStructure.Data.Migrations
                     b.ToTable("UserRoles");
                 });
 
-            modelBuilder.Entity("CoreAppStructure.Data.Models.RefreshToken", b =>
+            modelBuilder.Entity("CoreAppStructure.Data.Models.Tokens", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,19 +58,29 @@ namespace CoreAppStructure.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("ExpiresAt")
+                    b.Property<DateTime>("ExpirationDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsMobile")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsRevoked")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("RevokedAt")
+                    b.Property<string>("RefreshToken")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RefreshTokenDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Token")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(255)
+                        .HasColumnType("ntext");
+
+                    b.Property<string>("TokenType")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -79,7 +89,7 @@ namespace CoreAppStructure.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("Tokens");
                 });
 
             modelBuilder.Entity("CoreAppStructure.Features.Categories.Models.Category", b =>
@@ -455,7 +465,7 @@ namespace CoreAppStructure.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("CoreAppStructure.Data.Models.RefreshToken", b =>
+            modelBuilder.Entity("CoreAppStructure.Data.Models.Tokens", b =>
                 {
                     b.HasOne("CoreAppStructure.Features.Users.Models.User", "User")
                         .WithMany()

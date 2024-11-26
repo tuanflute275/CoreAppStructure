@@ -1,0 +1,23 @@
+Infrastructure/
+├── Messaging/
+│   ├── RabbitMQ/                 # Nếu sử dụng RabbitMQ
+│   │   ├── RabbitMqProducer.cs   # Lớp quản lý gửi tin nhắn
+│   │   ├── RabbitMqConsumer.cs   # Lớp quản lý nhận tin nhắn
+│   │   ├── RabbitMqConfiguration.cs # Cấu hình RabbitMQ
+│   │   ├── Interfaces/
+│   │   │   ├── IMessageProducer.cs  # Interface cho Producer
+│   │   │   └── IMessageConsumer.cs  # Interface cho Consumer
+│   │   └── Models/              # Các mô hình message DTO
+│   ├── Kafka/                   # Nếu sử dụng Kafka (tùy chọn)
+│   │   ├── KafkaProducer.cs
+│   │   ├── KafkaConsumer.cs
+│   │   ├── KafkaConfiguration.cs
+│   │   ├── Interfaces/
+│   │   │   ├── IMessageProducer.cs
+│   │   │   └── IMessageConsumer.cs
+│   │   └── Models/
+│   └── Common/                  # Phần dùng chung giữa RabbitMQ/Kafka
+│       ├── MessageQueueOptions.cs # Các tùy chọn cấu hình dùng chung
+│       ├── MessageQueueManager.cs # Manager để chọn công nghệ MQ
+│       ├── BaseConsumer.cs      # Lớp base cho Consumer
+│       ├── BaseProducer.cs      # Lớp base cho Producer

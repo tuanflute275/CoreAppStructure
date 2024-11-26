@@ -17,16 +17,19 @@ namespace CoreAppStructure.Features.Users.Servicces
         private readonly IRoleRepository _roleRepository;
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _environment;
         private readonly ILogger<UserService> _logger;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public UserService(IMapper mapper,IUserRepository userRepository,
            Microsoft.AspNetCore.Hosting.IHostingEnvironment environment,
-            ILogger<UserService> logger, IRoleRepository roleRepository)
+            ILogger<UserService> logger, IRoleRepository roleRepository, 
+            IHttpContextAccessor httpContextAccessor)
         {
             _mapper = mapper;
             _userRepository = userRepository;
             _roleRepository = roleRepository;
             _environment = environment;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<ResponseObject> FindAllAsync(string? name, string? sort, int page = 1)
@@ -83,10 +86,11 @@ namespace CoreAppStructure.Features.Users.Servicces
             }
         }
 
-        public async Task<ResponseObject> SaveAsync(UserViewModel model, HttpRequest request)
+        public async Task<ResponseObject> SaveAsync(UserViewModel model)
         {
             try
             {
+                var request = _httpContextAccessor.HttpContext?.Request;
                 User user = new User();
                 var foundData = await _userRepository.FindByUsernameAsync(model.UserName);
                 if (foundData != null)
@@ -142,10 +146,11 @@ namespace CoreAppStructure.Features.Users.Servicces
             }
         }
 
-        public async Task<ResponseObject> UpdateAsync(int id, UserViewModel model, HttpRequest request)
+        public async Task<ResponseObject> UpdateAsync(int id, UserViewModel model)
         {
             try
             {
+                var request = _httpContextAccessor.HttpContext?.Request;
                 var user = await _userRepository.FindByIdAsync(id);
                 if (user != null)
                 {

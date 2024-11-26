@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eAWJGipX2cnziVU0DnPO5axCBSEd0Ob8hIn0nygmmdw=",
+  "Hash": "GWbNcB0+I3kevFrpnclnAA+SbIthn+bB08jVqwnJlTE=",
   "Source": "CoreAppStructure",
   "BasePath": "_content/CoreAppStructure",
   "Mode": "Default",
@@ -36,12 +36,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\.gitkeep"
     },
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\1ac6f1a3-9259-49cc-bdb2-d659fe278638.jpg",
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\9e237e45-3ee5-43a3-808e-a3f680136fd6.webp",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/1ac6f1a3-9259-49cc-bdb2-d659fe278638.jpg",
+      "RelativePath": "uploads/products/9e237e45-3ee5-43a3-808e-a3f680136fd6.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\1ac6f1a3-9259-49cc-bdb2-d659fe278638.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\9e237e45-3ee5-43a3-808e-a3f680136fd6.webp"
     },
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\e89e5fcc-d137-4a8f-a1cc-f226a9d99e13.jpg",
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\c775887a-9323-44e8-b882-8cc7b5032c2f.webp",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/e89e5fcc-d137-4a8f-a1cc-f226a9d99e13.jpg",
+      "RelativePath": "uploads/products/c775887a-9323-44e8-b882-8cc7b5032c2f.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\e89e5fcc-d137-4a8f-a1cc-f226a9d99e13.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\c775887a-9323-44e8-b882-8cc7b5032c2f.webp"
     },
     {
       "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
@@ -91,6 +91,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\users\\.gitkeep"
+    },
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\178bc983-0640-4d1f-b4d6-2baf706fdd2d.webp",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/users/178bc983-0640-4d1f-b4d6-2baf706fdd2d.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\users\\178bc983-0640-4d1f-b4d6-2baf706fdd2d.webp"
+    },
+    {
+      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\9eaf0359-b64c-4943-8b39-43b95227a2df.webp",
+      "SourceId": "CoreAppStructure",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "BasePath": "_content/CoreAppStructure",
+      "RelativePath": "uploads/users/9eaf0359-b64c-4943-8b39-43b95227a2df.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\users\\9eaf0359-b64c-4943-8b39-43b95227a2df.webp"
     }
   ]
 }

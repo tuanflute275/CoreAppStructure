@@ -18,15 +18,19 @@ namespace CoreAppStructure.Features.Products.Services
         private readonly ILogger<ProductService> _logger;
         private readonly RedisCacheService _redisCacheService;
         private readonly string _cacheKeyPrefix = "product_";
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public ProductService(IMapper mapper,IProductRepository productRepository, 
             Microsoft.AspNetCore.Hosting.IHostingEnvironment environment,
             ILogger<ProductService> logger,
-            RedisCacheService redisCacheService)
+            RedisCacheService redisCacheService,
+            IHttpContextAccessor httpContextAccessor
+            )
         {
             _mapper = mapper;
-            _productRepository = productRepository;
             _environment = environment;
+            _productRepository = productRepository;
+            _httpContextAccessor = httpContextAccessor;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _redisCacheService = redisCacheService ?? throw new ArgumentNullException(nameof(redisCacheService));
         }
@@ -35,8 +39,7 @@ namespace CoreAppStructure.Features.Products.Services
         {
            try
             {
-                //var cacheKey = $"{_cacheKeyPrefix}{name ?? "all"}_{sort ?? "default"}_page_{page}";
-                var cacheKey = $"{_cacheKeyPrefix}";
+                var cacheKey = $"{_cacheKeyPrefix}{name ?? "all"}_{sort ?? "default"}_page_{page}";
                 var cachedData = await _redisCacheService.GetCacheAsync(cacheKey);
 
                 if (cachedData != null)
@@ -120,7 +123,7 @@ namespace CoreAppStructure.Features.Products.Services
             }
         }
 
-        public async Task<ResponseObject> SaveAsync(ProductViewModel model, HttpRequest request)
+        public async Task<ResponseObject> SaveAsync(ProductViewModel model)
         {
             try
             {
@@ -140,12 +143,13 @@ namespace CoreAppStructure.Features.Products.Services
                     ProductDescription = model.ProductDescription
                 };
 
+                var request = _httpContextAccessor.HttpContext?.Request;
                 var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage, request.Scheme, request.Host.Value, "products");
                 product.ProductImage = imageUrl;
 
                 await _productRepository.AddAsync(product);
-                // Cập nhật lại cache Redis
-                await UpdateRedisCacheAsync();
+                // Xóa cache Redis
+                _redisCacheService.ClearCacheAsync();
                 LogHelper.LogInformation(_logger, "POST", "/api/product", model, product);
                 return new ResponseObject(200, "Insert data successfully", product);
 
@@ -157,7 +161,7 @@ namespace CoreAppStructure.Features.Products.Services
             }
         }
 
-        public async Task<ResponseObject> UpdateAsync(int id, ProductViewModel model, HttpRequest request)
+        public async Task<ResponseObject> UpdateAsync(int id, ProductViewModel model)
         {
             try
             {
@@ -166,7 +170,7 @@ namespace CoreAppStructure.Features.Products.Services
                 {
                     return new ResponseObject(404, "Product not found", null);
                 }
-
+                var request = _httpContextAccessor.HttpContext?.Request;
                 var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage,request.Scheme, request.Host.Value, "products");
                 product.ProductImage = imageUrl;
                 product.ProductName = model.ProductName;
@@ -178,8 +182,8 @@ namespace CoreAppStructure.Features.Products.Services
                 product.ProductDescription = model.ProductDescription;
 
                 await _productRepository.UpdateAsync(product);
-                // Cập nhật lại cache Redis
-                await UpdateRedisCacheAsync();
+                // Xóa cache Redis
+                _redisCacheService.ClearCacheAsync();
                 LogHelper.LogInformation(_logger, "PUT", $"/api/product/{id}", model, product);
                 return new ResponseObject(200, "Update data successfully", product);
 
@@ -202,8 +206,8 @@ namespace CoreAppStructure.Features.Products.Services
                 }
 
                 await _productRepository.DeleteAsync(product);
-                // Cập nhật lại cache Redis
-                await UpdateRedisCacheAsync();
+                // Xóa lại cache Redis
+                _redisCacheService.ClearCacheAsync();
                 LogHelper.LogInformation(_logger, "DELETE", $"/api/product/{id}", id, "Deleted successfully");
                 return new ResponseObject(200, "Delete data successfully");
             }
@@ -212,67 +216,6 @@ namespace CoreAppStructure.Features.Products.Services
                 LogHelper.LogError(_logger, ex, "DELETE", $"/api/product/{id}", id);
                 return new ResponseObject(500, "Internal server error. Please try again later.", ex.Message);
             }
-        }
-
-        private async Task UpdateRedisCacheAsync()
-        {
-            // Tạo key cache cho danh sách sản phẩm (có thể thêm thông tin phân trang hoặc lọc nếu cần)
-            var cacheKey = $"{_cacheKeyPrefix}";
-
-            // Lấy toàn bộ danh sách sản phẩm từ cơ sở dữ liệu
-            var products = await _productRepository.FindAllAsync(null, null);
-
-            // Chuyển dữ liệu thành dạng mà bạn muốn lưu trữ trong cache (ví dụ DTO)
-            var productDTOs = products.Select(p => new ProductDTO
-            {
-                ProductId = p.ProductId,
-                ProductName = p.ProductName,
-                ProductPrice = p.ProductPrice,
-                ProductSalePrice = p.ProductSalePrice,
-                ProductImage = p.ProductImage,
-                ProductStatus = p.ProductStatus,
-                CategoryId = p.CategoryId
-            }).ToList();
-
-
-            if (products.Count > 0)
-            {
-                int totalRecords = products.Count();
-                int limit = 10;
-                int page = 1;
-                var pageData = products.ToPagedList(page, limit);
-
-                int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
-
-                var productDTO = products.Select(p => new ProductDTO
-                {
-                    ProductId = p.ProductId,
-                    ProductImage = p.ProductImage,
-                    ProductName = p.ProductName,
-                    ProductSlug = p.ProductSlug,
-                    ProductPrice = p.ProductPrice,
-                    ProductSalePrice = p.ProductSalePrice,
-                    ProductStatus = p.ProductStatus,
-                    ProductDescription = p.ProductDescription,
-                    CategoryId = p.CategoryId,
-                    CategoryName = p.Category.CategoryName,
-                    CategorySlug = p.Category.CategorySlug
-                }).ToList();
-
-                var response = new
-                {
-                    TotalRecords = totalRecords,
-                    TotalPages = totalPages,
-                    Data = productDTO
-                };
-
-                // Lưu toàn bộ dữ liệu sản phẩm vào Redis
-                await _redisCacheService.SetCacheAsync(cacheKey, JsonConvert.SerializeObject(response), TimeSpan.FromMinutes(10));
-
-                // Log thông tin cache đã được cập nhật
-                LogHelper.LogInformation(_logger, "Cache updated after adding product", cacheKey, null, productDTOs);
-            }
-           
         }
     }
 }

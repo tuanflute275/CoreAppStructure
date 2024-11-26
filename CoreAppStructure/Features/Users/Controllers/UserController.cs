@@ -34,14 +34,15 @@ namespace CoreAppStructure.Features.Users.Controllers
         [HttpPost]
         public async Task<ActionResult> Save([FromForm] UserViewModel model)
         {
-            var result = await _userService.SaveAsync(model, HttpContext.Request);
+            var result = await _userService.SaveAsync(model);
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin, User")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, [FromForm] UserViewModel model)
         {
-            var result = await _userService.UpdateAsync(id, model, HttpContext.Request);
+            var result = await _userService.UpdateAsync(id, model);
             return Ok(result);
         }
 

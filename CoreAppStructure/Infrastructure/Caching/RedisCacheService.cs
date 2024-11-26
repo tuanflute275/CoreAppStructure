@@ -3,27 +3,35 @@ using StackExchange.Redis;
 
 namespace CoreAppStructure.Infrastructure.Caching
 {
-    public class RedisCacheService
+    public class RedisCacheService : IDisposable
     {
         private readonly ConnectionMultiplexer _redis;
         private readonly IDatabase _database;
         private readonly string _connectionString;
-        private readonly IMemoryCache _memoryCache;
+        private IMemoryCache _memoryCache;
 
         public RedisCacheService(string connectionString, IMemoryCache memoryCache)
         {
             _connectionString = connectionString;
-            _redis = ConnectToRedis(connectionString);
-            _database = _redis?.GetDatabase();
             _memoryCache = memoryCache;
+            if (CacheState.IsRedisConnectedStatic) // Kiểm tra trạng thái kết nối Redis
+            {
+                _redis = ConnectToRedis(connectionString);
+                _database = _redis?.GetDatabase();
+            }
+            else
+            {
+                Console.WriteLine("Redis không khả dụng. Sử dụng MemoryCache.");
+            }
         }
 
         private ConnectionMultiplexer ConnectToRedis(string connectionString)
         {
             try
             {
-                var connection = ConnectionMultiplexer.Connect(connectionString);
-                Console.WriteLine("Kết nối Redis thành công.");
+                var modifiedConnectionString = $"{connectionString},abortConnect=false";
+                var connection = ConnectionMultiplexer.Connect(modifiedConnectionString);
+                Console.WriteLine("Kết nối Redis thành công.");     
                 return connection;
             }
             catch (Exception ex)
@@ -82,6 +90,20 @@ namespace CoreAppStructure.Infrastructure.Caching
             }
         }
 
+        public async Task ClearCacheAsync()
+        {
+            if (IsRedisConnected())
+            {
+                // Xóa tất cả dữ liệu trong Redis
+                await _database.ExecuteAsync("FLUSHALL");
+            }
+            else
+            {
+                // Xóa tất cả dữ liệu trong MemoryCache bằng cách tạo lại instance của MemoryCache
+                _memoryCache = new MemoryCache(new MemoryCacheOptions());
+            }
+        }
+
         // Kiểm tra sự tồn tại của cache trong Redis hoặc MemoryCache
         public async Task<bool> ExistsCacheAsync(string key)
         {
@@ -89,6 +111,7 @@ namespace CoreAppStructure.Infrastructure.Caching
             {
                 return await _database.KeyExistsAsync(key);
             }
+
             else
             {
                 return _memoryCache.TryGetValue(key, out _);
@@ -160,6 +183,11 @@ namespace CoreAppStructure.Infrastructure.Caching
             // Nếu Redis không kết nối, sử dụng MemoryCache
             _memoryCache.TryGetValue(key, out string value);
             return value;
+        }
+
+        public void Dispose()
+        {
+            _redis?.Dispose();
         }
     }
 

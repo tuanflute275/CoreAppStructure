@@ -1,0 +1,4 @@
+2024-11-26 23:57:27.564 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-26 23:57:39.724 +07:00 [INF] HTTP POST /api/auth/refresh-token responded 200 in 12083.8609 ms
+2024-11-26 23:58:47.032 +07:00 [INF] HTTP POST /api/auth/refresh-token responded 200 in 44919.1822 ms
+2024-11-26 23:59:37.170 +07:00 [INF] HTTP POST /api/auth/refresh-token responded 200 in 29743.0800 ms

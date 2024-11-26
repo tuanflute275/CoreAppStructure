@@ -1,6 +1,7 @@
 ﻿using CoreAppStructure.Core.Exceptions;
 using CoreAppStructure.Core.Helpers;
 using CoreAppStructure.Data.Entities;
+using CoreAppStructure.Data.Models;
 using CoreAppStructure.Features.Auth.Interfaces;
 using CoreAppStructure.Features.Auth.Models;
 using CoreAppStructure.Features.Users.Models;
@@ -15,13 +16,16 @@ namespace CoreAppStructure.Features.Auth.Services
         private readonly IConfiguration _configuration;
         private readonly ILogger<AuthService> _logger;
         private readonly IEmailService _emailService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         public AuthService(IAuthRepository authRepository, IConfiguration configuration,
-            ILogger<AuthService> logger, IEmailService emailService) 
+            ILogger<AuthService> logger, IEmailService emailService,
+            IHttpContextAccessor httpContextAccessor) 
         {
             _authRepository = authRepository;
             _configuration = configuration;
             _logger = logger;
             _emailService = emailService;   
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<ResponseObject> LoginAsync(LoginViewModel model)
@@ -53,7 +57,37 @@ namespace CoreAppStructure.Features.Auth.Services
                       _configuration
                   );
                 var refreshToken = TokenHelper.GenerateRefreshToken();
-                await _authRepository.SaveRefreshTokenAsync(user.UserId, refreshToken, DateTime.UtcNow.AddDays(15));
+
+                // check if >=3 then delete old token with priority to delete web token first
+                var userTokens = await _authRepository.GetUserTokensAsync(user.UserId);
+                if (userTokens.Count >= 3)
+                {
+                    var tokenToDelete = userTokens
+                        .OrderBy(t => t.IsMobile)
+                        .ThenBy(t => t.CreatedAt)
+                        .First();
+
+                    await _authRepository.DeleteTokenAsync(tokenToDelete.Id);
+                }
+
+                // save new token
+                // Lấy User-Agent từ request header
+                var request = _httpContextAccessor.HttpContext?.Request;
+                string userAgent = request.Headers["User-Agent"].FirstOrDefault();
+                bool isMobile = Util.IsMobileDevice(userAgent);
+                Tokens token = new Tokens
+                {
+                    UserId = user.UserId,
+                    IsMobile = isMobile,
+                    IsRevoked = false,
+                    TokenType = "AccessToken",
+                    Token = accessToken,
+                    ExpirationDate = DateTime.UtcNow.AddHours(1),
+                    RefreshToken = refreshToken,
+                    RefreshTokenDate = DateTime.UtcNow.AddDays(15),
+                    CreatedAt = DateTime.UtcNow,
+                };
+                await _authRepository.SaveTokenAsync(token);
                 LogHelper.LogInformation(_logger, "POST", "/api/auth/login", null, new
                 {
                     AccessToken = accessToken,
@@ -76,31 +110,32 @@ namespace CoreAppStructure.Features.Auth.Services
         {
             try
             {
-                var storedToken = await _authRepository.GetRefreshTokenAsync(refreshToken);
+                 var storedToken = await _authRepository.GetRefreshTokenAsync(refreshToken);
 
-                if (storedToken == null || storedToken.IsRevoked || storedToken.ExpiresAt <= DateTime.UtcNow)
-                    return new ResponseObject(400, "Invalid or expired refresh token.");
+                 if (storedToken == null || storedToken.IsRevoked || storedToken.RefreshTokenDate <= DateTime.UtcNow)
+                     return new ResponseObject(400, "Invalid or expired refresh token.");
 
-                // Generate new Access Token
-                var user = await _authRepository.GetUserByIdAsync(storedToken.UserId);
-                var roles = await _authRepository.GetUserRolesAsync(user.UserId);
+                 // Generate new Access Token
+                 var user = await _authRepository.GetUserByIdAsync(storedToken.UserId);
+                 var roles = await _authRepository.GetUserRolesAsync(user.UserId);
 
-                var newAccessToken = TokenHelper.GenerateJwtToken(
-                      user.UserId,
-                      user.UserEmail,
-                      roles.Select(r => r.RoleName),
-                      _configuration
-                  );
+                 var newAccessToken = TokenHelper.GenerateJwtToken(
+                       user.UserId,
+                       user.UserEmail,
+                       roles.Select(r => r.RoleName),
+                       _configuration
+                   );
 
-                // Optionally: Generate a new Refresh Token
-                var newRefreshToken = TokenHelper.GenerateRefreshToken();
-                await _authRepository.UpdateRefreshTokenAsync(storedToken.Id, newRefreshToken, DateTime.UtcNow.AddDays(15));
+                 // Optionally: Generate a new Refresh Token
+                 var newRefreshToken = TokenHelper.GenerateRefreshToken();
+                 await _authRepository.UpdateTokenAsync(storedToken.Id, newAccessToken, DateTime.UtcNow.AddHours(15),  newRefreshToken, DateTime.UtcNow.AddDays(15));
 
-                return new ResponseObject(200, "Token refreshed successfully", new
-                {
-                    AccessToken = newAccessToken,
-                    RefreshToken = newRefreshToken
-                });
+                 return new ResponseObject(200, "Token refreshed successfully", new
+                 {
+                     AccessToken = newAccessToken,
+                     RefreshToken = newRefreshToken
+                 });
+                return null;
             }
             catch (Exception ex)
             {

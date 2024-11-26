@@ -41,5 +41,22 @@
 
             return input;
         }
+
+        public static bool IsMobileDevice(string userAgent)
+        {
+            if (string.IsNullOrEmpty(userAgent))
+                return false;
+
+            // Danh sách các từ khóa phổ biến trong User-Agent của thiết bị di động
+            var mobileKeywords = new[]
+            {
+                "Android", "iPhone", "iPad", "iPod", "Opera Mini", "Mobile", "BlackBerry", "Windows Phone",
+                "webOS", "IEMobile", "SamsungBrowser", "MeeGo", "AvantGo"
+            };
+
+            // Kiểm tra nếu User-Agent chứa bất kỳ từ khóa nào
+            return mobileKeywords.Any(keyword =>
+                userAgent.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0);
+        }
     }
 }

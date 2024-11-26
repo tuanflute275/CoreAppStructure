@@ -17,9 +17,11 @@ namespace CoreAppStructure.Features.Auth.Interfaces
         Task DeleteUserRoleAsync(List<UserRole> userRoles);
         Task<Role> FindByNameAsync(string name);
 
-        // refresh token
-        Task SaveRefreshTokenAsync(int userId, string token, DateTime expiresAt);
-        Task<RefreshToken> GetRefreshTokenAsync(string token);
-        Task UpdateRefreshTokenAsync(int tokenId, string newToken, DateTime newExpiresAt);
+        // token
+        Task<List<Tokens>> GetUserTokensAsync(int userId);
+        Task<Tokens> GetRefreshTokenAsync(string refreshToken);
+        Task SaveTokenAsync(Tokens token);
+        Task UpdateTokenAsync(int tokenId, string token, DateTime expirationDate, string refreshToken, DateTime refreshTokenDate);
+        Task DeleteTokenAsync(int tokenId); 
     }
 }

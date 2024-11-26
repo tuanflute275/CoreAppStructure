@@ -1,0 +1,11 @@
+2024-11-27 00:44:04.681 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-27 00:44:06.182 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: []
+2024-11-27 00:44:06.204 +07:00 [INF] HTTP GET /api/product responded 200 in 1426.6415 ms
+2024-11-27 00:44:17.518 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: []
+2024-11-27 00:44:17.521 +07:00 [INF] HTTP GET /api/product responded 200 in 35.0306 ms
+2024-11-27 00:44:18.625 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: []
+2024-11-27 00:44:18.629 +07:00 [INF] HTTP GET /api/product responded 200 in 69.0463 ms
+2024-11-27 00:45:15.329 +07:00 [INF] Processed POST /api/product. Request Data: CoreAppStructure.Features.Products.Models.ProductViewModel. Response Data: CoreAppStructure.Features.Products.Models.Product
+2024-11-27 00:45:15.338 +07:00 [INF] HTTP POST /api/product responded 200 in 12119.2457 ms
+2024-11-27 00:46:04.628 +07:00 [INF] Processed PUT /api/product/1. Request Data: CoreAppStructure.Features.Products.Models.ProductViewModel. Response Data: CoreAppStructure.Features.Products.Models.Product
+2024-11-27 00:46:04.634 +07:00 [INF] HTTP PUT /api/product/1 responded 200 in 11751.7191 ms

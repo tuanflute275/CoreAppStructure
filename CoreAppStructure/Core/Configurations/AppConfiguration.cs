@@ -1,41 +1,26 @@
-﻿using CoreAppStructure.Infrastructure.Caching;
-using CoreAppStructure.Infrastructure.Email;
-using CoreAppStructure.Infrastructure.Logging;
-
+﻿using CoreAppStructure.Core.Middlewares;
+using Serilog;
 
 namespace CoreAppStructure.Core.Configurations
 {
     public static class AppConfiguration
     {
-       public static void ConfigureServices(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureMiddleware(IApplicationBuilder app)
         {
-            // Load appsettings
-            var appSetting = AppSetting.MapValues(configuration);
+            // Cấu hình các middleware
+            app.UseCors("AllowOrigin");  // CORS policy
+            app.UseStaticFiles();        // Cung cấp các file tĩnh (nếu có)
+            app.UseHttpsRedirection();   // Chuyển hướng tất cả yêu cầu HTTP sang HTTPS
 
-            // Cấu hình Logging (Serilog)
-            services.AddSerilogConfiguration(configuration);
+            // Middleware cho xác thực và phân quyền
+            app.UseAuthentication();
+            app.UseAuthorization();
 
-            // Cấu hình SQL Server
-            services.AddSqlServerConfiguration(appSetting.SqlServerConnection);
+            // Cấu hình middleware cho xử lý ngoại lệ (ExceptionMiddleware)
+            app.UseMiddleware<ExceptionMiddleware>();
 
-            // Cấu hình AutoMapper
-            services.AddAutoMapper();
-
-            // Cấu hình CORS
-            services.AddCorsConfiguration();
-
-            // Cấu hình JWT
-            services.AddJwtConfiguration(configuration);
-
-            // Cấu hình Cache (Redis or MemoryCache)
-            services.AddCacheConfiguration(appSetting.RedisConnection);
-
-            // Cấu hình Email
-            services.AddEmailConfiguration(configuration);
-
-            // Cấu hình các dịch vụ nghiệp vụ
-            services.AddServiceConfiguration();
-
+            // Ghi log các request vào Serilog
+            app.UseSerilogRequestLogging(); // Ghi log các request HTTP
         }
     }
 }

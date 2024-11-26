@@ -98,7 +98,7 @@ namespace CoreAppStructure.Data.Migrations
                     UserPassword = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     UserPhoneNumber = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
                     UserAddress = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    UserGender = table.Column<bool>(type: "bit", nullable: false),
+                    UserGender = table.Column<bool>(type: "bit", nullable: true),
                     UserActive = table.Column<int>(type: "int", nullable: false),
                     FailedLoginAttempts = table.Column<int>(type: "int", nullable: true),
                     UserCurrentTime = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -160,6 +160,33 @@ namespace CoreAppStructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tokens",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nvarcharmax = table.Column<string>(name: "nvarchar(max)", type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    TokenType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsMobile = table.Column<bool>(type: "bit", nullable: false),
+                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsRevoked = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RefreshToken = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RefreshTokenDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tokens", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Tokens_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UserRoles",
                 columns: table => new
                 {
@@ -191,6 +218,11 @@ namespace CoreAppStructure.Data.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Tokens_UserId",
+                table: "Tokens",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
@@ -209,6 +241,9 @@ namespace CoreAppStructure.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Tokens");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");

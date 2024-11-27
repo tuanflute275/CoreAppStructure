@@ -1,3 +1,8 @@
+# certicate https
+
+	dotnet dev-certs https --trust
+	
+
 # CLI VS code
 
 	 Add-Migration v1 -OutputDir Data\Migrations

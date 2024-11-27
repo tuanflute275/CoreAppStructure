@@ -14,7 +14,7 @@
             app.UseAuthorization();
 
             // Cấu hình middleware cho xử lý ngoại lệ (ExceptionMiddleware)
-            app.UseMiddleware<ExceptionMiddleware>();
+            //app.UseMiddleware<ExceptionMiddleware>();
 
             // Ghi log các request vào Serilog
             app.UseSerilogRequestLogging(); // Ghi log các request HTTP

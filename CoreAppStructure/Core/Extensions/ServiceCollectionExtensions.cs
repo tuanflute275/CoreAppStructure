@@ -1,4 +1,7 @@
-﻿namespace CoreAppStructure.Core.Extensions
+﻿using Microsoft.Extensions.DependencyInjection;
+using Nest;
+
+namespace CoreAppStructure.Core.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -62,6 +65,10 @@
         // add singleton
         private static IServiceCollection AddSingletonServices(this IServiceCollection services)
         {
+            // Cấu hình dịch vụ Elasticsearch Client
+            var elasticsearchConfig = new ElasticsearchLogConfig();
+            var client = elasticsearchConfig.GetElasticClient();
+            services.AddSingleton<IElasticClient>(client);
             return services;
         }
 

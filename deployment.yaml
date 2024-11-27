@@ -69,7 +69,9 @@ services:
 
 volumes:
   rabbitmq-data:
+    driver: local
   redis-data:
+    driver: local
   sqlserver-data:
     driver: local
 

@@ -1,9 +1,3 @@
-2024-11-27 11:39:07.746 +07:00 [WRN] Failed to determine the https port for redirect.
-2024-11-27 11:39:10.317 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
-2024-11-27 11:39:10.338 +07:00 [INF] HTTP GET /api/category responded 200 in 1839.5034 ms
-2024-11-27 11:39:21.906 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = System.Collections.Generic.List`1[CoreAppStructure.Features.Products.Models.ProductDTO] }
-2024-11-27 11:39:21.915 +07:00 [INF] HTTP GET /api/product responded 200 in 441.8031 ms
-2024-11-27 11:39:26.826 +07:00 [INF] HTTP GET /api/product responded 200 in 42.6006 ms
 2024-11-27 15:19:53.424 +07:00 [WRN] Failed to determine the https port for redirect.
 2024-11-27 15:19:54.215 +07:00 [ERR] HTTP GET /metrics responded 500 in 17.8956 ms
 Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
@@ -50,3 +44,10 @@ Prometheus metrics
    at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
    at CoreAppStructure.Core.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Middlewares\ExceptionMiddleware.cs:line 19
+2024-11-27 15:44:10.311 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-27 15:44:12.601 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-27 15:44:12.626 +07:00 [INF] HTTP GET /api/category responded 200 in 2235.6822 ms
+2024-11-27 15:44:14.705 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-27 15:44:14.708 +07:00 [INF] HTTP GET /api/category responded 200 in 26.6783 ms
+2024-11-27 15:44:16.492 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-27 15:44:16.494 +07:00 [INF] HTTP GET /api/category responded 200 in 54.2652 ms

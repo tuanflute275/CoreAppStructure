@@ -1,0 +1,20 @@
+2024-11-27 15:45:04.609 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-27 15:45:07.107 +07:00 [INF] Processed POST /api/auth/login. Request Data: No request data provided. Response Data: { AccessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE3MzI2OTcxMDYsImV4cCI6MTczMjcwMDcwNiwiaWF0IjoxNzMyNjk3MTA2LCJpc3MiOiJ0dWFuZmx1dGUyNzUuc2l0ZSIsImF1ZCI6InR1YW5mbHV0ZSJ9.pDczPS_ztGt4Xpz7DApmjWgbFMWlcGVKIWC-Uz5Ut6U, RefreshToken = BQOj0eUv6JmbDm0nJll5QzzNritJP8475mCmbKguAAym6R0CuXoHbHSQ4t0KEK2ARHa3lVRbZErPUgE1CL4Lqg== }
+2024-11-27 15:45:07.122 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2437.9715 ms
+2024-11-27 18:09:01.481 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-27 18:09:05.581 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-27 18:09:05.695 +07:00 [INF] HTTP GET /api/category responded 200 in 3070.1262 ms
+2024-11-27 18:12:50.326 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = System.Collections.Generic.List`1[CoreAppStructure.Features.Products.Models.ProductDTO] }
+2024-11-27 18:12:50.357 +07:00 [INF] HTTP GET /api/product responded 200 in 725.7205 ms
+2024-11-27 18:13:17.175 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:13:17.189 +07:00 [INF] HTTP GET /api/role responded 200 in 106.7949 ms
+2024-11-27 18:13:31.064 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:13:31.068 +07:00 [INF] HTTP GET /api/role responded 200 in 15.9260 ms
+2024-11-27 18:14:12.920 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:14:12.926 +07:00 [INF] HTTP GET /api/role responded 200 in 17.7563 ms
+2024-11-27 18:14:15.162 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:14:15.180 +07:00 [INF] HTTP GET /api/role responded 200 in 22.5131 ms
+2024-11-27 18:14:15.666 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:14:15.674 +07:00 [INF] HTTP GET /api/role responded 200 in 16.8292 ms
+2024-11-27 18:14:15.915 +07:00 [INF] Processed GET /api/role. Request Data: No request data provided. Response Data: { TotalRecords = 5, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Roles.Models.Role] }
+2024-11-27 18:14:15.941 +07:00 [INF] HTTP GET /api/role responded 200 in 32.3218 ms

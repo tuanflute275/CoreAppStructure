@@ -1,8 +1,4 @@
-﻿using CoreAppStructure.Features.Categories.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace CoreAppStructure.Features.Products.Models
+﻿namespace CoreAppStructure.Features.Products.Models
 {
     [Table("Products")]
     public class Product

@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Auth.Models;
-
-namespace CoreAppStructure.Features.Auth.Interfaces
+﻿namespace CoreAppStructure.Features.Auth.Interfaces
 {
     public interface IAuthService
     {

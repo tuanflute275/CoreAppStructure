@@ -1,8 +1,4 @@
-﻿using CoreAppStructure.Features.Users.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace CoreAppStructure.Data.Models
+﻿namespace CoreAppStructure.Data.Models
 {
     [Table("Tokens")]
     public class Tokens

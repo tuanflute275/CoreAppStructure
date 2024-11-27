@@ -1,22 +1,19 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using StackExchange.Redis;
-
-namespace CoreAppStructure.Infrastructure.Caching
+﻿namespace CoreAppStructure.Infrastructure.Caching
 {
     public class RedisCacheService : IDisposable
     {
         private readonly ConnectionMultiplexer _redis;
-        private readonly IDatabase _database;
-        private readonly string _connectionString;
-        private IMemoryCache _memoryCache;
+        private readonly IDatabase             _database;
+        private readonly string                _connectionString;
+        private IMemoryCache                   _memoryCache;
 
         public RedisCacheService(string connectionString, IMemoryCache memoryCache)
         {
             _connectionString = connectionString;
-            _memoryCache = memoryCache;
+            _memoryCache      = memoryCache;
             if (CacheState.IsRedisConnectedStatic) // Kiểm tra trạng thái kết nối Redis
             {
-                _redis = ConnectToRedis(connectionString);
+                _redis    = ConnectToRedis(connectionString);
                 _database = _redis?.GetDatabase();
             }
             else

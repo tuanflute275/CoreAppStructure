@@ -1,9 +1,4 @@
-﻿using System.Net.Mail;
-using System.Net;
-using RazorEngine;
-using RazorEngine.Templating;
-
-namespace CoreAppStructure.Infrastructure.Email
+﻿namespace CoreAppStructure.Infrastructure.Email
 {
     public class EmailService : IEmailService
     {
@@ -18,18 +13,18 @@ namespace CoreAppStructure.Infrastructure.Email
         {
             using var mailMessage = new MailMessage
             {
-                From = new MailAddress(_emailConfig.From),
-                Subject = subject,
-                Body = body,
+                From       = new MailAddress(_emailConfig.From),
+                Subject    = subject,
+                Body       = body,
                 IsBodyHtml = true
             };
             mailMessage.To.Add(to);
 
             using var smtpClient = new SmtpClient(_emailConfig.SmtpServer)
             {
-                Port = _emailConfig.Port,
+                Port        = _emailConfig.Port,
                 Credentials = new NetworkCredential(_emailConfig.UserName, _emailConfig.Password),
-                EnableSsl = true
+                EnableSsl   = true
             };
 
             await smtpClient.SendMailAsync(mailMessage);

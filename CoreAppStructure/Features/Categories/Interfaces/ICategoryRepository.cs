@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Products.Models;
-
-namespace CoreAppStructure.Features.Categories.Interfaces
+﻿namespace CoreAppStructure.Features.Categories.Interfaces
 {
     public interface ICategoryRepository
     {

@@ -1,30 +1,24 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Core.Helpers;
-using CoreAppStructure.Data.Entities;
-using CoreAppStructure.Data.Models;
-using CoreAppStructure.Features.Auth.Interfaces;
-using CoreAppStructure.Features.Auth.Models;
-using CoreAppStructure.Features.Users.Models;
-using CoreAppStructure.Infrastructure.Email;
-using CoreAppStructure.Infrastructure.Logging;
-
-namespace CoreAppStructure.Features.Auth.Services
+﻿namespace CoreAppStructure.Features.Auth.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly IAuthRepository _authRepository;
-        private readonly IConfiguration _configuration;
+        private readonly IAuthRepository      _authRepository;
+        private readonly IConfiguration       _configuration;
         private readonly ILogger<AuthService> _logger;
-        private readonly IEmailService _emailService;
+        private readonly IEmailService        _emailService;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public AuthService(IAuthRepository authRepository, IConfiguration configuration,
-            ILogger<AuthService> logger, IEmailService emailService,
+
+        public AuthService(
+            IAuthRepository      authRepository,
+            IConfiguration       configuration,
+            ILogger<AuthService> logger, 
+            IEmailService        emailService,
             IHttpContextAccessor httpContextAccessor) 
         {
-            _authRepository = authRepository;
-            _configuration = configuration;
-            _logger = logger;
-            _emailService = emailService;   
+            _authRepository      = authRepository;
+            _configuration       = configuration;
+            _logger              = logger;
+            _emailService        = emailService;   
             _httpContextAccessor = httpContextAccessor;
         }
 
@@ -77,21 +71,21 @@ namespace CoreAppStructure.Features.Auth.Services
                 bool isMobile = Util.IsMobileDevice(userAgent);
                 Tokens token = new Tokens
                 {
-                    UserId = user.UserId,
-                    IsMobile = isMobile,
-                    IsRevoked = false,
-                    TokenType = "AccessToken",
-                    Token = accessToken,
-                    ExpirationDate = DateTime.UtcNow.AddHours(1),
-                    RefreshToken = refreshToken,
+                    UserId           = user.UserId,
+                    IsMobile         = isMobile,
+                    IsRevoked        = false,
+                    TokenType        = "AccessToken",
+                    Token            = accessToken,
+                    ExpirationDate   = DateTime.UtcNow.AddHours(1),
+                    RefreshToken     = refreshToken,
                     RefreshTokenDate = DateTime.UtcNow.AddDays(15),
-                    CreatedAt = DateTime.UtcNow,
+                    CreatedAt        = DateTime.UtcNow,
                 };
                 await _authRepository.SaveTokenAsync(token);
                 LogHelper.LogInformation(_logger, "POST", "/api/auth/login", null, new
                 {
-                    AccessToken = accessToken,
-                    RefreshToken = refreshToken
+                    AccessToken                = accessToken,
+                    RefreshToken               = refreshToken
                 });
                 return new ResponseObject(200, "Login successfully", new
                 {
@@ -155,11 +149,11 @@ namespace CoreAppStructure.Features.Auth.Services
             try
             {
                 string passwordHash = BCrypt.Net.BCrypt.HashPassword(model.Password, 12);
-                User user = new User
+                User user           = new User
                 {
-                    UserName = model.UserName,
+                    UserName     = model.UserName,
                     UserFullName = model.FullName,
-                    UserEmail = model.Email,
+                    UserEmail    = model.Email,
                     UserPassword = passwordHash
                 };
 

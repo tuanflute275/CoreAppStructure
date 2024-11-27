@@ -1,11 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Categories.Services;
-using CoreAppStructure.Features.Parameters.Interfaces;
-using CoreAppStructure.Features.Parameters.Models;
-using CoreAppStructure.Infrastructure.Logging;
-using X.PagedList;
-
-namespace CoreAppStructure.Features.Parameters.Services
+﻿namespace CoreAppStructure.Features.Parameters.Services
 {
     public class ParameterService : IParameterService
     {
@@ -27,17 +20,17 @@ namespace CoreAppStructure.Features.Parameters.Services
                 if (parameters.Count > 0)
                 {
                     int totalRecords = parameters.Count();
-                    int limit = 10;
-                    page = page <= 1 ? 1 : page;
-                    var pageData = parameters.ToPagedList(page, limit);
+                    int limit        = 10;
+                    page             = page <= 1 ? 1 : page;
+                    var pageData     = parameters.ToPagedList(page, limit);
 
                     int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
 
                     var response = new
                     {
                         TotalRecords = totalRecords,
-                        TotalPages = totalPages,
-                        Data = pageData
+                        TotalPages   = totalPages,
+                        Data         = pageData
                     };
 
                     LogHelper.LogInformation(_logger, "GET", "/api/parameter", null, response);

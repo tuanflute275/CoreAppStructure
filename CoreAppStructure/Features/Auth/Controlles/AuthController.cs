@@ -1,8 +1,4 @@
-﻿using CoreAppStructure.Features.Auth.Interfaces;
-using CoreAppStructure.Features.Auth.Models;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CoreAppStructure.Features.Auth.Controlles
+﻿namespace CoreAppStructure.Features.Auth.Controlles
 {
     [ApiController]
     [Route("api/auth")]

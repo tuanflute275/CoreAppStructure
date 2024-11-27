@@ -1,9 +1,4 @@
-﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Parameters.Interfaces;
-using CoreAppStructure.Features.Parameters.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace CoreAppStructure.Features.Parameters.Repositories
+﻿namespace CoreAppStructure.Features.Parameters.Repositories
 {
     public class ParameterRepository : IParameterRepository
     {

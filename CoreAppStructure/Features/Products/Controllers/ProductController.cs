@@ -1,11 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Products.Interfaces;
-using CoreAppStructure.Features.Products.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CoreAppStructure.Features.Products.Controllers
+﻿namespace CoreAppStructure.Features.Products.Controllers
 {
     [ApiController]
     [Route("/api/product")]

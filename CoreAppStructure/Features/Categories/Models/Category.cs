@@ -1,9 +1,4 @@
-﻿using CoreAppStructure.Features.Products.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
-
-namespace CoreAppStructure.Features.Categories.Models
+﻿namespace CoreAppStructure.Features.Categories.Models
 {
     [Table("Categories")]
     public class Category

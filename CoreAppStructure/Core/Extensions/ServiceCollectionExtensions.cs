@@ -1,52 +1,17 @@
-﻿using AutoMapper;
-using CoreAppStructure.Core.Configurations;
-using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Data;
-using CoreAppStructure.Features.Auth.Interfaces;
-using CoreAppStructure.Features.Auth.Repositories;
-using CoreAppStructure.Features.Auth.Services;
-using CoreAppStructure.Features.Categories.Interfaces;
-using CoreAppStructure.Features.Categories.Repositories;
-using CoreAppStructure.Features.Categories.Services;
-using CoreAppStructure.Features.Parameters.Interfaces;
-using CoreAppStructure.Features.Parameters.Repositories;
-using CoreAppStructure.Features.Parameters.Services;
-using CoreAppStructure.Features.Products.Interfaces;
-using CoreAppStructure.Features.Products.Mappings;
-using CoreAppStructure.Features.Products.Repositories;
-using CoreAppStructure.Features.Products.Services;
-using CoreAppStructure.Features.Roles.Interfaces;
-using CoreAppStructure.Features.Roles.Repositories;
-using CoreAppStructure.Features.Roles.Servicces;
-using CoreAppStructure.Features.Users.Interfaces;
-using CoreAppStructure.Features.Users.Mappings;
-using CoreAppStructure.Features.Users.Repositories;
-using CoreAppStructure.Features.Users.Servicces;
-using CoreAppStructure.Infrastructure.Caching;
-using CoreAppStructure.Infrastructure.Email;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.IdentityModel.Tokens;
-using Serilog;
-using StackExchange.Redis;
-using System.Text;
-using System.Text.Json;
-using ILogger = Serilog.ILogger;
-
-namespace CoreAppStructure.Core.Extensions
+﻿namespace CoreAppStructure.Core.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddDerivativeTradeServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddDerivativeTradeServices(this IServiceCollection services, IConfiguration configuration, AppSetting appSetting)
         {
-            var appSetting = AppSetting.MapValues(configuration);
             services
+                .AddHttpContextAccessorService()
                 .AddSerilogConfiguration(configuration)
                 .AddAutoMapper()
                 .AddScopedServices()
+                .AddSingletonServices()
+                .AddTransientServices()
                 .AddCorsConfiguration()
-                .AddServiceConfiguration()
                 .AddJwtConfiguration(configuration)
                 .AddEmailConfiguration(configuration)
                 .AddCacheConfiguration(appSetting.RedisConnection)
@@ -59,9 +24,53 @@ namespace CoreAppStructure.Core.Extensions
         {
             // Đăng ký dịch vụ EmailService
             services.AddScoped<IEmailService, EmailService>();
+
+            // Dịch vụ liên quan đến Product
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+
+            // Dịch vụ liên quan đến Category
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            // Dịch vụ liên quan đến Parameter
+            services.AddScoped<IParameterRepository, ParameterRepository>();
+            services.AddScoped<IParameterService, ParameterService>();
+
+            // Dịch vụ liên quan đến Role
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IRoleService, RoleService>();
+
+            // Dịch vụ liên quan đến User
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
+            // Dịch vụ liên quan đến Auth
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IAuthService, AuthService>();
+
+            return services;
+        }
+
+        // add singleton
+        private static IServiceCollection AddHttpContextAccessorService(this IServiceCollection services)
+        {
             services.AddHttpContextAccessor();
             return services;
         }
+
+        // add singleton
+        private static IServiceCollection AddSingletonServices(this IServiceCollection services)
+        {
+            return services;
+        }
+
+        // add trabsient
+        private static IServiceCollection AddTransientServices(this IServiceCollection services)
+        {
+            return services;
+        }
+
 
         // Cấu hình logging (Serilog)
         public static IServiceCollection AddSerilogConfiguration(this IServiceCollection services, IConfiguration configuration)
@@ -195,7 +204,6 @@ namespace CoreAppStructure.Core.Extensions
             return services;
         }
 
-
         // Cấu hình bộ nhớ cache (Redis hoặc fallback MemoryCache)
         public static IServiceCollection AddCacheConfiguration(this IServiceCollection services, string connectionString)
         {
@@ -253,35 +261,6 @@ namespace CoreAppStructure.Core.Extensions
 
             // Đăng ký cấu hình email như một singleton
             services.AddSingleton(emailConfig);
-            return services;
-        }
-
-        // Đăng ký các dịch vụ và repository cho ứng dụng
-        public static IServiceCollection AddServiceConfiguration(this IServiceCollection services)
-        {
-            // Dịch vụ liên quan đến Product
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-
-            // Dịch vụ liên quan đến Category
-            services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-
-            // Dịch vụ liên quan đến Parameter
-            services.AddScoped<IParameterRepository, ParameterRepository>();
-            services.AddScoped<IParameterService, ParameterService>();
-
-            // Dịch vụ liên quan đến Role
-            services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IRoleService, RoleService>();
-
-            // Dịch vụ liên quan đến User
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserService, UserService>();
-
-            // Dịch vụ liên quan đến Auth
-            services.AddScoped<IAuthRepository, AuthRepository>();
-            services.AddScoped<IAuthService, AuthService>();
             return services;
         }
     }

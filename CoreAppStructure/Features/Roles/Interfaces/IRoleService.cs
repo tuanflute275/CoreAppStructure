@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Roles.Models;
-
-namespace CoreAppStructure.Features.Roles.Interfaces
+﻿namespace CoreAppStructure.Features.Roles.Interfaces
 {
     public interface IRoleService
     {

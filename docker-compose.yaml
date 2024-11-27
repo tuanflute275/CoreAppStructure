@@ -87,6 +87,7 @@ networks:
     name: shopapp-asp-network
     driver: bridge
     external: true
+    
 # docker-compose -f ./docker-compose.yaml down
 # docker-compose -f ./docker-compose.yaml up -d
 

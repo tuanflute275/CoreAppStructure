@@ -1,10 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Users.Interfaces;
-using CoreAppStructure.Features.Users.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CoreAppStructure.Features.Users.Controllers
+﻿namespace CoreAppStructure.Features.Users.Controllers
 {
     [ApiController]
     [Route("/api/user")]

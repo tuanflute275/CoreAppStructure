@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Features.Products.Models;
-using AutoMapper;
-
-namespace CoreAppStructure.Features.Products.Mappings
+﻿namespace CoreAppStructure.Features.Products.Mappings
 {
     public class ProductMapping : Profile
     {

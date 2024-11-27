@@ -1,10 +1,4 @@
-﻿
-using CoreAppStructure.Features.Roles.Interfaces;
-using CoreAppStructure.Features.Roles.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CoreAppStructure.Features.Roles.Controllers
+﻿namespace CoreAppStructure.Features.Roles.Controllers
 {
     [ApiController]
     [Route("/api/role")]

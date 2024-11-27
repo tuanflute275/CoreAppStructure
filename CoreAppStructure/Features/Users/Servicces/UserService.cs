@@ -1,34 +1,27 @@
-﻿using AutoMapper;
-using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Core.Helpers;
-using CoreAppStructure.Data.Entities;
-using CoreAppStructure.Features.Roles.Interfaces;
-using CoreAppStructure.Features.Users.Interfaces;
-using CoreAppStructure.Features.Users.Models;
-using CoreAppStructure.Infrastructure.Logging;
-using X.PagedList;
-
-namespace CoreAppStructure.Features.Users.Servicces
+﻿namespace CoreAppStructure.Features.Users.Servicces
 {
     public class UserService : IUserService
     {
-        private readonly IMapper _mapper;
-        private readonly IUserRepository _userRepository;
-        private readonly IRoleRepository _roleRepository;
+        private readonly IMapper                                          _mapper;
+        private readonly IUserRepository                                  _userRepository;
+        private readonly IRoleRepository                                  _roleRepository;
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _environment;
-        private readonly ILogger<UserService> _logger;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ILogger<UserService>                             _logger;
+        private readonly IHttpContextAccessor                             _httpContextAccessor;
 
-        public UserService(IMapper mapper,IUserRepository userRepository,
-           Microsoft.AspNetCore.Hosting.IHostingEnvironment environment,
-            ILogger<UserService> logger, IRoleRepository roleRepository, 
-            IHttpContextAccessor httpContextAccessor)
+        public UserService(
+            IMapper                                          mapper,
+            IUserRepository                                  userRepository,
+            Microsoft.AspNetCore.Hosting.IHostingEnvironment environment,
+            ILogger<UserService>                             logger,
+            IRoleRepository                                  roleRepository, 
+            IHttpContextAccessor                             httpContextAccessor)
         {
-            _mapper = mapper;
-            _userRepository = userRepository;
-            _roleRepository = roleRepository;
-            _environment = environment;
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper              = mapper;
+            _userRepository      = userRepository;
+            _roleRepository      = roleRepository;
+            _environment         = environment;
+            _logger              = logger ?? throw new ArgumentNullException(nameof(logger));
             _httpContextAccessor = httpContextAccessor;
         }
 
@@ -40,17 +33,17 @@ namespace CoreAppStructure.Features.Users.Servicces
                 if (users.Count > 0)
                 {
                     int totalRecords = users.Count();
-                    int limit = 10;
-                    page = page <= 1 ? 1 : page;
-                    var pageData = users.ToPagedList(page, limit);
-                    int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
-                    var userDTOs = _mapper.Map<List<UserDTO>>(pageData);
+                    int limit        = 10;
+                    page             = page <= 1 ? 1 : page;
+                    var pageData     = users.ToPagedList(page, limit);
+                    int totalPages   = (int)Math.Ceiling((double)totalRecords / limit);
+                    var userDTOs     = _mapper.Map<List<UserDTO>>(pageData);
 
                     var response = new
                     {
                         TotalRecords = totalRecords,
-                        TotalPages = totalPages,
-                        Data = userDTOs
+                        TotalPages   = totalPages,
+                        Data         = userDTOs
                     };
                    
                     LogHelper.LogInformation(_logger, "GET", "/api/user", null, response);
@@ -99,22 +92,22 @@ namespace CoreAppStructure.Features.Users.Servicces
                 }
                 else
                 {
-                    var imageUrl = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage,request.Scheme, request.Host.Value, "users");
-                    user.UserAvatar = imageUrl;
-                    string passwordHash = BCrypt.Net.BCrypt.HashPassword(model.UserPassword, 12);
-                    user.UserName = model.UserName;
-                    user.UserFullName = model.UserName;
-                    user.UserEmail = model.UserEmail;
-                    user.UserPassword = passwordHash;
+                    var imageUrl         = await FileUploadHelper.UploadImageAsync(model.ImageFile, model.OldImage,request.Scheme, request.Host.Value, "users");
+                    user.UserAvatar      = imageUrl;
+                    string passwordHash  = BCrypt.Net.BCrypt.HashPassword(model.UserPassword, 12);
+                    user.UserName        = model.UserName;
+                    user.UserFullName    = model.UserName;
+                    user.UserEmail       = model.UserEmail;
+                    user.UserPassword    = passwordHash;
                     user.UserPhoneNumber = model.UserPhoneNumber;
-                    user.UserAddress = model.UserAddress;
-                    user.UserGender = model.UserGender;
-                    user.UserActive = model.UserActive;
-                    user.PlaceOfBirth = model.PlaceOfBirth;
-                    user.DateOfBirth = model.DateOfBirth;
-                    user.Nationality = model.Nationality;
-                    user.UserBio = model.UserBio;
-                    user.SocialLinks = model.SocialLinks;
+                    user.UserAddress     = model.UserAddress;
+                    user.UserGender      = model.UserGender;
+                    user.UserActive      = model.UserActive;
+                    user.PlaceOfBirth    = model.PlaceOfBirth;
+                    user.DateOfBirth     = model.DateOfBirth;
+                    user.Nationality     = model.Nationality;
+                    user.UserBio         = model.UserBio;
+                    user.SocialLinks     = model.SocialLinks;
                     await _userRepository.AddAsync(user);
 
                     // Lấy userId vừa tạo
@@ -161,18 +154,18 @@ namespace CoreAppStructure.Features.Users.Servicces
                     {
                         user.UserPassword = BCrypt.Net.BCrypt.HashPassword(model.UserPassword, 12);
                     }
-                    user.UserName = model.UserName;
-                    user.UserFullName = model.UserName;
-                    user.UserEmail = model.UserEmail;
+                    user.UserName        = model.UserName;
+                    user.UserFullName    = model.UserName;
+                    user.UserEmail       = model.UserEmail;
                     user.UserPhoneNumber = model.UserPhoneNumber;
-                    user.UserAddress = model.UserAddress;
-                    user.UserGender = model.UserGender;
-                    user.UserActive = model.UserActive;
-                    user.PlaceOfBirth = model.PlaceOfBirth;
-                    user.DateOfBirth = model.DateOfBirth;
-                    user.Nationality = model.Nationality;
-                    user.UserBio = model.UserBio;
-                    user.SocialLinks = model.SocialLinks;
+                    user.UserAddress     = model.UserAddress;
+                    user.UserGender      = model.UserGender;
+                    user.UserActive      = model.UserActive;
+                    user.PlaceOfBirth    = model.PlaceOfBirth;
+                    user.DateOfBirth     = model.DateOfBirth;
+                    user.Nationality     = model.Nationality;
+                    user.UserBio         = model.UserBio;
+                    user.SocialLinks     = model.SocialLinks;
                     await _userRepository.UpdateAsync(user);
 
                     // Lấy userId vừa cập nhật

@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Products.Models;
-
-namespace CoreAppStructure.Features.Products.Interfaces
+﻿namespace CoreAppStructure.Features.Products.Interfaces
 {
     public interface IProductService
     {

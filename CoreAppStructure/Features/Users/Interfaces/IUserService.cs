@@ -1,7 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Users.Models;
-
-namespace CoreAppStructure.Features.Users.Interfaces
+﻿namespace CoreAppStructure.Features.Users.Interfaces
 {
     public interface IUserService
     {

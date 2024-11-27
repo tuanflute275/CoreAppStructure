@@ -1,62 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\",
+  "WorkspaceRootPath": "D:\\FreeLancer\\CoreAppStructure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\users\\servicces\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\users\\servicces\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\products\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\products\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\users\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\users\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\users\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\products\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\products\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Services\\ProductService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Products\\Services\\ProductService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\products\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\products\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Helpers\\Util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Core\\Helpers\\Util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\helpers\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\helpers\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\controlles\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\controlles\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\data\\models\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\data\\models\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Data\\Models\\Tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreAppStructure\\Data\\Models\\Tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,193 +66,187 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
               "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
               "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Servicces\\UserService.cs",
               "ViewState": "AQIAAJ0AAAAAAAAAAAAcwKEAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:46:37.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:46:27.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCwAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:46:18.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppConfiguration.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeToolTip": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:41:59.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:34:16.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:33:59.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:46:37.172Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAcwKwAAABIAAAA",
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:33:53.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:46:27.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Util.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Helpers\\Util.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Helpers\\Util.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Helpers\\Util.cs",
-              "RelativeToolTip": "CoreAppStructure\\Core\\Helpers\\Util.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAjwCsAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Users\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCwAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:31:44.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:46:18.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "DocumentIndex": 3,
+              "Title": "AppConfiguration.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
+              "RelativeToolTip": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:25:37.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:41:59.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAewBgAAAAsAAAA",
+              "DocumentIndex": 4,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:40:25.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:34:16.437Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAswGAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:40:29.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:33:59.214Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAgwGUAAAAgAAAA",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Products\\Services\\ProductService.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAcwKwAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:40:14.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:33:53.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Util.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Helpers\\Util.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Helpers\\Util.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Core\\Helpers\\Util.cs",
+              "RelativeToolTip": "CoreAppStructure\\Core\\Helpers\\Util.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAjwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:31:44.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:25:37.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAewBgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:40:25.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Repositories\\AuthRepository.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAswGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:40:29.097Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAgwGUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:40:14.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
               "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
               "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:40:08.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:40:08.57Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Tokens.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Data\\Models\\Tokens.cs",
+              "DocumentMoniker": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Data\\Models\\Tokens.cs",
               "RelativeDocumentMoniker": "CoreAppStructure\\Data\\Models\\Tokens.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Data\\Models\\Tokens.cs",
+              "ToolTip": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\Data\\Models\\Tokens.cs",
               "RelativeToolTip": "CoreAppStructure\\Data\\Models\\Tokens.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:37:40.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:37:40.593Z"
             }
           ]
         }

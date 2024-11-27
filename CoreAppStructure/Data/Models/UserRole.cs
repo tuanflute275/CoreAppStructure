@@ -1,9 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using CoreAppStructure.Features.Users.Models;
-using CoreAppStructure.Features.Roles.Models;
-
-namespace CoreAppStructure.Data.Entities
+﻿namespace CoreAppStructure.Data.Entities
 {
     [Table("UserRoles")]
     public class UserRole

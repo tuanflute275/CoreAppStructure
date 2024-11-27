@@ -1,9 +1,4 @@
-﻿using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats.Webp;
-using SixLabors.ImageSharp.Processing;
-using System.IO;
-
-namespace CoreAppStructure.Core.Helpers
+﻿namespace CoreAppStructure.Core.Helpers
 {
     public static class FileUploadHelper
     {

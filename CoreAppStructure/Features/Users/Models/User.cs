@@ -1,8 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using CoreAppStructure.Data.Entities;
-
-namespace CoreAppStructure.Features.Users.Models
+﻿namespace CoreAppStructure.Features.Users.Models
 {
     [Table("Users")]
     public class User

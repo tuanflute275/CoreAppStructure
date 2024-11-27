@@ -1,6 +1,4 @@
-﻿using CoreAppStructure.Features.Parameters.Models;
-
-namespace CoreAppStructure.Features.Parameters.Interfaces
+﻿namespace CoreAppStructure.Features.Parameters.Interfaces
 {
     public interface IParameterRepository
     {

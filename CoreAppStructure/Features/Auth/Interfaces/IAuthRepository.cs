@@ -1,10 +1,4 @@
-﻿using CoreAppStructure.Data.Entities;
-using CoreAppStructure.Data.Models;
-using CoreAppStructure.Features.Auth.Models;
-using CoreAppStructure.Features.Roles.Models;
-using CoreAppStructure.Features.Users.Models;
-
-namespace CoreAppStructure.Features.Auth.Interfaces
+﻿namespace CoreAppStructure.Features.Auth.Interfaces
 {
     public interface IAuthRepository
     {
@@ -15,12 +9,12 @@ namespace CoreAppStructure.Features.Auth.Interfaces
         Task<List<UserRole>> FindUserRoleAsync(int userId);
         Task AddUserRoleAsync(UserRole userRole);
         Task DeleteUserRoleAsync(List<UserRole> userRoles);
-        Task<Role> FindByNameAsync(string name);
+        Task<RoleModel.Role> FindByNameAsync(string name);
 
         // token
-        Task<List<Tokens>> GetUserTokensAsync(int userId);
-        Task<Tokens> GetRefreshTokenAsync(string refreshToken);
-        Task SaveTokenAsync(Tokens token);
+        Task<List<DataModel.Tokens>> GetUserTokensAsync(int userId);
+        Task<DataModel.Tokens> GetRefreshTokenAsync(string refreshToken);
+        Task SaveTokenAsync(DataModel.Tokens token);
         Task UpdateTokenAsync(int tokenId, string token, DateTime expirationDate, string refreshToken, DateTime refreshTokenDate);
         Task DeleteTokenAsync(int tokenId); 
     }

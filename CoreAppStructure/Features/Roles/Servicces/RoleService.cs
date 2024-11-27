@@ -1,14 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Features.Categories.Interfaces;
-using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Categories.Repositories;
-using CoreAppStructure.Features.Categories.Services;
-using CoreAppStructure.Features.Roles.Interfaces;
-using CoreAppStructure.Features.Roles.Models;
-using CoreAppStructure.Infrastructure.Logging;
-using X.PagedList;
-
-namespace CoreAppStructure.Features.Roles.Servicces
+﻿namespace CoreAppStructure.Features.Roles.Servicces
 {
     public class RoleService : IRoleService
     {
@@ -30,17 +20,17 @@ namespace CoreAppStructure.Features.Roles.Servicces
                 if (roles.Count > 0)
                 {
                     int totalRecords = roles.Count();
-                    int limit = 10;
-                    page = page <= 1 ? 1 : page;
-                    var pageData = roles.ToPagedList(page, limit);
+                    int limit        = 10;
+                    page             = page <= 1 ? 1 : page;
+                    var pageData     = roles.ToPagedList(page, limit);
 
                     int totalPages = (int)Math.Ceiling((double)totalRecords / limit);
 
                     var response = new
                     {
                         TotalRecords = totalRecords,
-                        TotalPages = totalPages,
-                        Data = pageData
+                        TotalPages   = totalPages,
+                        Data         = pageData
                     };
 
                     LogHelper.LogInformation(_logger, "GET", "/api/role", null, response);

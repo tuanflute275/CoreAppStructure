@@ -1,11 +1,4 @@
-﻿using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System;
-using System.Text;
-using System.Text.Json;
-
-namespace Infrastructure.Messaging.RabbitMQ
+﻿namespace Infrastructure.Messaging.RabbitMQ
 {
     public class RabbitMqConsumer
     {

@@ -1,10 +1,4 @@
-﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Categories.Interfaces;
-using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Products.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace CoreAppStructure.Features.Categories.Repositories
+﻿namespace CoreAppStructure.Features.Categories.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

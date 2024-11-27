@@ -1,10 +1,4 @@
-﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Features.Roles.Interfaces;
-using CoreAppStructure.Features.Roles.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace CoreAppStructure.Features.Roles.Repositories
+﻿namespace CoreAppStructure.Features.Roles.Repositories
 {
     public class RoleRepository : IRoleRepository
     {
@@ -14,7 +8,7 @@ namespace CoreAppStructure.Features.Roles.Repositories
         {
             _context = context;
         }
-        public async Task<List<Role>> FindAllAsync(string? name, string? sort)
+        public async Task<List<RoleModel.Role>> FindAllAsync(string? name, string? sort)
         {
             var roles = _context.Roles.AsQueryable();
 
@@ -45,34 +39,34 @@ namespace CoreAppStructure.Features.Roles.Repositories
             return await roles.ToListAsync();
         }
 
-        public async Task<List<Role>> FindListAllAsync()
+        public async Task<List<RoleModel.Role>> FindListAllAsync()
         {
             return await _context.Roles.ToListAsync();
         }
 
-        public async Task<Role> FindByIdAsync(int id)
+        public async Task<RoleModel.Role> FindByIdAsync(int id)
         {
             return await _context.Roles.FindAsync(id);
         }
 
-        public async Task<Role> FindByNameAsync(string name)
+        public async Task<RoleModel.Role> FindByNameAsync(string name)
         {
             return await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == name);
         }
 
-        public async Task AddAsync(Role role)
+        public async Task AddAsync(RoleModel.Role role)
         {
             await _context.Roles.AddAsync(role);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Role role)
+        public async Task UpdateAsync(RoleModel.Role role)
         {
             _context.Roles.Update(role);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Role role)
+        public async Task DeleteAsync(RoleModel.Role role)
         {
             _context.Roles.Remove(role);
             await _context.SaveChangesAsync();

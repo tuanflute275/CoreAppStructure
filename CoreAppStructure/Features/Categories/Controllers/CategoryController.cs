@@ -1,9 +1,4 @@
-﻿using CoreAppStructure.Features.Categories.Interfaces;
-using CoreAppStructure.Features.Categories.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CoreAppStructure.Features.Categories.Controllers
+﻿namespace CoreAppStructure.Features.Categories.Controllers
 {
     [ApiController]
     [Route("/api/category")]

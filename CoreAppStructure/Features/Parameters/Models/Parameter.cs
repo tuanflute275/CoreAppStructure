@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace CoreAppStructure.Features.Parameters.Models
+﻿namespace CoreAppStructure.Features.Parameters.Models
 {
     [Table("Parameters")]
     public class Parameter

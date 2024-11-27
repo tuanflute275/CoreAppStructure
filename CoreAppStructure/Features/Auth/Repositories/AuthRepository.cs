@@ -1,13 +1,4 @@
-﻿using CoreAppStructure.Data;
-using CoreAppStructure.Data.Entities;
-using CoreAppStructure.Data.Models;
-using CoreAppStructure.Features.Auth.Interfaces;
-using CoreAppStructure.Features.Auth.Models;
-using CoreAppStructure.Features.Roles.Models;
-using CoreAppStructure.Features.Users.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace CoreAppStructure.Features.Auth.Repositories
+﻿namespace CoreAppStructure.Features.Auth.Repositories
 {
     public class AuthRepository : IAuthRepository
     {
@@ -62,7 +53,7 @@ namespace CoreAppStructure.Features.Auth.Repositories
                           }).ToListAsync();
         }
 
-        public async Task<Role> FindByNameAsync(string name)
+        public async Task<RoleModel.Role> FindByNameAsync(string name)
         {
             return await _context.Roles.FirstOrDefaultAsync(x => x.RoleName == name);
         }
@@ -79,8 +70,6 @@ namespace CoreAppStructure.Features.Auth.Repositories
             await _context.Tokens.AddAsync(token);
             await _context.SaveChangesAsync();
         }
-
-  
 
         public async Task UpdateTokenAsync(int tokenId, string token, DateTime expirationDate, string refreshToken, DateTime refreshTokenDate)
         {

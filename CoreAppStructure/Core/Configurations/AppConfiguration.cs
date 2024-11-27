@@ -1,11 +1,8 @@
-﻿using CoreAppStructure.Core.Middlewares;
-using Serilog;
-
-namespace CoreAppStructure.Core.Configurations
+﻿namespace CoreAppStructure.Core.Configurations
 {
     public static class AppConfiguration
     {
-        public static void ConfigureMiddleware(IApplicationBuilder app)
+        public static void ConfigureMiddleware(this IApplicationBuilder app)
         {
             // Cấu hình các middleware
             app.UseCors("AllowOrigin");  // CORS policy

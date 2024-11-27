@@ -1,9 +1,4 @@
-﻿using CoreAppStructure.Data.Entities;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
-
-namespace CoreAppStructure.Features.Roles.Models
+﻿namespace CoreAppStructure.Features.Roles.Models
 {
     [Table("Roles")]
     public class Role

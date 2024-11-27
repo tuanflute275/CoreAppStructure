@@ -5,24 +5,8 @@
       "PackagePath": "staticwebassets\\uploads\\products\\.gitkeep"
     },
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\9e237e45-3ee5-43a3-808e-a3f680136fd6.webp",
-      "PackagePath": "staticwebassets\\uploads\\products\\9e237e45-3ee5-43a3-808e-a3f680136fd6.webp"
-    },
-    {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\c775887a-9323-44e8-b882-8cc7b5032c2f.webp",
-      "PackagePath": "staticwebassets\\uploads\\products\\c775887a-9323-44e8-b882-8cc7b5032c2f.webp"
-    },
-    {
       "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
       "PackagePath": "staticwebassets\\uploads\\users\\.gitkeep"
-    },
-    {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\178bc983-0640-4d1f-b4d6-2baf706fdd2d.webp",
-      "PackagePath": "staticwebassets\\uploads\\users\\178bc983-0640-4d1f-b4d6-2baf706fdd2d.webp"
-    },
-    {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\9eaf0359-b64c-4943-8b39-43b95227a2df.webp",
-      "PackagePath": "staticwebassets\\uploads\\users\\9eaf0359-b64c-4943-8b39-43b95227a2df.webp"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,13 +1,4 @@
-﻿using CoreAppStructure.Core.Helpers;
-using CoreAppStructure.Features.Products.Interfaces;
-using CoreAppStructure.Features.Products.Models;
-using X.PagedList;
-using CoreAppStructure.Infrastructure.Caching;
-using Newtonsoft.Json;
-using AutoMapper;
-using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Infrastructure.Logging;
-
+﻿using Newtonsoft.Json;
 namespace CoreAppStructure.Features.Products.Services
 {
     public class ProductService : IProductService

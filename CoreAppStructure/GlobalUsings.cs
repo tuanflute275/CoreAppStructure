@@ -56,7 +56,6 @@ global using System.Net;
 global using System.Net.Mail;
 global using System.Security.Claims;
 global using System.Security.Cryptography;
-global using System.Text;
 global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using X.PagedList;
@@ -65,3 +64,7 @@ global using ILogger = Serilog.ILogger;
 global using RoleModel = CoreAppStructure.Features.Roles.Models;
 global using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
 global using RabbitMQ.Client;
+global using Role = CoreAppStructure.Features.Roles.Models.Role;
+
+
+

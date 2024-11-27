@@ -1,9 +1,4 @@
-﻿using CoreAppStructure.Data;
-using CoreAppStructure.Features.Products.Interfaces;
-using CoreAppStructure.Features.Products.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace CoreAppStructure.Features.Products.Repositories
+﻿namespace CoreAppStructure.Features.Products.Repositories
 {
     public class ProductRepository : IProductRepository
     {

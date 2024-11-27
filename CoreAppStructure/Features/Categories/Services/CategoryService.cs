@@ -1,11 +1,4 @@
-﻿using CoreAppStructure.Core.Exceptions;
-using CoreAppStructure.Core.Helpers;
-using CoreAppStructure.Features.Categories.Interfaces;
-using CoreAppStructure.Features.Categories.Models;
-using CoreAppStructure.Infrastructure.Logging;
-using X.PagedList;
-
-namespace CoreAppStructure.Features.Categories.Services
+﻿namespace CoreAppStructure.Features.Categories.Services
 {
     public class CategoryService : ICategoryService
     {

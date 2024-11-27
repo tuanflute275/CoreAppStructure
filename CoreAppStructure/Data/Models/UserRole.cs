@@ -21,6 +21,6 @@
         public virtual User User { get; set; }
 
         [ForeignKey("RoleId")]
-        public virtual Role Role { get; set; }
+        public virtual Features.Roles.Models.Role Role { get; set; }
     }
 }

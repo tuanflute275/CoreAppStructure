@@ -9,3 +9,9 @@
 2024-11-27 00:45:15.338 +07:00 [INF] HTTP POST /api/product responded 200 in 12119.2457 ms
 2024-11-27 00:46:04.628 +07:00 [INF] Processed PUT /api/product/1. Request Data: CoreAppStructure.Features.Products.Models.ProductViewModel. Response Data: CoreAppStructure.Features.Products.Models.Product
 2024-11-27 00:46:04.634 +07:00 [INF] HTTP PUT /api/product/1 responded 200 in 11751.7191 ms
+2024-11-27 11:39:07.746 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-27 11:39:10.317 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-27 11:39:10.338 +07:00 [INF] HTTP GET /api/category responded 200 in 1839.5034 ms
+2024-11-27 11:39:21.906 +07:00 [INF] Processed GET /api/product. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = System.Collections.Generic.List`1[CoreAppStructure.Features.Products.Models.ProductDTO] }
+2024-11-27 11:39:21.915 +07:00 [INF] HTTP GET /api/product responded 200 in 441.8031 ms
+2024-11-27 11:39:26.826 +07:00 [INF] HTTP GET /api/product responded 200 in 42.6006 ms

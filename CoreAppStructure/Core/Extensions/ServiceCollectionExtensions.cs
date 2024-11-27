@@ -141,7 +141,7 @@
         public static IServiceCollection AddJwtConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
             var key = configuration["Jwt:Key"];
-            var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+            var signingKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(key));
 
             services.AddAuthentication(options =>
             {

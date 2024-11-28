@@ -227,3 +227,5 @@ D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Promet
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Prometheus.AspNetCore.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Elasticsearch.Net.dll
 D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Nest.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Prometheus.Client.dll
+D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\bin\Debug\net8.0\Prometheus.Client.Abstractions.dll

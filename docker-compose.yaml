@@ -35,7 +35,8 @@ services:
       - "8888:8888"
       - "8889:8889"
       - "13133:13133"
-      - "4317:4317"
+      - "4317:4317"  # Cổng cho gRPC
+      - "4318:4318"  # Cổng cho HTTP
     networks:
       - shopapp-asp-network
   prometheus:
@@ -87,6 +88,13 @@ networks:
     name: shopapp-asp-network
     driver: bridge
     external: true
+    
+    
+    
+#otel-collector: Thu thập dữ liệu từ các ứng dụng và gửi đến Prometheus.
+#Prometheus: Lưu trữ và xử lý dữ liệu giám sát.
+#Grafana: Hiển thị dữ liệu từ Prometheus dưới dạng dashboard.
+#node_exporter: Thu thập các số liệu từ hệ thống máy chủ.    
     
 # docker-compose -f ./docker-compose.yaml down
 # docker-compose -f ./docker-compose.yaml up -d

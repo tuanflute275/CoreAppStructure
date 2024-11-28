@@ -29,6 +29,7 @@
           "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
           "OpenTelemetry.Instrumentation.Http": "1.9.0",
           "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
+          "Prometheus.Client": "5.2.0",
           "RabbitMQ.Client": "7.0.0",
           "RazorEngine": "3.10.0",
           "Serilog.AspNetCore": "8.0.3",
@@ -1251,6 +1252,25 @@
           }
         }
       },
+      "Prometheus.Client/5.2.0": {
+        "dependencies": {
+          "Prometheus.Client.Abstractions": "5.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "Prometheus.Client.Abstractions/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
       "RabbitMQ.Client/7.0.0": {
         "dependencies": {
           "System.IO.Pipelines": "8.0.0",
@@ -2363,6 +2383,20 @@
       "sha512": "sha512-/4TfTvbwIDqpaKTiWvEsjUywiHYF9zZvGZF5sK15avoDsUO/WPQbKsF8TiMaesuphdFQPK2z52P0zk6j26V0rQ==",
       "path": "prometheus-net.aspnetcore/8.2.1",
       "hashPath": "prometheus-net.aspnetcore.8.2.1.nupkg.sha512"
+    },
+    "Prometheus.Client/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Wa4qzz9WtKmXr2Yii5sOwAaKCzxwwfMg27wrHqrejw54icwRuWRSX68QhvUFwJnCKqpXc7SpIS3kzzmcfrB8w==",
+      "path": "prometheus.client/5.2.0",
+      "hashPath": "prometheus.client.5.2.0.nupkg.sha512"
+    },
+    "Prometheus.Client.Abstractions/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ROwoYLSTmodSTQLQWrqVLNh4ZZyXAA+0wPGKM+1dhCGUPJQm5qjrKMhMVL8Fy6waEU1CFtf+0nLeIsvdDCUFAQ==",
+      "path": "prometheus.client.abstractions/5.2.0",
+      "hashPath": "prometheus.client.abstractions.5.2.0.nupkg.sha512"
     },
     "RabbitMQ.Client/7.0.0": {
       "type": "package",

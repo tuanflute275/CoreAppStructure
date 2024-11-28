@@ -1,0 +1,7 @@
+2024-11-28 13:41:31.894 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-28 13:41:33.865 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-28 13:41:33.962 +07:00 [INF] HTTP GET /api/category responded 200 in 1985.4789 ms
+2024-11-28 13:41:39.315 +07:00 [INF] HTTP GET /metrics responded 200 in 52.4970 ms
+2024-11-28 13:42:31.929 +07:00 [INF] HTTP GET /metrics responded 200 in 10.6539 ms
+2024-11-28 13:42:32.003 +07:00 [INF] HTTP GET /favicon.ico responded 404 in 0.5963 ms
+2024-11-28 13:46:54.694 +07:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0657 ms

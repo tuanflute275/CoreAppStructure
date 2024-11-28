@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Nest;
+using OpenTelemetry.Trace;
 
 namespace CoreAppStructure.Core.Extensions
 {
@@ -17,6 +18,7 @@ namespace CoreAppStructure.Core.Extensions
                 .AddCorsConfiguration()
                 .AddJwtConfiguration(configuration)
                 .AddEmailConfiguration(configuration)
+                .AddMornitorConfiguration(configuration)
                 .AddCacheConfiguration(appSetting.RedisConnection)
                 .AddSqlServerConfiguration(appSetting.SqlServerConnection);
             return services;
@@ -78,6 +80,33 @@ namespace CoreAppStructure.Core.Extensions
             return services;
         }
 
+        // Cấu hình mornitoring (Promethues)
+        public static IServiceCollection AddMornitorConfiguration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddOpenTelemetry()
+            .WithTracing(tracerProviderBuilder =>
+            {
+                tracerProviderBuilder
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddOtlpExporter(otp =>
+                    {
+                        otp.Endpoint = new Uri(configuration["Otlp:Endpoint"]);
+                    });
+            })
+            .WithMetrics(otp =>
+                otp
+                    .AddAspNetCoreInstrumentation()
+                    .AddRuntimeInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddOtlpExporter(otp => {
+                        otp.Endpoint = new Uri(configuration["Otlp:Endpoint"]);
+                    })
+            );
+            services.AddSingleton(Metrics.DefaultRegistry);
+            services.AddEndpointsApiExplorer();
+            return services;
+        }
 
         // Cấu hình logging (Serilog)
         public static IServiceCollection AddSerilogConfiguration(this IServiceCollection services, IConfiguration configuration)
@@ -102,7 +131,6 @@ namespace CoreAppStructure.Core.Extensions
             services.AddSingleton<ILogger>(Log.Logger);
             return services;
         }
-
        
         // Đăng ký các dịch vụ scoped
         public static IServiceCollection AddSqlServerConfiguration(this IServiceCollection services, string connectionString)

@@ -65,6 +65,9 @@ global using RoleModel = CoreAppStructure.Features.Roles.Models;
 global using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
 global using RabbitMQ.Client;
 global using Role = CoreAppStructure.Features.Roles.Models.Role;
+global using OpenTelemetry.Metrics;
+global using Prometheus;
+global using Metrics = Prometheus.Metrics;
 
 
 

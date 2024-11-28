@@ -1716,6 +1716,35 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Prometheus.Client/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Prometheus.Client.Abstractions": "5.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Prometheus.Client.Abstractions/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "RabbitMQ.Client/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -5363,6 +5392,40 @@
         "prometheus-net.aspnetcore.nuspec"
       ]
     },
+    "Prometheus.Client/5.2.0": {
+      "sha512": "9Wa4qzz9WtKmXr2Yii5sOwAaKCzxwwfMg27wrHqrejw54icwRuWRSX68QhvUFwJnCKqpXc7SpIS3kzzmcfrB8w==",
+      "type": "package",
+      "path": "prometheus.client/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/Prometheus.Client.dll",
+        "lib/netstandard2.0/Prometheus.Client.xml",
+        "lib/netstandard2.1/Prometheus.Client.dll",
+        "lib/netstandard2.1/Prometheus.Client.xml",
+        "prometheus.client.5.2.0.nupkg.sha512",
+        "prometheus.client.nuspec"
+      ]
+    },
+    "Prometheus.Client.Abstractions/5.2.0": {
+      "sha512": "ROwoYLSTmodSTQLQWrqVLNh4ZZyXAA+0wPGKM+1dhCGUPJQm5qjrKMhMVL8Fy6waEU1CFtf+0nLeIsvdDCUFAQ==",
+      "type": "package",
+      "path": "prometheus.client.abstractions/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/Prometheus.Client.Abstractions.dll",
+        "lib/netstandard2.0/Prometheus.Client.Abstractions.xml",
+        "lib/netstandard2.1/Prometheus.Client.Abstractions.dll",
+        "lib/netstandard2.1/Prometheus.Client.Abstractions.xml",
+        "prometheus.client.abstractions.5.2.0.nupkg.sha512",
+        "prometheus.client.abstractions.nuspec"
+      ]
+    },
     "RabbitMQ.Client/7.0.0": {
       "sha512": "8YJz22mOSMtkbIVuVSz2HbJwbpKwRoXQ1uqbczDUt1w1Ds8dxFs6dkV/oZ8AlTmkErZjtQelHv+oBu52ud00WA==",
       "type": "package",
@@ -6982,6 +7045,7 @@
       "OpenTelemetry.Instrumentation.AspNetCore >= 1.9.0",
       "OpenTelemetry.Instrumentation.Http >= 1.9.0",
       "OpenTelemetry.Instrumentation.Runtime >= 1.9.0",
+      "Prometheus.Client >= 5.2.0",
       "RabbitMQ.Client >= 7.0.0",
       "RazorEngine >= 3.10.0",
       "Serilog.AspNetCore >= 8.0.3",
@@ -7130,6 +7194,10 @@
           "OpenTelemetry.Instrumentation.Runtime": {
             "target": "Package",
             "version": "[1.9.0, )"
+          },
+          "Prometheus.Client": {
+            "target": "Package",
+            "version": "[5.2.0, )"
           },
           "RabbitMQ.Client": {
             "target": "Package",

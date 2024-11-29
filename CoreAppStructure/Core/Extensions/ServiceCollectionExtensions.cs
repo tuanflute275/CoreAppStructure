@@ -1,7 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Nest;
+﻿using Nest;
 using OpenTelemetry.Trace;
-
 namespace CoreAppStructure.Core.Extensions
 {
     public static class ServiceCollectionExtensions
@@ -18,7 +16,9 @@ namespace CoreAppStructure.Core.Extensions
                 .AddCorsConfiguration()
                 .AddJwtConfiguration(configuration)
                 .AddEmailConfiguration(configuration)
+                .AddRabbitMQConfiguration(configuration)
                 .AddMornitorConfiguration(configuration)
+                .AddElasticSearchConfiguration(configuration)
                 .AddCacheConfiguration(appSetting.RedisConnection)
                 .AddSqlServerConfiguration(appSetting.SqlServerConnection);
             return services;
@@ -67,10 +67,6 @@ namespace CoreAppStructure.Core.Extensions
         // add singleton
         private static IServiceCollection AddSingletonServices(this IServiceCollection services)
         {
-            // Cấu hình dịch vụ Elasticsearch Client
-            var elasticsearchConfig = new ElasticsearchLogConfig();
-            var client = elasticsearchConfig.GetElasticClient();
-            services.AddSingleton<IElasticClient>(client);
             return services;
         }
 
@@ -296,6 +292,56 @@ namespace CoreAppStructure.Core.Extensions
 
             // Đăng ký cấu hình email như một singleton
             services.AddSingleton(emailConfig);
+            return services;
+        }
+
+        // Cấu hình dịch vụ elasticSearch
+        public static IServiceCollection AddElasticSearchConfiguration(this IServiceCollection services, IConfiguration configuration)
+        {
+            var uri = configuration["Elasticsearch:Uri"];
+            var index = configuration["Elasticsearch:Index"];
+
+            var settings = new ConnectionSettings(new Uri(uri))
+                           .DefaultIndex(index);
+
+            var client = new ElasticClient(settings);
+
+            services.AddSingleton<IElasticClient>(client);
+            return services;
+        }
+
+        // Cấu hình rabbitMQ
+        public static IServiceCollection AddRabbitMQConfiguration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton<IRabbitService, RabbitService>(sp => {
+                var logger = sp.GetRequiredService<ILogger<RabbitService>>();
+                var rabbitSettingConfigurations = configuration.GetSection(nameof(RabbitSetting)).GetChildren();
+
+                var rabbitSettings = new List<RabbitSetting>();
+                foreach (var rabbitSettingConfiguration in rabbitSettingConfigurations)
+                {
+                    var rabbit = rabbitSettingConfiguration.Get<RabbitSetting>();
+                    if (!rabbitSettings.Contains(rabbit))
+                        rabbitSettings.Add(rabbit);
+                }
+
+                var configHNX = rabbitSettings.FirstOrDefault(e => e.Id.Equals(Constants.HNXSettingId));
+                var configFixReceive = rabbitSettings.FirstOrDefault(e => e.Id.Equals(Constants.FixReceiveSettingId));
+                var factoryHNX = new ConnectionFactory()
+                {
+                    UserName = configHNX.UserName,
+                    Password = configHNX.Password,
+                    HostName = configHNX.HostName,
+                };
+                var factoryFixReceive = new ConnectionFactory()
+                {
+                    UserName = configFixReceive.UserName,
+                    Password = configFixReceive.Password,
+                    HostName = configFixReceive.HostName,
+                };
+
+                return new RabbitService(factoryHNX, factoryFixReceive, logger, configHNX, configFixReceive);
+            });
             return services;
         }
     }

@@ -1,4 +1,6 @@
-﻿var builder       = WebApplication.CreateBuilder(args);
+﻿using Nest;
+
+var builder       = WebApplication.CreateBuilder(args);
 var services      = builder.Services;
 var configuration = builder.Configuration;
 var appSetting    = AppSetting.MapValues(configuration);
@@ -27,7 +29,6 @@ if (app.Environment.IsDevelopment())
 // test mornitoring prometheus
 var counter = Metrics.CreateCounter("my_custom_counter", "Số lần thực thi một số thao tác.");
 counter.Inc();
-
 // Gọi phương thức cấu hình các middleware từ AppConfiguration
 app.ConfigureMiddleware();
 app.UseRouting();

@@ -1,4 +1,6 @@
-﻿namespace CoreAppStructure.Core.Configurations
+﻿using Nest;
+
+namespace CoreAppStructure.Core.Configurations
 {
     public static class AppConfiguration
     {
@@ -18,6 +20,10 @@
 
             // Ghi log các request vào Serilog
             app.UseSerilogRequestLogging(); // Ghi log các request HTTP
+
+            // Cấu hình Elasticsearch client cho LogHelper
+            var elasticClient = app.ApplicationServices.GetRequiredService<IElasticClient>();
+            LogHelper.Configure(elasticClient);
         }
     }
 }

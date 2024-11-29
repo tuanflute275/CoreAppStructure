@@ -3,7 +3,6 @@ global using CoreAppStructure.Core.Configurations;
 global using CoreAppStructure.Core.Exceptions;
 global using CoreAppStructure.Core.Extensions;
 global using CoreAppStructure.Core.Helpers;
-global using CoreAppStructure.Core.Middlewares;
 global using CoreAppStructure.Data;
 global using CoreAppStructure.Data.Entities;
 global using CoreAppStructure.Data.Models;
@@ -62,12 +61,13 @@ global using X.PagedList;
 global using DataModel = CoreAppStructure.Data.Models;
 global using ILogger = Serilog.ILogger;
 global using RoleModel = CoreAppStructure.Features.Roles.Models;
-global using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
-global using RabbitMQ.Client;
 global using Role = CoreAppStructure.Features.Roles.Models.Role;
 global using OpenTelemetry.Metrics;
 global using Prometheus;
 global using Metrics = Prometheus.Metrics;
+global using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
+global using RabbitMQ.Client;
+global using Constants = CoreAppStructure.Core.Helpers.Constants;
 
 
 

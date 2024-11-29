@@ -2,9 +2,9 @@
 {
     public class RabbitMqConsumer
     {
-        private readonly RabbitMqSettings _rabbitMqSettings;
+        private readonly RabbitService _rabbitMqSettings;
 
-        public RabbitMqConsumer(RabbitMqSettings rabbitMqSettings)
+        public RabbitMqConsumer(RabbitService rabbitMqSettings)
         {
             _rabbitMqSettings = rabbitMqSettings;
         }

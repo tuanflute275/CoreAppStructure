@@ -364,3 +364,7 @@ FodyWeavers.xsd
 
 # Bỏ qua tất cả các file trong wwwroot/Uploads/products
 **wwwroot/Uploads/products/*
+
+# Bỏ qua tất cả các thư mục bin và obj ở bất kỳ cấp nào
+**/bin/
+**/obj/

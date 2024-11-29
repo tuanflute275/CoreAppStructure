@@ -5,10 +5,10 @@ namespace CoreAppStructure.Infrastructure.Logging
     public static class LogHelper
     {
         private static IElasticClient _elasticClient;
-        static LogHelper()
+
+        public static void Configure(IElasticClient elasticClient)
         {
-            var elasticsearchConfig = new ElasticsearchLogConfig();
-            _elasticClient = elasticsearchConfig.GetElasticClient();
+            _elasticClient = elasticClient ?? throw new ArgumentNullException(nameof(elasticClient));
         }
 
         // Log lỗi khi có ngoại lệ

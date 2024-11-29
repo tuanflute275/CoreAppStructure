@@ -1,0 +1,6 @@
+2024-11-29 11:46:22.875 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-29 11:46:24.402 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-29 11:47:09.366 +07:00 [INF] HTTP GET /api/category responded 200 in 46398.1527 ms
+2024-11-29 11:48:29.107 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-11-29 11:48:31.100 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-11-29 11:48:54.465 +07:00 [INF] HTTP GET /api/category responded 200 in 25273.6885 ms

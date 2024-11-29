@@ -2,21 +2,21 @@
 {
     public class RabbitMqProducer
     {
-        private readonly RabbitMqSettings _rabbitMqSettings;
+        private readonly RabbitService _rabbitMqSettings;
 
-        public RabbitMqProducer(RabbitMqSettings rabbitMqSettings)
+        public RabbitMqProducer(RabbitService rabbitMqSettings)
         {
             _rabbitMqSettings = rabbitMqSettings;
         }
 
         public void SendMessage<T>(T message)
         {
-            var factory = new ConnectionFactory()
+           /* var factory = new ConnectionFactory()
             {
                 HostName = _rabbitMqSettings.HostName,
                 UserName = _rabbitMqSettings.UserName,
                 Password = _rabbitMqSettings.Password
-            };
+            };*/
 
            /* using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())

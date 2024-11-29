@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "07Vi306NZZAKri9llBUSPNN+5TUbQu6S0tpWFNFhLtA=",
+  "Hash": "qZkBEzmnMEjGJzYyPLkfWyPAoGaPJUX0/JudVTd9vro=",
   "Source": "CoreAppStructure",
   "BasePath": "_content/CoreAppStructure",
   "Mode": "Default",
@@ -10,49 +10,219 @@
     {
       "Name": "CoreAppStructure\\wwwroot",
       "Source": "CoreAppStructure",
-      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "ContentRoot": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
+      "Identity": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "ContentRoot": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/products/.gitkeep",
+      "RelativePath": "uploads/products/#[.{fingerprint}]?.gitkeep",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\.gitkeep"
     },
     {
-      "Identity": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
+      "Identity": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
       "SourceId": "CoreAppStructure",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
+      "ContentRoot": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\",
       "BasePath": "_content/CoreAppStructure",
-      "RelativePath": "uploads/users/.gitkeep",
+      "RelativePath": "uploads/users/#[.{fingerprint}]?.gitkeep",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "5ipweew5fc",
+      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\users\\.gitkeep"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/products/.5ipweew5fc.gitkeep",
+      "AssetFile": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 08:59:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/products/.gitkeep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/products/.gitkeep",
+      "AssetFile": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 08:59:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/users/.5ipweew5fc.gitkeep",
+      "AssetFile": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 08:59:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5ipweew5fc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/users/.gitkeep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/users/.gitkeep",
+      "AssetFile": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "0"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 08:59:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        }
+      ]
     }
   ]
 }

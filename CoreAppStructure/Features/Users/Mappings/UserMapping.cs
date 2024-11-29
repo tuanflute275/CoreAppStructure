@@ -1,6 +1,6 @@
 ﻿namespace CoreAppStructure.Features.Users.Mappings
 {
-    public class UserMapping : Profile
+    public class UserMapping : AutoMapper.Profile
     {
         public UserMapping()
         {

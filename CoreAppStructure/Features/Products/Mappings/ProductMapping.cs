@@ -1,6 +1,6 @@
 ﻿namespace CoreAppStructure.Features.Products.Mappings
 {
-    public class ProductMapping : Profile
+    public class ProductMapping : AutoMapper.Profile
     {
         public ProductMapping()
         {

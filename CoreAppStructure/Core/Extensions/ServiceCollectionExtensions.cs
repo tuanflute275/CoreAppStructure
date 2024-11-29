@@ -1,8 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Nest;
-using OpenTelemetry.Trace;
-
-namespace CoreAppStructure.Core.Extensions
+﻿namespace CoreAppStructure.Core.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -71,6 +67,10 @@ namespace CoreAppStructure.Core.Extensions
             var elasticsearchConfig = new ElasticsearchLogConfig();
             var client = elasticsearchConfig.GetElasticClient();
             services.AddSingleton<IElasticClient>(client);
+
+            // Memory
+            services.AddSingleton<CategoryMemory>();
+
             return services;
         }
 

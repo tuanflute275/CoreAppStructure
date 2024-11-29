@@ -1,12 +1,16 @@
 {
   "Files": [
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
+      "Id": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\products\\.gitkeep",
       "PackagePath": "staticwebassets\\uploads\\products\\.gitkeep"
     },
     {
-      "Id": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
+      "Id": "D:\\FreeLancer\\CoreAppStructure\\CoreAppStructure\\wwwroot\\uploads\\users\\.gitkeep",
       "PackagePath": "staticwebassets\\uploads\\users\\.gitkeep"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreAppStructure.Microsoft.AspNetCore.StaticWebAssets.props",

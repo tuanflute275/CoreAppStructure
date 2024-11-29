@@ -16,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+var app = builder.Build().EnsureNetworkConnectivity();
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
@@ -33,4 +33,7 @@ app.ConfigureMiddleware();
 app.UseRouting();
 app.MapControllers();
 app.MapMetrics();
+
+// Seeding Data vào Memory
+app.LoadDataFromDbContextToMemory();
 app.Run();

@@ -46,7 +46,11 @@ namespace CoreAppStructure.Core.Configurations
                     if (context.WebSockets.IsWebSocketRequest)
                     {
                         var webSocket = await context.WebSockets.AcceptWebSocketAsync();
-                        await WebSocketHandler.TrackUserActivity(context, webSocket);
+                        using (var scope = app.ApplicationServices.CreateScope())
+                        {
+                            var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                            await WebSocketHandler.TrackUserActivity(context, webSocket, dbContext);
+                        }
                     }
                     else
                     {

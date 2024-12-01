@@ -40,7 +40,7 @@
         [StringLength(1)]
         [Column(TypeName = "nvarchar(1)")]
         public string? DeleteFlag { get; set; } // Y or N
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public virtual ICollection<UserRole> UserRoles { get; set; }
     }
 }

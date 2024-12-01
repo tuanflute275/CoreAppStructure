@@ -11,14 +11,7 @@ namespace CoreAppStructure.Features.Auth.Controlles
         {
             _authService = authService;
         }
-
-        [HttpGet("online")]
-        public IActionResult GetOnlineUsers()
-        {
-            var onlineUserCount = WebSocketHandler.GetOnlineUserCount(); // Trả về số lượng người dùng online
-            return Ok(new { onlineUserCount });
-        }
-
+       
         [HttpGet("signin-google")]
         public async Task<ActionResult> GoogleLogin()
         {

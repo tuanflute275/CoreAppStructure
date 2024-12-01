@@ -43,6 +43,18 @@
 		(1, 1),
 		(2, 2);
 
+		
+# Exam notification realtime
+
+	 [HttpGet]
+	 [Route("noti")]
+	 public async Task<IActionResult> CreatePromotion()
+	 {
+		 // Gửi thông báo giảm giá đến tất cả các client đang kết nối WebSocket
+		 await WebSocketHandler.SendPromoNotification("Giảm giá 20% cho tất cả các sản phẩm!");
+
+		 return Ok("Khuyến mãi đã được tạo và thông báo đã được gửi.");
+	 }
 
 	
 	

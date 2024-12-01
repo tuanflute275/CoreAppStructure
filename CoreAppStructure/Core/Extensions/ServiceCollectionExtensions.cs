@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Google;
-using Nest;
-using OpenTelemetry.Trace;
+﻿using Nest;
 namespace CoreAppStructure.Core.Extensions
 {
     public static class ServiceCollectionExtensions

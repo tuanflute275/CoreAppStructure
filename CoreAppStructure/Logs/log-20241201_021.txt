@@ -1,0 +1,35 @@
+2024-12-01 12:55:32.191 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 12:55:42.317 +07:00 [ERR] HTTP GET /ws responded 500 in 9972.7134 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoreAppStructure.Core.WebSocket.WebSocketHandler.TrackUserActivity(HttpContext context, WebSocket webSocket, ApplicationDbContext ctx) in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\WebSocket\WebSocketHandler.cs:line 44
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext() in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Configurations\AppConfiguration.cs:line 52
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-12-01 12:55:42.338 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoreAppStructure.Core.WebSocket.WebSocketHandler.TrackUserActivity(HttpContext context, WebSocket webSocket, ApplicationDbContext ctx) in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\WebSocket\WebSocketHandler.cs:line 44
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext() in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Configurations\AppConfiguration.cs:line 52
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-01 12:55:42.344 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2024-12-01 12:55:42.350 +07:00 [ERR] Connection id "0HN8HPIV1LF63", Request id "0HN8HPIV1LF63:00000001": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoreAppStructure.Core.WebSocket.WebSocketHandler.TrackUserActivity(HttpContext context, WebSocket webSocket, ApplicationDbContext ctx) in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\WebSocket\WebSocketHandler.cs:line 44
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext() in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Configurations\AppConfiguration.cs:line 52
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-12-01 12:57:46.202 +07:00 [WRN] Failed to determine the https port for redirect.

@@ -73,6 +73,10 @@ global using Microsoft.AspNetCore.Authentication;
 global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.AspNetCore.Authentication.Facebook;
 global using System.Net.WebSockets;
+global using Newtonsoft.Json;
+
+global using OpenTelemetry.Trace;
+global using JsonSerializer = System.Text.Json.JsonSerializer;
 
 
 

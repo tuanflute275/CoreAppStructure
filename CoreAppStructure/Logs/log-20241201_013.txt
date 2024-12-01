@@ -1,15 +1,3 @@
-2024-12-01 10:31:17.451 +07:00 [WRN] Failed to determine the https port for redirect.
-2024-12-01 10:31:17.682 +07:00 [INF] HTTP GET /api/auth/signin-google responded 302 in 146.9811 ms
-2024-12-01 10:31:20.414 +07:00 [WRN] The cookie '.AspNetCore.Cookies' has set 'SameSite=None' and must also set 'Secure'.
-2024-12-01 10:31:20.426 +07:00 [ERR] An unhandled exception has occurred while executing the request.
-Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
- ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
-   --- End of inner exception stack trace ---
-   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2024-12-01 11:02:48.888 +07:00 [WRN] Failed to determine the https port for redirect.
 2024-12-01 11:02:49.133 +07:00 [INF] HTTP GET /api/auth/signin-facebook responded 302 in 146.3641 ms
 2024-12-01 11:02:54.158 +07:00 [WRN] The cookie '.AspNetCore.Cookies' has set 'SameSite=None' and must also set 'Secure'.
@@ -77,8 +65,8 @@ Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was
 2024-12-01 11:10:02.485 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 200 in 0.7193 ms
 2024-12-01 11:10:02.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 200 in 0.3372 ms
 2024-12-01 11:10:02.487 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 200 in 0.2463 ms
-2024-12-01 11:10:10.460 +07:00 [INF] HTTP GET /ws responded 101 in 48354.8889 ms
 2024-12-01 11:10:10.461 +07:00 [INF] HTTP GET /ws responded 101 in 88455.8967 ms
+2024-12-01 11:10:10.460 +07:00 [INF] HTTP GET /ws responded 101 in 48354.8889 ms
 2024-12-01 11:10:10.502 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 200 in 1.0015 ms
 2024-12-01 11:10:10.505 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 200 in 0.4886 ms
 2024-12-01 11:10:12.537 +07:00 [INF] HTTP GET /ws responded 101 in 2038.6457 ms
@@ -127,3 +115,35 @@ Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was
 2024-12-01 11:12:33.477 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0546 ms
 2024-12-01 11:12:33.842 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.1798 ms
 2024-12-01 11:12:36.046 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.1710 ms
+2024-12-01 11:12:58.098 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 11:12:58.309 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 130.7661 ms
+2024-12-01 11:13:09.744 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 7.2178 ms
+2024-12-01 11:13:12.624 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 2.6787 ms
+2024-12-01 11:13:18.011 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.6005 ms
+2024-12-01 11:13:23.638 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.7981 ms
+2024-12-01 11:13:28.015 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0508 ms
+2024-12-01 11:13:29.034 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.3063 ms
+2024-12-01 11:13:31.979 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0475 ms
+2024-12-01 11:13:33.285 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.3336 ms
+2024-12-01 11:13:35.578 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.2854 ms
+2024-12-01 11:13:38.260 +07:00 [INF] HTTP GET /api/auth/online responded 200 in 0.5647 ms
+2024-12-01 11:13:38.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0829 ms
+2024-12-01 11:13:42.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0266 ms
+2024-12-01 11:13:46.482 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0654 ms
+2024-12-01 11:13:48.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.1092 ms
+2024-12-01 11:13:52.479 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0813 ms
+2024-12-01 11:13:56.487 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0867 ms
+2024-12-01 11:13:58.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0322 ms
+2024-12-01 11:14:02.479 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0256 ms
+2024-12-01 11:14:06.480 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0798 ms
+2024-12-01 11:14:08.477 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0392 ms
+2024-12-01 11:14:12.488 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0437 ms
+2024-12-01 11:14:16.481 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0342 ms
+2024-12-01 11:14:18.486 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0352 ms
+2024-12-01 11:14:22.474 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0388 ms
+2024-12-01 11:14:26.491 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.1231 ms
+2024-12-01 11:14:28.487 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0795 ms
+2024-12-01 11:14:32.476 +07:00 [INF] HTTP GET /api/auth/admin/online-users responded 404 in 0.0587 ms
+2024-12-01 11:14:39.873 +07:00 [INF] HTTP GET /ws responded 101 in 81862.1204 ms
+2024-12-01 11:14:39.885 +07:00 [INF] HTTP GET /ws responded 101 in 67905.9628 ms
+2024-12-01 11:14:39.902 +07:00 [INF] HTTP GET /ws responded 101 in 64326.0803 ms

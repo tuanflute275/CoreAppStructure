@@ -72,6 +72,7 @@ global using Microsoft.AspNetCore.Authentication.Google;
 global using Microsoft.AspNetCore.Authentication;
 global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.AspNetCore.Authentication.Facebook;
+global using System.Net.WebSockets;
 
 
 

@@ -1,4 +1,6 @@
-﻿namespace CoreAppStructure.Features.Auth.Controlles
+﻿using CoreAppStructure.Core.WebSocket;
+
+namespace CoreAppStructure.Features.Auth.Controlles
 {
     [ApiController]
     [Route("api/auth")]
@@ -8,6 +10,13 @@
         public AuthController(IAuthService authService)
         {
             _authService = authService;
+        }
+
+        [HttpGet("online")]
+        public IActionResult GetOnlineUsers()
+        {
+            var onlineUserCount = WebSocketHandler.GetOnlineUserCount(); // Trả về số lượng người dùng online
+            return Ok(new { onlineUserCount });
         }
 
         [HttpGet("signin-google")]

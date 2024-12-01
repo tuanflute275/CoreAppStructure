@@ -1,4 +1,6 @@
-﻿namespace CoreAppStructure.Features.Auth.Services
+﻿using Azure.Core;
+
+namespace CoreAppStructure.Features.Auth.Services
 {
     public class AuthService : IAuthService
     {
@@ -181,11 +183,13 @@
                 }
 
                 // Gửi email xác nhận đăng ký
+                LogHelper.LogInformation(_logger, "GET", "/api/auth/register", null, null);
                 await _emailService.SendEmailAsync(model.Email, "Welcome to Our Service", BodyRegisterMail(model.FullName));
                 return new ResponseObject(200, "Register successfully,please check email!", model);
             }
             catch (Exception ex)
             {
+                LogHelper.LogError(_logger, ex, "POST", $"/api/auth/register");
                 return new ResponseObject(500, "Internal server error. Please try again later.");
             }
         }
@@ -202,5 +206,206 @@
             return body.Replace("{{fullName}}", fullName);
         }
 
+        public async Task<ResponseObject> GoogleCallbackAsync(HttpContext httpContext)
+        {
+            var authenticateResult = await httpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+            {
+                return new ResponseObject(400, "Google authentication failed", null);
+            }
+
+            var claims = authenticateResult.Principal.Identities.FirstOrDefault()?.Claims;
+            var email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            var name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+            if (email == null || name == null)
+            {
+                return new ResponseObject(404, "Required user information not found", new
+                {
+                    Name = name,
+                    Email = email
+                });
+            }
+            var refreshToken = TokenHelper.GenerateRefreshToken();
+            return new ResponseObject(200, "Login successfully", new
+            {
+                Name = name,
+                Email = email,
+                AccessToken = 1,
+                RefreshToken = refreshToken
+            });
+        }
+
+        public async Task<ResponseObject> FacebookCallbackAsync(HttpContext httpContext)
+        {
+            try
+            {
+                var authenticateResult = await httpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                if (!authenticateResult.Succeeded)
+                {
+                    return new ResponseObject(400, "Facebook authentication failed", null);
+                }
+
+                var claims = authenticateResult.Principal.Identities.FirstOrDefault()?.Claims;
+                var email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+                var name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+
+                if (email == null || name == null)
+                {
+                    return new ResponseObject(404, "Required user information not found", new
+                    {
+                        Name = name,
+                        Email = email
+                    });
+                }
+
+                // Lưu user vào database nếu cần
+                var userCheck = await _authRepository.FindByEmailAsync(email);
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword("123456", 12);
+                if (userCheck == null)
+                {
+                    // Tạo tài khoản mới
+                    User user = new User
+                    {
+                        UserName = name,
+                        UserFullName = name,
+                        UserEmail = email,
+                        UserPassword = passwordHash
+                    };
+
+                    await _authRepository.AddAsync(user);
+
+                    // Lấy userId vừa tạo
+                    var userId = user.UserId;
+                    var userRole = new UserRole
+                    {
+                        UserId = userId,
+                        RoleId = 2
+                    };
+
+                    _authRepository.AddUserRoleAsync(userRole);
+
+                    // Đăng nhập và tạo token
+                    List<UserRoleDto> roles = new List<UserRoleDto>();
+                    UserRoleDto dto = new UserRoleDto
+                    {
+                        UserId = user.UserId,
+                        RoleName = "User"
+                    };
+                    roles.Add(dto);
+                    var accessToken = TokenHelper.GenerateJwtToken(
+                             user.UserId,
+                             email,
+                             roles.Select(r => r.RoleName),
+                             _configuration
+                         );
+                    var refreshToken = TokenHelper.GenerateRefreshToken();
+
+                    // check if >=3 then delete old token with priority to delete web token first
+                    var userTokens = await _authRepository.GetUserTokensAsync(user.UserId);
+                    if (userTokens.Count >= 3)
+                    {
+                        var tokenToDelete = userTokens
+                            .OrderBy(t => t.IsMobile)
+                            .ThenBy(t => t.CreatedAt)
+                            .First();
+
+                        await _authRepository.DeleteTokenAsync(tokenToDelete.Id);
+                    }
+
+                    // save new token
+                    // Lấy User-Agent từ request header
+                    var request = _httpContextAccessor.HttpContext?.Request;
+                    string userAgent = request.Headers["User-Agent"].FirstOrDefault();
+                    bool isMobile = Util.IsMobileDevice(userAgent);
+                    Tokens token = new Tokens
+                    {
+                        UserId = user.UserId,
+                        IsMobile = isMobile,
+                        IsRevoked = false,
+                        TokenType = "Oauth2",
+                        Token = accessToken,
+                        ExpirationDate = DateTime.UtcNow.AddHours(1),
+                        RefreshToken = refreshToken,
+                        RefreshTokenDate = DateTime.UtcNow.AddDays(15),
+                        CreatedAt = DateTime.UtcNow,
+                    };
+                    await _authRepository.SaveTokenAsync(token);
+                    LogHelper.LogInformation(_logger, "POST", "/api/auth/signin-facebook", null, new
+                    {
+                        AccessToken = accessToken,
+                        RefreshToken = refreshToken
+                    });
+                    return new ResponseObject(200, "Login successfully", new
+                    {
+                        AccessToken = accessToken,
+                        RefreshToken = refreshToken
+                    });
+                }
+
+                // đã tồn tại tài koanr thì đăng nhập luôn
+                List<UserRoleDto> roles2 = new List<UserRoleDto>();
+                UserRoleDto dto2 = new UserRoleDto
+                {
+                    UserId = userCheck.UserId,
+                    RoleName = "User"
+                };
+                roles2.Add(dto2);
+                var accessToken2 = TokenHelper.GenerateJwtToken(
+                     userCheck.UserId,
+                     userCheck.UserEmail,
+                     roles2.Select(r => r.RoleName),
+                     _configuration
+                 );
+                var refreshToken2 = TokenHelper.GenerateRefreshToken();
+
+                // check if >=3 then delete old token with priority to delete web token first
+                var userTokens2 = await _authRepository.GetUserTokensAsync(userCheck.UserId);
+                if (userTokens2.Count >= 3)
+                {
+                    var tokenToDelete2 = userTokens2
+                        .OrderBy(t => t.IsMobile)
+                        .ThenBy(t => t.CreatedAt)
+                        .First();
+
+                    await _authRepository.DeleteTokenAsync(tokenToDelete2.Id);
+                }
+
+                // save new token
+                // Lấy User-Agent từ request header
+                var request2 = _httpContextAccessor.HttpContext?.Request;
+                string userAgent2 = request2.Headers["User-Agent"].FirstOrDefault();
+                bool isMobile2 = Util.IsMobileDevice(userAgent2);
+                Tokens token2 = new Tokens
+                {
+                    UserId = userCheck.UserId,
+                    IsMobile = isMobile2,
+                    IsRevoked = false,
+                    TokenType = "Oauth2",
+                    Token = accessToken2,
+                    ExpirationDate = DateTime.UtcNow.AddHours(1),
+                    RefreshToken = refreshToken2,
+                    RefreshTokenDate = DateTime.UtcNow.AddDays(15),
+                    CreatedAt = DateTime.UtcNow,
+                };
+                await _authRepository.SaveTokenAsync(token2);
+                LogHelper.LogInformation(_logger, "POST", "/api/auth/signin-facebook", null, new
+                {
+                    AccessToken = accessToken2,
+                    RefreshToken = refreshToken2
+                });
+                return new ResponseObject(200, "Login successfully", new
+                {
+                    AccessToken = accessToken2,
+                    RefreshToken = refreshToken2
+                });
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError(_logger, ex, "POST", $"/api/auth/signin-facebook");
+                return new ResponseObject(500, "Internal server error. Please try again later.");
+            }
+        }
     }
 }

@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\controlles\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\controlles\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\caching\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\caching\\rediscacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\core\\configurations\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\features\\categories\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\features\\categories\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\logging\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\logging\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|d:\\code\\csharp\\asp_api\\coreappstructure\\coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92574D2-A883-45D8-B8CA-EFC39300720B}|CoreAppStructure\\CoreAppStructure.csproj|solutionrelative:coreappstructure\\infrastructure\\messaging\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,114 +42,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RedisCacheService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Caching\\RedisCacheService.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwIkAAABGAAAA",
+              "DocumentIndex": 4,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Categories\\Services\\CategoryService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCMAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T08:50:08.818Z",
+              "WhenOpened": "2024-12-01T01:56:39.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T01:27:18.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\appsettings.json",
-              "RelativeDocumentMoniker": "CoreAppStructure\\appsettings.json",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\appsettings.json",
-              "RelativeToolTip": "CoreAppStructure\\appsettings.json",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAACcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-29T05:08:09.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppConfiguration.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "RelativeToolTip": "CoreAppStructure\\Core\\Configurations\\AppConfiguration.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwBcAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T04:29:39.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ServiceCollectionExtensions.cs",
               "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "CoreAppStructure\\Core\\Extensions\\ServiceCollectionExtensions.cs",
               "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Core\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeToolTip": "CoreAppStructure\\Core\\Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AQIAAD8BAAAAAAAAAAAuwE0BAAAyAAAA",
+              "ViewState": "AQIAAG8BAAAAAAAAAAAcwHoBAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T04:19:35.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RabbitService.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitService.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitService.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitService.cs",
-              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitService.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAjwAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T09:20:53.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Program.cs",
               "RelativeDocumentMoniker": "CoreAppStructure\\Program.cs",
               "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Program.cs",
               "RelativeToolTip": "CoreAppStructure\\Program.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAABsAAAABAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T04:46:23.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RabbitMqProducer.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqProducer.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqProducer.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqProducer.cs",
-              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqProducer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Controlles\\AuthController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwA8AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T09:26:29.865Z"
+              "WhenOpened": "2024-11-30T12:10:55.834Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogHelper.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Logging\\LogHelper.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Logging\\LogHelper.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Logging\\LogHelper.cs",
-              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Logging\\LogHelper.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAuwEQAAAAFAAAA",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAA3wNIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T04:21:35.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RabbitMqConsumer.cs",
-              "DocumentMoniker": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqConsumer.cs",
-              "RelativeDocumentMoniker": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqConsumer.cs",
-              "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqConsumer.cs",
-              "RelativeToolTip": "CoreAppStructure\\Infrastructure\\Messaging\\RabbitMQ\\RabbitMqConsumer.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCUAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T09:26:30.824Z"
+              "WhenOpened": "2024-11-30T13:09:08.424Z",
+              "EditorCaption": ""
             }
           ]
         }

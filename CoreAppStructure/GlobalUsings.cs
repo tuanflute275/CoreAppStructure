@@ -68,6 +68,10 @@ global using Metrics = Prometheus.Metrics;
 global using CoreAppStructure.Infrastructure.Messaging.RabbitMQ;
 global using RabbitMQ.Client;
 global using Constants = CoreAppStructure.Core.Helpers.Constants;
+global using Microsoft.AspNetCore.Authentication.Google;
+global using Microsoft.AspNetCore.Authentication;
+global using Microsoft.AspNetCore.Authentication.Cookies;
+global using Microsoft.AspNetCore.Authentication.Facebook;
 
 
 

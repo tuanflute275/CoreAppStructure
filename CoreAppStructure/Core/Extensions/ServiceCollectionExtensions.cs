@@ -1,4 +1,6 @@
-﻿using Nest;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Nest;
 using OpenTelemetry.Trace;
 namespace CoreAppStructure.Core.Extensions
 {
@@ -9,6 +11,7 @@ namespace CoreAppStructure.Core.Extensions
             services
                 .AddHttpContextAccessorService()
                 .AddSerilogConfiguration(configuration)
+                .AddOauth2Configuration(configuration)
                 .AddAutoMapper()
                 .AddScopedServices()
                 .AddSingletonServices()
@@ -159,10 +162,11 @@ namespace CoreAppStructure.Core.Extensions
             {
                 options.AddPolicy("AllowOrigin", policy =>
                 {
-                    policy.WithOrigins("http://localhost:3000")  // Cho phép nguồn từ localhost:3000
-                          .AllowAnyHeader()                      // Cho phép bất kỳ header nào
-                          .AllowAnyMethod()                      // Cho phép bất kỳ phương thức HTTP nào
-                          .AllowCredentials();                   // Cho phép cookies hoặc thông tin xác thực khác
+                    policy  // Cho phép nguồn từ localhost:3000
+                           .WithOrigins("http://localhost:3000")     
+                          .AllowAnyHeader()                         // Cho phép bất kỳ header nào
+                          .AllowAnyMethod()                        // Cho phép bất kỳ phương thức HTTP nào
+                          .AllowCredentials();                    // Cho phép cookies hoặc thông tin xác thực khác
                 });
             });
             return services;
@@ -342,6 +346,45 @@ namespace CoreAppStructure.Core.Extensions
 
                 return new RabbitService(factoryHNX, factoryFixReceive, logger, configHNX, configFixReceive);
             });
+            return services;
+        }
+
+        public static IServiceCollection AddOauth2Configuration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.MinimumSameSitePolicy = SameSiteMode.Lax;
+            });
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
+            .AddCookie(options =>
+            {
+                options.Cookie.SameSite = SameSiteMode.None;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+            })
+            .AddGoogle(options =>
+            {
+                options.ClientId = configuration["Authentication:Google:ClientId"];
+                options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+                options.CallbackPath = "/api/auth/google-callback";
+                options.SaveTokens = true;
+                //options.Scope.Add("email");
+                options.Scope.Add("profile");
+            })
+            .AddFacebook(options =>
+            {
+                options.AppId = configuration["Authentication:Facebook:AppId"];
+                options.AppSecret = configuration["Authentication:Facebook:AppSecret"];
+                options.Scope.Add("public_profile");
+                options.Fields.Add("picture");
+                //options.Scope.Add("email");
+            });
+
             return services;
         }
     }

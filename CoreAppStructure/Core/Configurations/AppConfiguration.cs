@@ -24,6 +24,12 @@ namespace CoreAppStructure.Core.Configurations
             // Cấu hình Elasticsearch client cho LogHelper
             var elasticClient = app.ApplicationServices.GetRequiredService<IElasticClient>();
             LogHelper.Configure(elasticClient);
+
+            app.UseCookiePolicy(new CookiePolicyOptions
+            {
+                MinimumSameSitePolicy = SameSiteMode.Lax,
+                HttpOnly = Microsoft.AspNetCore.CookiePolicy.HttpOnlyPolicy.Always
+            });
         }
     }
 }

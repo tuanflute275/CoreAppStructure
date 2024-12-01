@@ -4,6 +4,7 @@
     {
         Task<User> GetUserByIdAsync(int id);
         Task AddAsync(User user);
+        Task<User> FindByEmailAsync(string email);
         Task<User> FindByUsernameOrEmailAsync(string usernameOrEmail);
         Task<List<UserRoleDto>> GetUserRolesAsync(int userId);
         Task<List<UserRole>> FindUserRoleAsync(int userId);

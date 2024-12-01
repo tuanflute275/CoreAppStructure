@@ -10,6 +10,44 @@
             _authService = authService;
         }
 
+        [HttpGet("signin-google")]
+        public async Task<ActionResult> GoogleLogin()
+        {
+            var redirectUrl = Url.Action("GoogleCallback", "Auth");
+            return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("google-callback")]
+        public async Task<ActionResult> GoogleCallback()
+        {
+            var result = await _authService.GoogleCallbackAsync(HttpContext);
+
+            if (result.status != 200)
+            {
+                return Unauthorized(new { message = result.message });
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("signin-facebook")]
+        public async Task<ActionResult> FacebookLogin()
+        {
+            var redirectUrl = Url.Action("FacebookCallback", "Auth");
+            return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, FacebookDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("facebook-callback")]
+        public async Task<ActionResult> FacebookCallback()
+        {
+            var result = await _authService.FacebookCallbackAsync(HttpContext);
+
+            if (result.status != 200)
+            {
+                return Unauthorized(new { message = result.message });
+            }
+            return Ok(result);
+        }
+
         [HttpPost("login")]
         public async Task<ActionResult> Login(LoginViewModel model)
         {

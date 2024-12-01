@@ -98,5 +98,10 @@
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<User> FindByEmailAsync(string email)
+        {
+            return  await _context.Users.FirstOrDefaultAsync(x => x.UserEmail == email); 
+        }
     }
 }

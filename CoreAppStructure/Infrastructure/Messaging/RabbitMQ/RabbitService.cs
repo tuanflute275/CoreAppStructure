@@ -17,11 +17,11 @@ namespace CoreAppStructure.Infrastructure.Messaging.RabbitMQ
            RabbitSetting rabbitHNXSetting,
            RabbitSetting rabbitSettingFixReceive)
         {
-            _modelHNX = factoryHNX.CreateConnection().CreateModel();
+           /* _modelHNX = factoryHNX.CreateConnection().CreateModel();
             _modelFixReceive = factoryFixReceive.CreateConnection().CreateModel();
             _logger = logger;
             _rabbitHNXSetting = rabbitHNXSetting;
-            _rabbitSettingFixReceive = rabbitSettingFixReceive;
+            _rabbitSettingFixReceive = rabbitSettingFixReceive;*/
         }
 
         public void PublishHNX(string data)

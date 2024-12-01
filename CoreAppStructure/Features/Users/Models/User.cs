@@ -45,7 +45,7 @@
         public bool? UserGender { get; set; } = true;
 
         [Column(TypeName = "int")]
-        public int UserActive { get; set; } = 0;       
+        public int UserActive { get; set; } = 0;   // 0 mở khóa, 1 tạm khóa, 2 cấm    
 
         [Range(0, int.MaxValue)]
         [Column]

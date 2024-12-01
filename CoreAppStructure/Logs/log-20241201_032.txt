@@ -1,0 +1,70 @@
+2024-12-01 19:00:54.488 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 19:00:57.731 +07:00 [INF] Processed GET /api/category. Request Data: No request data provided. Response Data: { TotalRecords = 1, TotalPages = 1, Data = X.PagedList.PagedList`1[CoreAppStructure.Features.Categories.Models.Category] }
+2024-12-01 19:00:57.814 +07:00 [INF] HTTP GET /api/category responded 200 in 2321.5422 ms
+2024-12-01 19:01:14.774 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:01:14.792 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 505.7893 ms
+2024-12-01 19:01:14.929 +07:00 [INF] HTTP GET /favicon.ico responded 404 in 0.1320 ms
+2024-12-01 19:01:18.987 +07:00 [INF] Processed GET /api/user. Request Data: No request data provided. Response Data: { TotalRecords = 3, TotalPages = 1, Data = System.Collections.Generic.List`1[CoreAppStructure.Features.Users.Models.UserDTO] }
+2024-12-01 19:01:18.996 +07:00 [INF] HTTP GET /api/user responded 200 in 100.1023 ms
+2024-12-01 19:01:26.441 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 6. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:01:26.447 +07:00 [INF] HTTP GET /api/user/6 responded 200 in 16.0068 ms
+2024-12-01 19:01:35.089 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:01:35.095 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 10.5162 ms
+2024-12-01 19:02:51.231 +07:00 [INF] Processed POST /api/auth/login. Request Data: No request data provided. Response Data: { AccessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwibmJmIjoxNzMzMDU0NTcxLCJleHAiOjE3MzMwNTgxNzEsImlhdCI6MTczMzA1NDU3MSwiaXNzIjoidHVhbmZsdXRlMjc1LnNpdGUiLCJhdWQiOiJ0dWFuZmx1dGUifQ.CqyaLj6HKNMvKc70dOhcChxDh4-15Z6KgjpND9CPCN8, RefreshToken = UDIfKzi9/E6yh7Gs9so6vLydrOL+eGjFZLf6FkEnYdcIvLyxfIR57Dkrv/ypq7lGMC+Uf28c7E+DKNmEJpPXJg== }
+2024-12-01 19:02:51.239 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 44455.0698 ms
+2024-12-01 19:02:59.917 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:02:59.922 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 12.1077 ms
+2024-12-01 19:03:01.262 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:03:01.267 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 9.0248 ms
+2024-12-01 19:04:54.566 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 50879.8042 ms
+2024-12-01 19:06:29.620 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1751.7406 ms
+2024-12-01 19:06:34.642 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:34.651 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 17.6228 ms
+2024-12-01 19:06:35.634 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:35.639 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 8.9843 ms
+2024-12-01 19:06:39.960 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1848.1486 ms
+2024-12-01 19:06:39.987 +07:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[@p28='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (DbType = DateTime), @p5='?' (Size = 1), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 100), @p15='?' (DbType = DateTime), @p16='?' (DbType = Int32), @p17='?' (Size = 200), @p18='?' (Size = 200), @p19='?' (Size = 4000), @p20='?' (DbType = DateTime2), @p21='?' (Size = 200), @p22='?' (Size = 200), @p23='?' (DbType = Boolean), @p24='?' (Size = 200), @p25='?' (Size = 100), @p26='?' (Size = 15), @p27='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreateBy] = @p0, [CreateDate] = @p1, [DateOfBirth] = @p2, [DeleteBy] = @p3, [DeleteDate] = @p4, [DeleteFlag] = @p5, [FailedLoginAttempts] = @p6, [LastLoginDate] = @p7, [Nationality] = @p8, [PlaceOfBirth] = @p9, [ResetPasswordToken] = @p10, [ResetPasswordTokenExpiry] = @p11, [SecurityStamp] = @p12, [SocialLinks] = @p13, [UpdateBy] = @p14, [UpdateDate] = @p15, [UserActive] = @p16, [UserAddress] = @p17, [UserAvatar] = @p18, [UserBio] = @p19, [UserCurrentTime] = @p20, [UserEmail] = @p21, [UserFullName] = @p22, [UserGender] = @p23, [UserName] = @p24, [UserPassword] = @p25, [UserPhoneNumber] = @p26, [UserUnlockTime] = @p27
+OUTPUT 1
+WHERE [UserId] = @p28;
+2024-12-01 19:06:43.569 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:43.573 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 23.7702 ms
+2024-12-01 19:06:44.224 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:44.229 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 11.6153 ms
+2024-12-01 19:06:44.538 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:44.543 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 8.7779 ms
+2024-12-01 19:06:44.709 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:44.714 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 8.1174 ms
+2024-12-01 19:06:44.873 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:44.878 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 8.6191 ms
+2024-12-01 19:06:45.037 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:45.041 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 7.3271 ms
+2024-12-01 19:06:45.199 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:45.203 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 8.7468 ms
+2024-12-01 19:06:45.365 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:45.369 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 7.6103 ms
+2024-12-01 19:06:45.537 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:06:45.541 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 7.3412 ms
+2024-12-01 19:07:07.518 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 14342.8934 ms
+2024-12-01 19:07:07.527 +07:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p28='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (DbType = DateTime), @p5='?' (Size = 1), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 100), @p15='?' (DbType = DateTime), @p16='?' (DbType = Int32), @p17='?' (Size = 200), @p18='?' (Size = 200), @p19='?' (Size = 4000), @p20='?' (DbType = DateTime2), @p21='?' (Size = 200), @p22='?' (Size = 200), @p23='?' (DbType = Boolean), @p24='?' (Size = 200), @p25='?' (Size = 100), @p26='?' (Size = 15), @p27='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreateBy] = @p0, [CreateDate] = @p1, [DateOfBirth] = @p2, [DeleteBy] = @p3, [DeleteDate] = @p4, [DeleteFlag] = @p5, [FailedLoginAttempts] = @p6, [LastLoginDate] = @p7, [Nationality] = @p8, [PlaceOfBirth] = @p9, [ResetPasswordToken] = @p10, [ResetPasswordTokenExpiry] = @p11, [SecurityStamp] = @p12, [SocialLinks] = @p13, [UpdateBy] = @p14, [UpdateDate] = @p15, [UserActive] = @p16, [UserAddress] = @p17, [UserAvatar] = @p18, [UserBio] = @p19, [UserCurrentTime] = @p20, [UserEmail] = @p21, [UserFullName] = @p22, [UserGender] = @p23, [UserName] = @p24, [UserPassword] = @p25, [UserPhoneNumber] = @p26, [UserUnlockTime] = @p27
+OUTPUT 1
+WHERE [UserId] = @p28;
+2024-12-01 19:07:11.250 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:07:11.255 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 20.9192 ms
+2024-12-01 19:07:25.295 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 7627.1940 ms
+2024-12-01 19:07:25.302 +07:00 [ERR] Failed executing DbCommand (8ms) [Parameters=[@p28='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (DbType = DateTime), @p5='?' (Size = 1), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 100), @p15='?' (DbType = DateTime), @p16='?' (DbType = Int32), @p17='?' (Size = 200), @p18='?' (Size = 200), @p19='?' (Size = 4000), @p20='?' (DbType = DateTime2), @p21='?' (Size = 200), @p22='?' (Size = 200), @p23='?' (DbType = Boolean), @p24='?' (Size = 200), @p25='?' (Size = 100), @p26='?' (Size = 15), @p27='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreateBy] = @p0, [CreateDate] = @p1, [DateOfBirth] = @p2, [DeleteBy] = @p3, [DeleteDate] = @p4, [DeleteFlag] = @p5, [FailedLoginAttempts] = @p6, [LastLoginDate] = @p7, [Nationality] = @p8, [PlaceOfBirth] = @p9, [ResetPasswordToken] = @p10, [ResetPasswordTokenExpiry] = @p11, [SecurityStamp] = @p12, [SocialLinks] = @p13, [UpdateBy] = @p14, [UpdateDate] = @p15, [UserActive] = @p16, [UserAddress] = @p17, [UserAvatar] = @p18, [UserBio] = @p19, [UserCurrentTime] = @p20, [UserEmail] = @p21, [UserFullName] = @p22, [UserGender] = @p23, [UserName] = @p24, [UserPassword] = @p25, [UserPhoneNumber] = @p26, [UserUnlockTime] = @p27
+OUTPUT 1
+WHERE [UserId] = @p28;
+2024-12-01 19:07:28.866 +07:00 [INF] Processed GET /api/user/{id}. Request Data: 2. Response Data: CoreAppStructure.Features.Users.Models.UserDTO
+2024-12-01 19:07:28.870 +07:00 [INF] HTTP GET /api/user/2 responded 200 in 16.6756 ms
+2024-12-01 19:26:47.417 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 19:26:49.095 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1574.4800 ms
+2024-12-01 19:26:59.873 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 29.5035 ms

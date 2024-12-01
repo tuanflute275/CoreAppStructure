@@ -1,0 +1,13 @@
+2024-12-01 19:26:47.417 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 19:26:49.095 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1574.4800 ms
+2024-12-01 19:26:59.873 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 29.5035 ms
+2024-12-01 19:28:21.791 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 19:28:40.666 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 18772.0262 ms
+2024-12-01 19:29:10.943 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 17586.8234 ms
+2024-12-01 19:30:21.311 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 13863.3848 ms
+2024-12-01 19:30:51.010 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 26441.8212 ms
+2024-12-01 19:31:40.995 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 11076.8203 ms
+2024-12-01 19:32:59.272 +07:00 [INF] Processed POST /api/auth/login. Request Data: No request data provided. Response Data: { AccessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwibmJmIjoxNzMzMDU2Mzc5LCJleHAiOjE3MzMwNTk5NzksImlhdCI6MTczMzA1NjM3OSwiaXNzIjoidHVhbmZsdXRlMjc1LnNpdGUiLCJhdWQiOiJ0dWFuZmx1dGUifQ.4zk4zThi3lfWyLCGQGJY-F3THiYw42JtcJRhUjIFoPE, RefreshToken = I5PqPRVgKudKGHvYaqWfxHuHr957bF0aapB+7g+i8oGnulmvpAht0JDWJIs2zzigqhqS6S05X7M/5ReczJfo5A== }
+2024-12-01 19:32:59.328 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 26544.4480 ms
+2024-12-01 19:39:26.719 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3327.8238 ms
+2024-12-01 19:41:25.672 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2807.5650 ms

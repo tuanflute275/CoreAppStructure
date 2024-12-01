@@ -359,8 +359,6 @@ namespace CoreAppStructure.Features.Auth.Services
                      _configuration
                  );
                 var refreshToken2 = TokenHelper.GenerateRefreshToken();
-
-                // check if >=3 then delete old token with priority to delete web token first
                 var userTokens2 = await _authRepository.GetUserTokensAsync(userCheck.UserId);
                 if (userTokens2.Count >= 3)
                 {
@@ -372,8 +370,6 @@ namespace CoreAppStructure.Features.Auth.Services
                     await _authRepository.DeleteTokenAsync(tokenToDelete2.Id);
                 }
 
-                // save new token
-                // Lấy User-Agent từ request header
                 var request2 = _httpContextAccessor.HttpContext?.Request;
                 string userAgent2 = request2.Headers["User-Agent"].FirstOrDefault();
                 bool isMobile2 = Util.IsMobileDevice(userAgent2);

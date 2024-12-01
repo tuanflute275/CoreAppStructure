@@ -30,8 +30,8 @@ if (app.Environment.IsDevelopment())
 var counter = Metrics.CreateCounter("my_custom_counter", "Số lần thực thi một số thao tác.");
 counter.Inc();
 // Gọi phương thức cấu hình các middleware từ AppConfiguration
-app.ConfigureMiddleware();
 app.UseRouting();
+app.ConfigureMiddleware();
 app.MapControllers();
 app.MapMetrics();
 app.Run();

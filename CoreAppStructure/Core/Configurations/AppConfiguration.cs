@@ -1,7 +1,6 @@
-﻿using CoreAppStructure.Core.WebSocket;
+﻿using CoreAppStructure.Core.Middlewares;
+using CoreAppStructure.Core.WebSocket;
 using Nest;
-using System.Net.WebSockets;
-using System.Text;
 
 namespace CoreAppStructure.Core.Configurations
 {
@@ -19,7 +18,7 @@ namespace CoreAppStructure.Core.Configurations
             app.UseAuthorization();
 
             // Cấu hình middleware cho xử lý ngoại lệ (ExceptionMiddleware)
-            //app.UseMiddleware<ExceptionMiddleware>();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             // Ghi log các request vào Serilog
             app.UseSerilogRequestLogging(); // Ghi log các request HTTP

@@ -1,4 +1,0 @@
-2024-12-01 12:57:46.202 +07:00 [WRN] Failed to determine the https port for redirect.
-2024-12-01 13:05:26.915 +07:00 [WRN] Failed to determine the https port for redirect.
-2024-12-01 13:06:40.264 +07:00 [INF] HTTP GET /ws responded 101 in 73198.9479 ms
-2024-12-01 13:07:30.901 +07:00 [INF] HTTP GET /ws responded 101 in 50626.7081 ms

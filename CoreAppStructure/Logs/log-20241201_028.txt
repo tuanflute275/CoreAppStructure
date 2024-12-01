@@ -1,0 +1,34 @@
+2024-12-01 13:27:20.634 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-12-01 13:27:20.794 +07:00 [ERR] HTTP GET /api/parameter responded 500 in 69.7834 ms
+System.InvalidOperationException: Endpoint CoreAppStructure.Features.Parameters.Controllers.ParameterController.FindAll (CoreAppStructure) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext() in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Configurations\AppConfiguration.cs:line 61
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-12-01 13:27:20.850 +07:00 [ERR] Something went wrong: System.InvalidOperationException: Endpoint CoreAppStructure.Features.Parameters.Controllers.ParameterController.FindAll (CoreAppStructure) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext() in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Configurations\AppConfiguration.cs:line 61
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\Code\Csharp\ASP_API\CoreAppStructure\CoreAppStructure\Core\Middlewares\ExceptionMiddleware.cs:line 22
+2024-12-01 13:28:30.593 +07:00 [ERR] HTTP GET /api/parameter responded 500 in 29.8877 ms
+System.InvalidOperationException: Endpoint CoreAppStructure.Features.Parameters.Controllers.ParameterController.FindAll (CoreAppStructure) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-12-01 13:28:30.620 +07:00 [ERR] Something went wrong: System.InvalidOperationException: Endpoint CoreAppStructure.Features.Parameters.Controllers.ParameterController.FindAll (CoreAppStructure) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Configurations.AppConfiguration.<>c__DisplayClass0_0.<<ConfigureMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at CoreAppStructure.Core.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext httpContext)
+2024-12-01 13:29:45.168 +07:00 [WRN] Failed to determine the https port for redirect.

@@ -57,7 +57,7 @@ namespace CoreAppStructure.Features.Auth.Services
                 // Kiểm tra mật khẩu có khớp dữ liệu không
                 if (!BCrypt.Net.BCrypt.Verify(model.Password, user.UserPassword))
                 {
-                    user.FailedLoginAttempts++;
+                    user.FailedLoginAttempts++; // tăng số lần đăng nhập fail
                     UpdateLockoutStatus(user); // Hàm cập nhật trạng thái khóa
 
                     await _authRepository.UpdateAsync(user);

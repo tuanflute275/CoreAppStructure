@@ -148,7 +148,7 @@
               "RelativeDocumentMoniker": "CoreAppStructure\\appsettings.json",
               "ToolTip": "D:\\Code\\Csharp\\ASP_API\\CoreAppStructure\\CoreAppStructure\\appsettings.json",
               "RelativeToolTip": "CoreAppStructure\\appsettings.json",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAA0AAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-01T11:59:09.591Z",
               "EditorCaption": ""
@@ -211,8 +211,7 @@
               "RelativeToolTip": "CoreAppStructure\\Features\\Auth\\Services\\AuthService.cs",
               "ViewState": "AQIAALEAAAAAAAAAAAAuwFQBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T11:47:35.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T11:47:35.723Z"
             },
             {
               "$type": "Document",
